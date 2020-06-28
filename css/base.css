@@ -1,20 +1,16 @@
 /* Defines custom DINPro and DINPro bold fonts */
 @font-face {
   font-family: 'DINPro';
-  src: url('../fonts/dinpro/DINPro-Regular.otf');
-}
+  src: url("../fonts/dinpro/DINPro-Regular.otf"); }
 
 @font-face {
   font-family: 'DINPro';
   font-weight: 600;
-  src: url('../fonts/DINPro-Bold.otf');
-}
+  src: url("../fonts/DINPro-Bold.otf"); }
 
 @font-face {
   font-family: 'NotoSans';
-  src: url('../fonts/notosans/NotoSans-Regular.ttf');
-}
+  src: url("../fonts/notosans/NotoSans-Regular.ttf"); }
 
 body {
-  font-family: 'NotoSans';
-}
+  font-family: 'NotoSans'; }

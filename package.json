@@ -1,23 +1,23 @@
 {
-  "name": "technica-site-2018",
+  "name": "technica-site-2020",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "build-scss": "node-sass --include-path scss scss/main.scss css/main.css",
+    "build-scss": "node-sass -o ./css ./scss",
     "watch-scss": "nodemon -e scss -x \"npm run build-scss\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gotechnica/technica-site-2018.git"
+    "url": "git+https://github.com/gotechnica/technica-site-2020.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gotechnica/technica-site-2018/issues"
+    "url": "https://github.com/gotechnica/technica-site-2020/issues"
   },
-  "homepage": "https://github.com/gotechnica/technica-site-2018#readme",
+  "homepage": "https://github.com/gotechnica/technica-site-2020#readme",
   "dependencies": {
     "hoek": "^5.0.4",
     "node-sass": "^4.13.0",
