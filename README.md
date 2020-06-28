@@ -14,5 +14,5 @@ npm install
 ## Watch SCSS changes
 
 ```bash
-npm run watch-scss
+npm run web
 ```
