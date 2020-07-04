@@ -1,1 +1,13 @@
 @use 'vars';
+
+ @mixin button-style($lavender){
+    color: #fff;
+    background-color: $lavender;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn {
+    @include button-style(#A88AA8);
+}
