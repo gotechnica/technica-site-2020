@@ -1,13 +1,26 @@
-@use 'vars';
+/*@use 'vars';*/
+//temporary until resolve _vars.scss issue
+$cyan: #82ECEC;
+$pink: #EA668E;
+$lavender: #A88AA8;
+$light-lavender: #DED2E6;
+$light-grey: #E5E5E5;
+$grey: #C4C4C4;
+
+@mixin dinpro-text($size, $weight){
+    font-family: DINPro;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+.test-text {
+    @include dinpro-text(size, weight);
+}
 
  @mixin button-style($lavender){
     color: #fff;
     background-color: $lavender;
-    border-radius: 15px;
+    border-radius: 20px;
     text-transform: uppercase;
     font-weight: bold;
-}
-
-.btn {
-    @include button-style(#A88AA8);
 }

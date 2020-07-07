@@ -1,7 +1,5 @@
-@use 'vars';
-.btn {
-  color: #fff;
-  background-color: #A88AA8;
-  border-radius: 15px;
-  text-transform: uppercase;
-  font-weight: bold; }
+/*@use 'vars';*/
+.test-text {
+  font-family: DINPro;
+  font-size: size;
+  font-weight: weight; }
