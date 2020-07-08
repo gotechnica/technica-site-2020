@@ -7,20 +7,16 @@ $light-lavender: #DED2E6;
 $light-grey: #E5E5E5;
 $grey: #C4C4C4;
 
-@mixin dinpro-text($size, $weight){
+@mixin dinpro-text($size, $weight, $color){
     font-family: DINPro;
     font-size: $size;
     font-weight: $weight;
+    color: $color;
 }
 
-.test-text {
-    @include dinpro-text(size, weight);
-}
-
- @mixin button-style($lavender){
-    color: #fff;
+.btn {
+    @include dinpro-text(15px, bold, #fff);
     background-color: $lavender;
     border-radius: 20px;
     text-transform: uppercase;
-    font-weight: bold;
 }

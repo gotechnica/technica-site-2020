@@ -1,5 +1,9 @@
 /*@use 'vars';*/
-.test-text {
+.btn {
   font-family: DINPro;
-  font-size: size;
-  font-weight: weight; }
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #A88AA8;
+  border-radius: 20px;
+  text-transform: uppercase; }
