@@ -1,1 +1,93 @@
 @use 'vars';
+
+// Track Circle Class
+@mixin circle($color, $size) {
+  background-color: $color;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  display: inline-block;
+}
+// Footer Circle Class
+@mixin footer-circle($color, $size){
+  @include circle($color, $size);
+  border: 1px solid $color;
+  box-sizing: border-box;
+  right: 0%;
+  bottom: 0%;
+}
+// Track Box Class
+@mixin box($color) {
+  border: 4px solid $color;
+  box-sizing: border-box;
+  left: 495px;
+  top: 1825px;
+  padding: 10px;
+}
+// Track Circles
+.beginner-circle {
+  @include circle(#82ECEC, 183px);
+}
+
+.general-circle {
+  @include circle(#A88AA8, 183px);
+}
+
+.research-circle {
+  @include circle(#EA668E, 183px);
+}
+
+// Footer Circles
+.blue-circle {
+  @include footer-circle(#82ECEC, 51px);
+}
+
+.purple-circle {
+  @include footer-circle(#A88AA8, 51px);
+}
+
+.pink-circle {
+  @include footer-circle(#EA668E, 51px);
+}
+
+// Track Boxes
+.beginner {
+  @include box(#82ECEC);
+}
+
+.general {
+  @include box(#A88AA8);
+}
+
+.research {
+  @include box(#EA668E);
+}
+
+.intro {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  padding-left: 32px;
+  padding-right: 32px;
+  background-color: #DED2E6;
+}
+
+.intro-header {
+  padding-top: 44px;
+}
+
+.track-header {
+  padding-bottom: 1%;
+}
+
+.rectangle {
+  background-color: #4D4D4D;
+  display: block;
+  height: 295px;
+  width: 485px;
+  top: 10px;
+}
+
+.container {
+  padding-left: 32px;
+  padding-bottom: 59px;
+}
