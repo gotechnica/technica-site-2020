@@ -1,4 +1,13 @@
-@use 'vars';
+/*@use 'vars';*/
+.btn {
+  font-family: DINPro;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #A88AA8;
+  border-radius: 20px;
+  text-transform: uppercase; }
+
 .beginner-circle {
   background-color: #82ECEC;
   width: 183px;

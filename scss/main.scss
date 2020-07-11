@@ -1,5 +1,25 @@
-@use 'vars';
+/*@use 'vars';*/
+//temporary until resolve _vars.scss issue
+$cyan: #82ECEC;
+$pink: #EA668E;
+$lavender: #A88AA8;
+$light-lavender: #DED2E6;
+$light-grey: #E5E5E5;
+$grey: #C4C4C4;
 
+@mixin dinpro-text($size, $weight, $color){
+    font-family: DINPro;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+.btn {
+    @include dinpro-text(15px, bold, #fff);
+    background-color: $lavender;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
 // Track Circle Class
 @mixin circle($color, $size) {
   background-color: $color;
