@@ -61,7 +61,6 @@
   background-color: #DED2E6; }
 
 .intro-header {
-  padding-top: 44px;
   padding-bottom: 1%; }
 
 .tracks {
@@ -78,7 +77,6 @@
   padding-right: 30px; }
 
 .outer-intro-layer {
-  background-color: white;
+  padding-top: 44px;
   padding-left: 32px;
-  padding-right: 32px;
   padding-bottom: 59px; }
