@@ -19,6 +19,8 @@ $grey: #C4C4C4;
     background-color: $lavender;
     border-radius: 20px;
     text-transform: uppercase;
+    font-size: 150%;
+    margin-top: 3%;
 }
 // Track Circle Class
 @mixin circle($color, $size) {
@@ -103,4 +105,18 @@ $grey: #C4C4C4;
   padding-top: 44px;
   padding-left: 32px;
   padding-bottom: 59px;
+}
+
+.registration {
+    background-color: #C4C4C4;
+    padding: 2%;
+}
+
+.hacker, .mentor, .volunteer {
+    background-color: white;
+    text-align: left;
+    padding: 5%;
+    padding-bottom: 3%;
+    width: 100%;
+    height: 75%;
 }
