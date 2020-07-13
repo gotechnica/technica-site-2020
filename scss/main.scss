@@ -15,10 +15,11 @@ $grey: #C4C4C4;
 }
 
 .btn {
-    @include dinpro-text(15px, bold, #fff);
+    @include dinpro-text(150%, bold, #fff);
     background-color: $lavender;
     border-radius: 20px;
     text-transform: uppercase;
+    margin-top: 3%;
 }
 // Track Circle Class
 @mixin circle($color, $size) {
@@ -104,3 +105,41 @@ $grey: #C4C4C4;
   padding-left: 32px;
   padding-bottom: 59px;
 }
+
+.registration {
+    background-color: $grey;
+    padding: 2%;
+}
+
+.hacker, .mentor, .volunteer {
+    background-color: white;
+    text-align: center;
+    padding: 5%;
+    padding-bottom: 3%;
+    width: 100%;
+    height: 75%;
+}
+
+.faq {
+    background-color: $light-lavender;
+    padding: 3%;
+}
+
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    margin-bottom: 2%;
+    border-bottom: 3px solid $grey;
+    transition: ease all 0.3s;
+}
+
+.accordion:hover. .accordion:active {
+    border-color: $lavender;
+}
+
+.panel {
+    transition: max-height 0.1s ease-out;
+ }

@@ -173,8 +173,152 @@
         </div>
       </div>
     </div>
+      
+    <div class="registration">
+      <div class="container">
+        <!-- Header -->
+        <div class="registration-header">
+          <h1>Registration</h1>
+        </div>
+        <!-- Body -->
+        <div class="text-center">
+          <div class="row">
+            <div class="col-sm">
+              <div class="hacker">
+                <p>Come build using hardware, software, or anything you want with other hackers! You don't have to know how to code to be a hacker. Hackers can be students, designers, or just any tech-lover out there!</p>
+              </div>
+              <button class="btn">Hacker</button>
+            </div>
+            <div class="col-sm">
+              <div class="mentor">
+                <p>Come help hackers with their ideas by being a resource for hackers who may have questions about their projects. Mentors can be anyone of any gender willing to share their knowledge!</p>
+              </div>
+              <button class="btn">Mentor</button>
+            </div>
+            <div class="col-sm">
+              <div class="volunteer">
+                <p>Come help with the operations! Volunteers are a huge helping hand and help make sure the hackathon runs smoothly. Anyone of any gender can volunteer and help make Technica a success!</p>
+              </div>
+              <button class="btn">Volunteer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div class="faq">
+      <div class="container" style="background-color: #C4C4C4; padding: 3%;">
+          <div class="row">
+            <div class="col-sm">
+                <div class="faq-header">
+                <h1>Frequently Asked Questions</h1>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md">
+                <div class="accordion">
+                    <h4>What is a "hackathon"?</h4>
+                    <h4>+</h4>
+                </div>
+                <div class="panel">
+                    <p>Answer here</p>
+                </div>
+                <div class="accordion">
+                    <h4>Why make it an all-women hackathon?</h4>
+                    <h4>+</h4>
+                </div>
+                <div class="panel">
+                    <p>Answer here</p>
+                </div>
+                <div class="accordion">
+                    <h4>Do I need to know how to code?</h4>
+                    <h4>+</h4>
+                </div>
+                <div class="panel">
+                    <p>Answer here</p>
+                </div>
+                <div class="accordion">
+                    <h4>Where and when is Technica?</h4>
+                    <h4>+</h4>
+                </div>
+                <div class="panel">
+                    <p>Answer here</p>
+                </div>
+                <div class="accordion">
+                    <h4>Who can attend Technica?</h4>
+                    <h4>+</h4>
+                </div>
+                <div class="panel">
+                    <p>Answer here</p>
+                </div>
+                <div class="accordion">
+                    <h4>How much does it cost to attend Technica?</h4>
+                    <h4>+</h4>
+                </div>
+                <div class="panel">
+                    <p>Answer here</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="accordion">
+                    <h4>What if I'm under 18?</h4>
+                    <h4>+</h4>
+                </div>
+                <div class="panel">
+                    <p>Answer here</p>
+                </div>
+                <div class="accordion">
+                    <h4>How do I travel to Technica?</h4>
+                    <h4>+</h4>
+                </div>
+                <div class="panel">
+                    <p>Answer here</p>
+                </div>
+                <div class="accordion">
+                    <h4>How do teams work?</h4>
+                    <h4>+</h4>
+                </div>
+                <div class="panel">
+                    <p>Answer here</p>
+                </div>
+                <div class="accordion">
+                    <h4>What should I bring?</h4>
+                    <h4>+</h4>
+                </div>
+                <div class="panel">
+                    <p>Answer here</p>
+                </div>
+                <div class="accordion">
+                    <h4>What if I need special accommodations?</h4>
+                    <h4>+</h4>
+                </div>
+                <div class="panel">
+                    <p>Answer here</p>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
 
     <!-- mlh badge -->
     <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-white.svg" alt="Major League Hacking 2020 Hackathon Season" style="width:100%"></a>
+      
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight){
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+      }
+    </script>
   </body>
   </html>
