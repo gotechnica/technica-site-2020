@@ -136,10 +136,12 @@ $grey: #C4C4C4;
     transition: ease all 0.3s;
 }
 
-.accordion:hover, .accordion:active {
+.accordion:hover, .accordion-active {
     border-color: $lavender;
 }
 
 .panel {
+    max-height: 0;
+    overflow: hidden;
     transition: max-height 0.1s ease-out;
  }
