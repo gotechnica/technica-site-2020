@@ -117,14 +117,8 @@
   border-bottom: 3px solid #C4C4C4;
   transition: ease all 0.3s; }
 
-.accordion:hover {
+.accordion:hover, .accordion:active {
   border-color: #A88AA8; }
 
-@media (max-width: 767.98px) {
-  .accordion:active {
-    border-color: #A88AA8; } }
-
 .panel {
-  max-height: 0;
-  overflow: hidden;
   transition: max-height 0.1s ease-out; }

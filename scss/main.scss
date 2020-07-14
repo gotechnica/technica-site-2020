@@ -38,46 +38,46 @@ $grey: #C4C4C4;
 
 // Track Circles
 .beginner-circle {
-  @include circle(#82ECEC, 183px);
+  @include circle($cyan, 183px);
 }
 
 .general-circle {
-  @include circle(#A88AA8, 183px);
+  @include circle($lavender, 183px);
 }
 
 .research-circle {
-  @include circle(#EA668E, 183px);
+  @include circle($pink, 183px);
 }
 
 // Footer Circles
 .blue-circle {
-  @include circle(#82ECEC, 51px);
+  @include circle($cyan, 51px);
 }
 
 .purple-circle {
-  @include circle(#A88AA8, 51px);
+  @include circle($lavender, 51px);
 }
 
 .pink-circle {
-  @include circle(#EA668E, 51px);
+  @include circle($pink, 51px);
 }
 
 // Track Boxes
 .beginner {
-  @include box(#82ECEC);
+  @include box($cyan);
 }
 
 .general {
-  @include box(#A88AA8);
+  @include box($lavender);
 }
 
 .research {
-  @include box(#EA668E);
+  @include box($pink);
 }
 
 .intro {
   padding: 64px 32px;
-  background-color: #DED2E6;
+  background-color: $light-lavender;
 }
 
 .intro-header {
@@ -136,7 +136,7 @@ $grey: #C4C4C4;
     transition: ease all 0.3s;
 }
 
-.accordion:hover. .accordion:active {
+.accordion:hover, .accordion:active {
     border-color: $lavender;
 }
 
