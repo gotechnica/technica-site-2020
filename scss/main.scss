@@ -36,6 +36,40 @@ $grey: #C4C4C4;
   padding: 10px;
 }
 
+.hero {
+  background-image: url('../img/temp-horizon.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1100px;
+}
+
+@keyframes move_cloud {
+  0% {opacity: 0; left: 0%;}
+  3% {opacity: 1;left: 5%;}
+  100% {opacity: 1;left: 100%;}
+}
+
+#cloud-static {
+  pointer-events: none;
+  position: absolute;
+  width: 35%;
+  height: 57%;
+  z-index: 1;
+  animation: move_cloud 80s infinite linear;
+}
+
+.cloud-container {
+  z-index: 11;
+  position: relative;
+}
+
+#cloud-dynamic {
+  position: absolute;
+  -webkit-transform: perspective(2000px) translate3d(0px, 0px, 50px);
+  transform: perspective(2000px) translate3d(0px, 0px, 50px);
+}
+
 // Track Circles
 .beginner-circle {
   @include circle($cyan, 183px);
