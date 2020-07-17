@@ -159,3 +159,45 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.1s ease-out; }
+
+.sponsor-img {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  z-index: 1;
+  animation: move_cloud 5s linear infinite; }
+
+.contact {
+  background-color: #E5E5E5;
+  text-align: center; }
+
+.contact-content a:link {
+  color: #000; }
+
+.social-circle1 {
+  background-color: #82ECEC;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block; }
+
+.social-circle2 {
+  background-color: #A88AA8;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block; }
+
+.social-circle3 {
+  background-color: #EA668E;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block; }
+
+.footer {
+  background-color: #C4C4C4;
+  text-align: center; }
+
+.footer a:link, a:visited {
+  color: #000; }

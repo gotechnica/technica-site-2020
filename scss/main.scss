@@ -179,3 +179,41 @@ $grey: #C4C4C4;
     overflow: hidden;
     transition: max-height 0.1s ease-out;
  }
+
+.sponsor-img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+    animation: move_cloud 5s linear infinite;
+}
+
+.contact{
+    background-color: $light-grey;
+    text-align: center;
+}
+
+.contact-content a:link {
+    color: #000;
+}
+
+.social-circle1 {
+    @include circle($cyan, 30px);
+}
+
+.social-circle2 {
+    @include circle($lavender, 30px);
+}
+
+.social-circle3 {
+    @include circle($pink, 30px);
+}
+
+.footer {
+    background-color: $grey;
+    text-align: center;
+}
+
+.footer a:link, a:visited {
+    color: #000;
+}
