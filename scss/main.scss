@@ -83,19 +83,6 @@ $grey: #C4C4C4;
   @include circle($pink, 183px);
 }
 
-// Footer Circles
-.blue-circle {
-  @include circle($cyan, 51px);
-}
-
-.purple-circle {
-  @include circle($lavender, 51px);
-}
-
-.pink-circle {
-  @include circle($pink, 51px);
-}
-
 // Track Boxes
 .beginner {
   @include box($cyan);
@@ -200,16 +187,17 @@ $grey: #C4C4C4;
     color: #000;
 }
 
-.social-circle1 {
-    @include circle($cyan, 30px);
+//contact us circles
+.blue-circle {
+  @include circle($cyan, 51px);
 }
 
-.social-circle2 {
-    @include circle($lavender, 30px);
+.purple-circle {
+  @include circle($lavender, 51px);
 }
 
-.social-circle3 {
-    @include circle($pink, 30px);
+.pink-circle {
+  @include circle($pink, 51px);
 }
 
 .footer {
