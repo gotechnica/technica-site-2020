@@ -180,12 +180,15 @@ $grey: #C4C4C4;
     transition: max-height 0.1s ease-out;
  }
 
+ .sponsors-list {
+   overflow: hidden;
+ }
+
 .sponsor-img {
     width: 100px;
     height: 100px;
-    position: relative;
     z-index: 1;
-    animation: move_cloud 5s linear infinite;
+    margin: 0px 50px;
 }
 
 .contact{
