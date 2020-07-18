@@ -83,19 +83,6 @@ $grey: #C4C4C4;
   @include circle($pink, 183px);
 }
 
-// Footer Circles
-.blue-circle {
-  @include circle($cyan, 51px);
-}
-
-.purple-circle {
-  @include circle($lavender, 51px);
-}
-
-.pink-circle {
-  @include circle($pink, 51px);
-}
-
 // Track Boxes
 .beginner {
   @include box($cyan);
@@ -179,3 +166,45 @@ $grey: #C4C4C4;
     overflow: hidden;
     transition: max-height 0.1s ease-out;
  }
+
+ .sponsors-list {
+   overflow: hidden;
+ }
+
+.sponsor-img {
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    margin: 0px 50px;
+}
+
+.contact{
+    background-color: $light-grey;
+    text-align: center;
+}
+
+.contact-content a:link {
+    color: #000;
+}
+
+//contact us circles
+.blue-circle {
+  @include circle($cyan, 51px);
+}
+
+.purple-circle {
+  @include circle($lavender, 51px);
+}
+
+.pink-circle {
+  @include circle($pink, 51px);
+}
+
+.footer {
+    background-color: $grey;
+    text-align: center;
+}
+
+.footer a:link, a:visited {
+    color: #000;
+}
