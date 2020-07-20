@@ -96,6 +96,52 @@ $grey: #C4C4C4;
   @include box($pink);
 }
 
+#navbar {
+  width: 1500px;
+  height: 48px;
+  background: #FFFFFF;
+  text-align: center;
+  float: none;
+
+  .nav-link {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $lavender;
+    text-transform: uppercase;
+  }
+  .nav-link:hover {
+    opacity:0.7;
+  }
+}
+
+.navbar-nav.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.navbar {
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap; /* assumes you only want one row */
+}
+
+.menu {
+  background-color: white;
+  padding-bottom: 0.5%;
+  padding-top: 0.5%;
+}
+
 .intro {
   padding: 64px 32px;
   background-color: $light-lavender;

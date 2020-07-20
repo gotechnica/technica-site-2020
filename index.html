@@ -109,6 +109,34 @@
     </script>
   </head>
   <body>
+    <!-- navbar -->
+    <div class="menu">
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-light sticky-top">
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+      </button>
+       <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav text-center">
+           <li class="nav-item">
+             <a class="nav-link" href="#about"><h3>About</h3></a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="#tracks"><h3>Tracks</h3></a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="#registration"><h3>Registration</h3></a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="#faq"><h3>FAQ</h3></a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="#sponsors"><h3>Sponsors</h3></a>
+           </li>
+         </ul>
+       </div>
+     </nav>
+   </div>
+
     <div class="hero">
       <div class="container">
         <img id="cloud-static" src="./img/temp-cloud.svg">
@@ -124,7 +152,7 @@
       </div>
     </div>
 
-    <div class="intro">
+    <div class="intro" id="about">
       <div class="container" style="background-color: white;">
           <div class="row">
             <div class="col-sm">
@@ -148,7 +176,7 @@
       </div>
     </div>
 
-    <div class="tracks">
+    <div class="tracks" id="tracks">
       <div class="container">
         <!-- Header -->
         <div class="track-header">
@@ -183,7 +211,7 @@
       </div>
     </div>
 
-    <div class="registration">
+    <div class="registration" id="registration">
       <div class="container">
         <!-- Header -->
         <div class="registration-header">
@@ -215,7 +243,7 @@
       </div>
     </div>
 
-    <div class="faq">
+    <div class="faq" id="faq">
       <div class="container" style="background-color: #C4C4C4; padding: 3%;">
           <div class="faq-header">
             <h1>Frequently Asked Questions</h1>
@@ -306,7 +334,7 @@
       </div>
     </div>
 
-    <div class="sponsors" style="background-color: grey;">
+    <div class="sponsors" id="sponsors" style="background-color: grey;">
       <div class="container" style="padding: 3%; padding-bottom: 10%">
           <div class="sponsors-header">
             <h1>Sponsors</h1>
