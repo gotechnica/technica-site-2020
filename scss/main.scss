@@ -99,12 +99,15 @@ $grey: #C4C4C4;
 #navbar {
   background: #FFFFFF;
   display: flex;
+  padding-top: 0.01rem;
+  padding-bottom: 0.01rem;
   .nav-link {
     @include dinpro-text(24px,bold,$lavender);
     text-transform: uppercase;
   }
   .nav-link:hover {
     transition: .3s ease;
+    opacity: 0.7;
   }
 }
 
@@ -112,8 +115,6 @@ $grey: #C4C4C4;
   margin-left: 33px;
   margin-right: 33px;
 }
-
-.navbar { padding-top: 0.01rem; padding-bottom: 0.01rem; }
 
 .intro {
   padding: 64px 32px;
