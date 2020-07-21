@@ -37,37 +37,43 @@ $grey: #C4C4C4;
 }
 
 .hero {
-  background-image: url('../img/temp-horizon.png');
+  background-image: url('../img/hero/horizon.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 1100px;
+  height: 120vw;
+}
+
+.hero-wave {
+  margin-top: 19vw;
+}
+
+#birds > img {
+  padding-top: 7%;
 }
 
 @keyframes move_cloud {
-  0% {opacity: 0; left: 0%;}
-  3% {opacity: 1;left: 5%;}
-  100% {opacity: 1;left: 100%;}
+  0% {opacity: 0; left: -25%}
+  5% {opacity: 1;}
+  95% {opacity: 1;}
+  100% {opacity: 0;left: 90%;}
 }
 
-#cloud-static {
+%cloud {
   pointer-events: none;
   position: absolute;
-  width: 35%;
-  height: 57%;
-  z-index: 1;
+  width: 50%;
   animation: move_cloud 80s infinite linear;
 }
 
-.cloud-container {
-  z-index: 11;
-  position: relative;
+#cloud1 {
+  @extend %cloud;
+  animation-delay: -50s;
 }
 
-#cloud-dynamic {
-  position: absolute;
-  -webkit-transform: perspective(2000px) translate3d(0px, 0px, 50px);
-  transform: perspective(2000px) translate3d(0px, 0px, 50px);
+.hero-information {
+  position: relative; //allows us to set z index so it appears on top of illustrations
+  z-index: 1;
 }
 
 // Track Circles
