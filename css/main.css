@@ -96,6 +96,10 @@
   margin-left: 33px;
   margin-right: 33px; }
 
+.navbar {
+  padding-top: 0.01rem;
+  padding-bottom: 0.01rem; }
+
 .intro {
   padding: 64px 32px;
   background-color: #DED2E6; }
