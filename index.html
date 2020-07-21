@@ -111,16 +111,21 @@
   <body>
     <div class="hero">
       <div class="container">
-        <img id="cloud-static" src="./img/temp-cloud.svg">
-        <div id="scene">
-          <img data-depth="0.2" src="./img/temp-cloud.svg">
+        <!-- clouds -->
+        <img id="cloud1" src="./img/hero/cloud1.svg">
+        <!-- birds -->
+        <div id="birds">
+          <img data-depth="0.4" src="./img/hero/birds.svg">
         </div>
-        <div class="cloud-container">
-          <img id="cloud-dynamic" src="./img/temp-cloud.svg">
+        <div class="hero-information">
+          <h2>Expand Your Horizons</h2> <!-- placeholder for now, need to check with design if theres a theme logo for this year -->
+          <h1>Technica</h1>
+          <h2>Oct 24-25, 2020 ⊹ Virtual Environment</h2>
         </div>
-        <h1>Technica</h1>
-        <h2><strong>Oct 24-25, 2020</strong> ⊹ Virtual Environment</h2>
-        <h1>
+      </div>
+      <div class="hero-wave">
+        <img id="moving-wave" src="./img/hero/moving_wave.svg">
+        <!-- <img id="static-wave" src="./img/hero/static_wave.svg"> -->
       </div>
     </div>
 
@@ -391,8 +396,10 @@
       startVisible: true,
     });
 
-    var scene = document.getElementById('scene');
-    var parallaxInstance = new Parallax(scene);
+    var birdScene = document.getElementById('birds');
+    var parallaxInstance = new Parallax(birdScene, {
+      clipRelativeInput: true //not working, revisit later for performance optimization
+    });
 
     var acc = document.getElementsByClassName("accordion");
     var i;
