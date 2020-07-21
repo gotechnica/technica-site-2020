@@ -83,6 +83,25 @@
   box-sizing: border-box;
   padding: 10px; }
 
+#navbar {
+  background: #FFFFFF;
+  display: flex;
+  padding-top: 0.01rem;
+  padding-bottom: 0.01rem; }
+  #navbar .nav-link {
+    font-family: DINPro;
+    font-size: 24px;
+    font-weight: bold;
+    color: #A88AA8;
+    text-transform: uppercase; }
+  #navbar .nav-link:hover {
+    transition: .3s ease;
+    opacity: 0.7; }
+
+.navbar-nav > li {
+  margin-left: 33px;
+  margin-right: 33px; }
+
 .intro {
   padding: 64px 32px;
   background-color: #DED2E6; }

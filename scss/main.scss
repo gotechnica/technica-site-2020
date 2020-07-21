@@ -102,6 +102,26 @@ $grey: #C4C4C4;
   @include box($pink);
 }
 
+#navbar {
+  background: #FFFFFF;
+  display: flex;
+  padding-top: 0.01rem;
+  padding-bottom: 0.01rem;
+  .nav-link {
+    @include dinpro-text(24px,bold,$lavender);
+    text-transform: uppercase;
+  }
+  .nav-link:hover {
+    transition: .3s ease;
+    opacity: 0.7;
+  }
+}
+
+.navbar-nav > li{
+  margin-left: 33px;
+  margin-right: 33px;
+}
+
 .intro {
   padding: 64px 32px;
   background-color: $light-lavender;
