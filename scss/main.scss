@@ -21,6 +21,7 @@ $grey: #C4C4C4;
     text-transform: uppercase;
     margin-top: 3%;
 }
+
 // Track Circle Class
 @mixin circle($color, $size) {
   background-color: $color;
@@ -43,6 +44,7 @@ $grey: #C4C4C4;
   background-repeat: no-repeat;
   height: 120vw;
 }
+
 
 .hero-wave {
   margin-top: 19vw;
@@ -71,9 +73,32 @@ $grey: #C4C4C4;
   animation-delay: -50s;
 }
 
+@mixin fade-in($waitTime) {
+    animation: wait $waitTime, fade-in 800ms $waitTime;
+    animation-duration: 2s;
+}
+
+@keyframes wait {
+    0% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 .hero-information {
   position: relative; //allows us to set z index so it appears on top of illustrations
   z-index: 1;
+  color: white;
+  @include fade-in(600ms);
+}
+
+.register-btn {
+  border-radius: 20px;
+  padding: 3px 35px;
+  @include fade-in(1.5s);
 }
 
 // Track Circles
