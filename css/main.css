@@ -43,9 +43,30 @@
 #cloud1 {
   animation-delay: -50s; }
 
+@keyframes wait {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .hero-information {
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  color: white;
+  animation: wait 600ms, fade-in 800ms 600ms;
+  animation-duration: 2s; }
+
+.register-btn {
+  border-radius: 20px;
+  padding: 3px 35px;
+  animation: wait 1.5s, fade-in 800ms 1.5s;
+  animation-duration: 2s; }
 
 .beginner-circle {
   background-color: #82ECEC;
