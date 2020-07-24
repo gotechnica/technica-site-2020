@@ -34,7 +34,7 @@
     opacity: 0;
     left: 90%; } }
 
-#cloud1 {
+#cloud1, #cloud2, #cloud3, #cloud4, #cloud5, #cloud6, #cloud7, #cloud8 {
   pointer-events: none;
   position: absolute;
   width: 50%;
@@ -42,6 +42,47 @@
 
 #cloud1 {
   animation-delay: -50s; }
+
+#cloud2 {
+  width: 15%;
+  height: 15%;
+  margin-top: 18%;
+  animation-delay: -60s; }
+
+#cloud3 {
+  width: 35%;
+  height: 35%;
+  margin-top: 20%;
+  animation-delay: -30s; }
+
+#cloud4 {
+  width: 15%;
+  height: 15%;
+  margin-top: 5%;
+  animation-delay: -35s; }
+
+#cloud5 {
+  width: 25%;
+  height: 25%;
+  margin-top: 20%;
+  animation-delay: -5s; }
+
+#cloud6 {
+  width: 10%;
+  height: 10%;
+  margin-top: 15%;
+  animation-delay: 0s; }
+
+#cloud7 {
+  width: 40%;
+  height: 40%;
+  animation-delay: -85s; }
+
+#cloud8 {
+  width: 20%;
+  height: 20%;
+  margin-top: 30%;
+  animation-delay: -70s; }
 
 @keyframes wait {
   0% {
