@@ -127,7 +127,7 @@
   display: inline-block; }
 
 .research-circle {
-  background-color: #EA668E;
+  background-color: #FF6B98;
   width: 183px;
   height: 183px;
   border-radius: 50%;
@@ -242,6 +242,10 @@
 .contact-content a:link {
   color: #000; }
 
+.blue-circle, .purple-circle, .pink-circle {
+  padding: 8px;
+  margin: 0px 10px; }
+
 .blue-circle {
   background-color: #82ECEC;
   width: 51px;
@@ -257,7 +261,7 @@
   display: inline-block; }
 
 .pink-circle {
-  background-color: #EA668E;
+  background-color: #FF6B98;
   width: 51px;
   height: 51px;
   border-radius: 50%;
