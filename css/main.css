@@ -19,9 +19,6 @@
   overflow: hidden;
   position: relative; }
 
-.hero-wave {
-  margin-top: 19vw; }
-
 #birds > img {
   padding-top: 7%; }
 
@@ -112,6 +109,55 @@
   animation: wait 1.5s, fade-in 800ms 1.5s;
   animation-duration: 2s; }
 
+.hero-wave {
+  width: 100vw; }
+  .hero-wave #moving-wave {
+    margin-top: 49vw;
+    position: absolute; }
+  .hero-wave #static-wave {
+    margin-top: 65vw;
+    position: absolute; }
+
+#navbar {
+  background: #FFFFFF;
+  display: flex;
+  padding-top: 0.01rem;
+  padding-bottom: 0.01rem; }
+  #navbar .nav-link {
+    font-family: DINPro;
+    font-size: 24px;
+    font-weight: bold;
+    color: #A88AA8;
+    text-transform: uppercase; }
+  #navbar .nav-link:hover {
+    transition: .3s ease;
+    opacity: 0.7; }
+
+.navbar-nav > li {
+  margin-left: 33px;
+  margin-right: 33px; }
+
+.intro {
+  margin-top: 30%;
+  padding: 3%;
+  position: relative;
+  z-index: 3; }
+
+.intro-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  padding: 3%; }
+
+.intro-header {
+  padding-bottom: 1%; }
+
+.tracks {
+  background-color: #CCA8C1;
+  padding: 32px; }
+
+.track-header {
+  padding-bottom: 1%; }
+
 .beginner-circle {
   background-color: #82ECEC;
   width: 183px;
@@ -139,50 +185,6 @@
   border-radius: 5px;
   box-sizing: border-box;
   padding: 10px; }
-
-#navbar {
-  background: #FFFFFF;
-  display: flex;
-  padding-top: 0.01rem;
-  padding-bottom: 0.01rem; }
-  #navbar .nav-link {
-    font-family: DINPro;
-    font-size: 24px;
-    font-weight: bold;
-    color: #A88AA8;
-    text-transform: uppercase; }
-  #navbar .nav-link:hover {
-    transition: .3s ease;
-    opacity: 0.7; }
-
-.navbar-nav > li {
-  margin-left: 33px;
-  margin-right: 33px; }
-
-.intro {
-  padding: 64px 32px; }
-
-.intro-header {
-  padding-bottom: 1%; }
-
-.tracks {
-  background-color: #CCA8C1;
-  padding: 32px; }
-
-.track-header {
-  padding-bottom: 1%; }
-
-.rectangle {
-  display: block;
-  height: 295px;
-  width: 485px;
-  top: 10px;
-  padding-right: 30px; }
-
-.outer-intro-layer {
-  padding-top: 44px;
-  padding-left: 32px;
-  padding-bottom: 59px; }
 
 .registration {
   background-color: #EBB8BE;
