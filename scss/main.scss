@@ -9,6 +9,11 @@ $peach: #EBB8BE;
 $blue: #C3DDE2;
 $grey: #C4C4C4;
 $light-grey: #E5E5E5;
+//for the gradient
+$gradient-peach: #EDA29F;
+$gradient-lavender: #C4A3BE;
+$gradient-blue: #47BCBB;
+
 
 @mixin dinpro-text($size, $weight, $color){
     font-family: DINPro;
@@ -45,7 +50,7 @@ $light-grey: #E5E5E5;
 // **** hero section ****
 
 .hero {
-  background-image: url('../img/hero/horizon.svg');
+  background-image: linear-gradient($gradient-blue, $gradient-lavender 12%, $gradient-peach 37%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -161,10 +166,14 @@ $light-grey: #E5E5E5;
   @include fade-in(1.5s);
 }
 
-.hero-wave {
+.hero-horizon {
   width: 100vw;
+  #horizon {
+    margin-top: 33vw;
+    position: absolute;
+  }
   #moving-wave {
-    margin-top: 49vw;
+    margin-top: 48vw;
     position: absolute;
   }
   #static-wave {

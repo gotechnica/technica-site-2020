@@ -10,7 +10,7 @@
   margin-top: 3%; }
 
 .hero {
-  background-image: url("../img/hero/horizon.svg");
+  background-image: linear-gradient(#47BCBB, #C4A3BE 12%, #EDA29F 37%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -109,12 +109,15 @@
   animation: wait 1.5s, fade-in 800ms 1.5s;
   animation-duration: 2s; }
 
-.hero-wave {
+.hero-horizon {
   width: 100vw; }
-  .hero-wave #moving-wave {
-    margin-top: 49vw;
+  .hero-horizon #horizon {
+    margin-top: 33vw;
     position: absolute; }
-  .hero-wave #static-wave {
+  .hero-horizon #moving-wave {
+    margin-top: 48vw;
+    position: absolute; }
+  .hero-horizon #static-wave {
     margin-top: 65vw;
     position: absolute; }
 
@@ -173,7 +176,7 @@
   display: inline-block; }
 
 .research-circle {
-  background-color: #EA668E;
+  background-color: #FF6B98;
   width: 183px;
   height: 183px;
   border-radius: 50%;
