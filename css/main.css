@@ -19,9 +19,6 @@
   overflow: hidden;
   position: relative; }
 
-.hero-wave {
-  margin-top: 19vw; }
-
 #birds > img {
   padding-top: 7%; }
 
@@ -112,33 +109,14 @@
   animation: wait 1.5s, fade-in 800ms 1.5s;
   animation-duration: 2s; }
 
-.beginner-circle {
-  background-color: #82ECEC;
-  width: 183px;
-  height: 183px;
-  border-radius: 50%;
-  display: inline-block; }
-
-.general-circle {
-  background-color: #A88AA8;
-  width: 183px;
-  height: 183px;
-  border-radius: 50%;
-  display: inline-block; }
-
-.research-circle {
-  background-color: #FF6B98;
-  width: 183px;
-  height: 183px;
-  border-radius: 50%;
-  display: inline-block; }
-
-.beginner, .general, .research {
-  border: 3px solid #CCA8C1;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 5px;
-  box-sizing: border-box;
-  padding: 10px; }
+.hero-wave {
+  width: 100vw; }
+  .hero-wave #moving-wave {
+    margin-top: 49vw;
+    position: absolute; }
+  .hero-wave #static-wave {
+    margin-top: 65vw;
+    position: absolute; }
 
 #navbar {
   background: #FFFFFF;
@@ -160,7 +138,15 @@
   margin-right: 33px; }
 
 .intro {
-  padding: 64px 32px; }
+  margin-top: 30%;
+  padding: 3%;
+  position: relative;
+  z-index: 3; }
+
+.intro-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  padding: 3%; }
 
 .intro-header {
   padding-bottom: 1%; }
@@ -172,17 +158,33 @@
 .track-header {
   padding-bottom: 1%; }
 
-.rectangle {
-  display: block;
-  height: 295px;
-  width: 485px;
-  top: 10px;
-  padding-right: 30px; }
+.beginner-circle {
+  background-color: #82ECEC;
+  width: 183px;
+  height: 183px;
+  border-radius: 50%;
+  display: inline-block; }
 
-.outer-intro-layer {
-  padding-top: 44px;
-  padding-left: 32px;
-  padding-bottom: 59px; }
+.general-circle {
+  background-color: #A88AA8;
+  width: 183px;
+  height: 183px;
+  border-radius: 50%;
+  display: inline-block; }
+
+.research-circle {
+  background-color: #EA668E;
+  width: 183px;
+  height: 183px;
+  border-radius: 50%;
+  display: inline-block; }
+
+.beginner, .general, .research {
+  border: 3px solid #CCA8C1;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px; }
 
 .registration {
   background-color: #EBB8BE;
