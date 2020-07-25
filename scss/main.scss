@@ -1,7 +1,7 @@
 /*@use 'vars';*/
 //temporary until resolve _vars.scss issue
 $cyan: #82ECEC;
-$pink: #EA668E;
+$pink: #FF6B98;
 $lavender: #A88AA8;
 
 $light-lavender: #CCA8C1;
@@ -315,15 +315,22 @@ $light-grey: #E5E5E5;
 }
 
 //contact us circles
+%contact-circle {
+  padding: 8px;
+  margin: 0px 10px;
+}
 .blue-circle {
+  @extend %contact-circle;
   @include circle($cyan, 51px);
 }
 
 .purple-circle {
+  @extend %contact-circle;
   @include circle($lavender, 51px);
 }
 
 .pink-circle {
+  @extend %contact-circle;
   @include circle($pink, 51px);
 }
 
