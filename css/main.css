@@ -14,7 +14,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 120vw; }
+  height: 120vw;
+  max-width: 100vw;
+  overflow: hidden;
+  position: relative; }
 
 .hero-wave {
   margin-top: 19vw; }
@@ -46,14 +49,14 @@
 #cloud2 {
   width: 15%;
   height: 15%;
-  margin-top: 18%;
+  margin-top: 15%;
   animation-delay: -60s; }
 
 #cloud3 {
   width: 35%;
   height: 35%;
-  margin-top: 20%;
-  animation-delay: -30s; }
+  margin-top: 10%;
+  animation-delay: -35s; }
 
 #cloud4 {
   width: 15%;
@@ -62,26 +65,24 @@
   animation-delay: -35s; }
 
 #cloud5 {
-  width: 25%;
-  height: 25%;
-  margin-top: 20%;
-  animation-delay: -5s; }
+  width: 22%;
+  height: 22%;
+  margin-top: 15%;
+  animation-delay: -15s; }
 
 #cloud6 {
   width: 10%;
   height: 10%;
   margin-top: 15%;
-  animation-delay: 0s; }
+  animation-delay: -5s; }
 
 #cloud7 {
-  width: 40%;
-  height: 40%;
-  animation-delay: -85s; }
+  animation-delay: -80s; }
 
 #cloud8 {
   width: 20%;
   height: 20%;
-  margin-top: 30%;
+  margin-top: 22%;
   animation-delay: -70s; }
 
 @keyframes wait {
@@ -104,6 +105,8 @@
   animation-duration: 2s; }
 
 .register-btn {
+  position: relative;
+  z-index: 1;
   border-radius: 20px;
   padding: 3px 35px;
   animation: wait 1.5s, fade-in 800ms 1.5s;
