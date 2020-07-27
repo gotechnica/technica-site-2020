@@ -191,7 +191,7 @@
 
 .registration {
   background-color: #EBB8BE;
-  padding: 2%; }
+  padding: 32px; }
 
 .hacker, .mentor, .volunteer {
   border: 3px solid #A88AA8;
@@ -199,11 +199,26 @@
   border-radius: 5px;
   box-sizing: border-box;
   padding: 10px;
-  text-align: center;
-  padding: 5%;
-  padding-bottom: 3%;
-  width: 100%;
-  height: 75%; }
+  text-align: left;
+  width: 90%;
+  height: 75%;
+  padding: 4%;
+  margin-top: 3%;
+  margin-bottom: 15%; }
+
+.hacker-illustration, .mentor-illustration, .volunteer-illustration {
+  border: 1px solid #000; }
+
+@media only screen and (max-width: 575px) {
+  .registration {
+    padding: 0px; }
+  .hacker, .mentor, .volunteer {
+    text-align: center;
+    width: 100%;
+    padding: 3%;
+    margin-bottom: 15%; }
+  .btn {
+    margin-bottom: 7%; } }
 
 .faq {
   background-color: #C3DDE2;
