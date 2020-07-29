@@ -180,45 +180,122 @@ $gradient-blue: #47BCBB;
   position: absolute;
 }
 
-#moving-wave {
-  margin-top: 49vw;
-  position: absolute;
+// **** navbar ****
+
+#navbar {
+  background-color: none;
+  transition: background-color 200ms linear;
+  margin-top: -60vw;
+  display: flex;
+  padding-top: 0.01rem;
+  padding-bottom: 0.01rem;
+  .nav-link {
+    @include dinpro-text(24px,bold,white);
+    transition: color 200ms linear;
+    text-transform: uppercase;
+  }
+  .nav-link:hover {
+    transition: .3s ease;
+    opacity: 0.7;
+  }
 }
 
-#static-wave {
-  margin-top: 66vw;
-  position: absolute;
+.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+  .nav-link {
+    color: $lavender !important;
+    transition: color 200ms linear;
+  }
 }
 
+.navbar-nav > li{
+  margin-left: 33px;
+  margin-right: 33px;
+}
+
+// **** intro section ****
+
+.intro {
+  #moving-wave {
+    margin-top: -23vw;
+    position: absolute;
+  }
+
+  #static-wave {
+    margin-top: -7vw;
+    position: absolute;
+  }
+
+  #intro-vid {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.intro-container {
+  margin-top: 100px;
+  position: relative;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  padding: 3%;
+}
+
+.intro-header {
+  padding-bottom: 1%;
+}
 
 @media only screen and (max-width: 1199px) {
   #horizon {
     margin-top: 38vw;
   }
-  #moving-wave {
-    margin-top: 53vw;
+
+  #navbar {
+    margin-top: -55vw;
   }
-  #static-wave {
-    margin-top: 67vw;
+
+  .intro {
+    #moving-wave {
+      margin-top: -25vw;
+    }
+    #static-wave {
+      margin-top: -10vw;
+    }
   }
 }
 
 @media only screen and (max-width: 991px) {
+  .hero {
+    height: 133vw;
+  }
+
   #horizon {
     margin-top: 47vw;
   }
-  #moving-wave {
-    margin-top: 62vw;
+
+  #navbar {
+    margin-top: -61vw;
   }
-  #static-wave {
-    margin-top: 76vw;
+
+  .intro {
+    #moving-wave {
+      margin-top: -26vw;
+    }
+    #static-wave {
+      margin-top: -10vw;
+    }
+    #intro-vid {
+      height: 300px;
+    }
   }
 }
 
 // change to mobile
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .hero {
-    background-image: linear-gradient($gradient-blue, $gradient-lavender 35%, $gradient-peach 80%);
+    height: 185vw;
+    background-image: linear-gradient($gradient-blue, $gradient-lavender 20%, $gradient-peach 60%);
   }
 
   .hero-information {
@@ -231,11 +308,21 @@ $gradient-blue: #47BCBB;
   #horizon {
     margin-top: 100vw;
   }
-  #moving-wave {
-    margin-top: 120vw;
+
+  #navbar {
+    margin-top: -59vw;
   }
-  #static-wave {
-    margin-top: 120vw;
+
+  .intro {
+    #moving-wave {
+      margin-top: -32vw;
+    }
+    #static-wave {
+      margin-top: -15vw;
+    }
+    #intro-vid {
+      height: 200px;
+    }
   }
 }
 
@@ -247,47 +334,6 @@ $gradient-blue: #47BCBB;
       margin-top: 150px;
     }
   }
-}
-
-// **** navbar ****
-
-#navbar {
-  background: #FFFFFF;
-  display: flex;
-  padding-top: 0.01rem;
-  padding-bottom: 0.01rem;
-  .nav-link {
-    @include dinpro-text(24px,bold,$lavender);
-    text-transform: uppercase;
-  }
-  .nav-link:hover {
-    transition: .3s ease;
-    opacity: 0.7;
-  }
-}
-
-.navbar-nav > li{
-  margin-left: 33px;
-  margin-right: 33px;
-}
-
-// **** intro section ****
-
-.intro {
-  margin-top: 30%;
-  padding: 3%;
-  position: relative;
-  z-index: 3;
-}
-
-.intro-container {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
-  padding: 3%;
-}
-
-.intro-header {
-  padding-bottom: 1%;
 }
 
 // **** tracks section ****
