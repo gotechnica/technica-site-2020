@@ -109,8 +109,34 @@
     </script>
   </head>
   <body>
+    <div class="hero">
+      <div class="hero-horizon">
+        <img id="horizon" src="./img/hero/horizon_no_sky.svg">
+      </div>
+      <div class="container">
+        <!-- clouds -->
+        <img id="cloud1" src="./img/hero/cloud1.svg">
+        <img id="cloud2" src="./img/hero/cloud2.svg">
+        <img id="cloud3" src="./img/hero/cloud3.svg">
+        <img id="cloud4" src="./img/hero/cloud4.svg">
+        <img id="cloud5" src="./img/hero/cloud5.svg">
+        <img id="cloud6" src="./img/hero/cloud6.svg">
+        <img id="cloud7" src="./img/hero/cloud7.svg">
+        <img id="cloud8" src="./img/hero/cloud8.svg">
+        <!-- birds -->
+        <div id="birds">
+          <img data-depth="0.4" src="./img/hero/birds.svg">
+        </div>
+        <div class="hero-information">
+          <img id="hero-logo" src="img/technica-logo-white.svg">
+          <p><b>Oct 24-25, 2020</b> ⊹ Virtual Environment</p>
+        </div>
+        <button class="register-btn btn">Register</button>
+      </div>
+    </div>
+
     <!-- navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light sticky-top">
+    <nav id="navbar" class="navbar navbar-expand-sm navbar-light sticky-top">
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
      <span class="navbar-toggler-icon"></span>
     </button>
@@ -128,57 +154,30 @@
          <li class="nav-item">
            <a class="nav-link" href="#faq">FAQ</a>
          </li>
-         <li class="nav-item">
+         <!-- <li class="nav-item">
            <a class="nav-link" href="#sponsors">Sponsors</a>
-         </li>
+         </li> -->
        </ul>
      </div>
    </nav>
 
-    <div class="hero">
-      <div class="hero-horizon">
-        <img id="horizon" src="./img/hero/horizon_no_sky.svg">
-        <img id="moving-wave" src="./img/hero/moving_wave.svg">
-        <img id="static-wave" src="./img/hero/static_wave.svg">
-      </div>
-      <div class="container">
-        <!-- clouds -->
-        <img id="cloud1" src="./img/hero/cloud1.svg">
-        <img id="cloud2" src="./img/hero/cloud2.svg">
-        <img id="cloud3" src="./img/hero/cloud3.svg">
-        <img id="cloud4" src="./img/hero/cloud4.svg">
-        <img id="cloud5" src="./img/hero/cloud5.svg">
-        <img id="cloud6" src="./img/hero/cloud6.svg">
-        <img id="cloud7" src="./img/hero/cloud7.svg">
-        <img id="cloud8" src="./img/hero/cloud8.svg">
-        <!-- birds -->
-        <div id="birds">
-          <img data-depth="0.4" src="./img/hero/birds.svg">
+    <div class="intro" id="about">
+      <img id="moving-wave" src="./img/hero/moving_wave.svg">
+      <img id="static-wave" src="./img/hero/static_wave.svg">
+      <div class="container intro-container">
+        <div class="intro-header">
+          <h1>What is Technica?</h1>
         </div>
-        <div class="hero-information">
-          <img src="img/technica-logo-white.svg" width="450" height="100">
-          <h2>Oct 24-25, 2020 ⊹ Virtual Environment</h2>
-        </div>
-        <button class="register-btn btn">Register</button>
-      </div>
-      <div class="intro" id="about">
-        <div class="container intro-container">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="outer-intro-layer">
-                  <div class="intro-header">
-                    <h1>What is Technica?</h1>
-                  </div>
-                  <p>Technica is the world’s largest all-women and nonbinary hackathon, hosted annually at the University of Maryland.</p>
-                  <p>Over the duration of 24 hours, women and non-binary people are immersed in tech culture and encouraged to exercise their imagination to create interesting and innovative hacks.</p>
-                  <p>This year’s theme is “Expand Your Horizons”. At Technica, we want to see women and non-binary folks thrive and go beyond society’s expectations for them. We encourage all attendees to take your tech journey beyond Technica. Don’t stop at our hackathon, attend others and keep creating. Technica is meant to catapult you further in your career, and help you to continue achieving. As you advance in your career, go beyond your duties at work, become a and help to advance the next generation of women in tech. Whatever your goals and aspirations, remember you can always #Expand #Your Horizon</p>
-                </div>
-              </div>
-              <div class="col-md-6" style="padding-top: 64px; object-fit:contain;">
-                  <iframe width="485" height="295" src="https://www.youtube.com/embed/Rcoc0Yo37Nk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <p>Technica is the world’s largest all-women and nonbinary hackathon, hosted annually at the University of Maryland.</p>
+              <p>Over the duration of 24 hours, women and non-binary people are immersed in tech culture and encouraged to exercise their imagination to create interesting and innovative hacks.</p>
+              <p>This year’s theme is “Expand Your Horizons”. At Technica, we want to see women and non-binary folks thrive and go beyond society’s expectations for them. We encourage all attendees to take your tech journey beyond Technica. Don’t stop at our hackathon, attend others and keep creating. Technica is meant to catapult you further in your career, and help you to continue achieving. As you advance in your career, go beyond your duties at work, become a and help to advance the next generation of women in tech. Whatever your goals and aspirations, remember you can always #Expand #Your Horizon</p>
             </div>
-        </div>
+            <div class="col-lg-6">
+                <iframe id="intro-vid" src="https://www.youtube.com/embed/Rcoc0Yo37Nk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
       </div>
     </div>
 
@@ -238,7 +237,7 @@
                 <button class="btn">Join As A Hacker</button>
               </div>
             </div>
-          </div> 
+          </div>
           <div class="row">
             <div class="col-sm order-sm-4">
               <div class="mentor-illustration">
@@ -360,7 +359,7 @@
       </div>
     </div>
 
-    <div class="sponsors" id="sponsors">
+    <!-- <div class="sponsors" id="sponsors">
       <div class="container" style="padding: 3%; padding-bottom: 10%">
           <div class="sponsors-header">
             <h1>Sponsors</h1>
@@ -376,7 +375,7 @@
             </div>
           </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="contact">
       <div class="container" style="padding: 1%;">
@@ -464,6 +463,18 @@
             }
         });
       }
+
+    //changing navbar color
+    $(function () {
+      $(document).scroll(function () {
+        var $nav = $(".navbar");
+        if($(window).scrollTop() >= $("#navbar").offset().top) {
+          $nav.addClass('scrolled');
+        } else {
+          $nav.removeClass('scrolled');
+        }
+      });
+    });
     </script>
   </body>
 </html>
