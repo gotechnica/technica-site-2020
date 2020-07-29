@@ -154,8 +154,13 @@ $gradient-blue: #47BCBB;
 .hero-information {
   position: relative; //allows us to set z index so it appears on top of illustrations
   z-index: 1;
-  color: white;
   @include fade-in(600ms);
+  @include dinpro-text(30px, normal, white)
+  #hero-logo {
+    width: 600px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
 }
 
 .register-btn {
@@ -168,17 +173,79 @@ $gradient-blue: #47BCBB;
 
 .hero-horizon {
   width: 100vw;
+}
+
+#horizon {
+  margin-top: 34vw;
+  position: absolute;
+}
+
+#moving-wave {
+  margin-top: 49vw;
+  position: absolute;
+}
+
+#static-wave {
+  margin-top: 66vw;
+  position: absolute;
+}
+
+
+@media only screen and (max-width: 1199px) {
   #horizon {
-    margin-top: 33vw;
-    position: absolute;
+    margin-top: 38vw;
   }
   #moving-wave {
-    margin-top: 48vw;
-    position: absolute;
+    margin-top: 53vw;
   }
   #static-wave {
-    margin-top: 65vw;
-    position: absolute;
+    margin-top: 67vw;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #horizon {
+    margin-top: 47vw;
+  }
+  #moving-wave {
+    margin-top: 62vw;
+  }
+  #static-wave {
+    margin-top: 76vw;
+  }
+}
+
+// change to mobile
+@media only screen and (max-width: 768px) {
+  .hero {
+    background-image: linear-gradient($gradient-blue, $gradient-lavender 35%, $gradient-peach 80%);
+  }
+
+  .hero-information {
+    #hero-logo {
+      margin-top: 120px;
+      width: 500px;
+    }
+  }
+
+  #horizon {
+    margin-top: 100vw;
+  }
+  #moving-wave {
+    margin-top: 120vw;
+  }
+  #static-wave {
+    margin-top: 120vw;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .hero-information {
+    font-size: 5vw;
+    #hero-logo {
+      width: 80vw;
+      margin-top: 150px;
+    }
   }
 }
 
@@ -271,6 +338,7 @@ $gradient-blue: #47BCBB;
     border: 1px solid #000;
 }
 
+//mobile
 @media only screen and (max-width: 575px) {
     .registration {
         padding: 0px;
