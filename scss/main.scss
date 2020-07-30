@@ -28,6 +28,10 @@ $gradient-blue: #47BCBB;
     border-radius: 20px;
     text-transform: uppercase;
     margin-top: 3%;
+
+    @media (max-width: 991px) {
+      font-size: 17px;
+    }
 }
 
 // Track Circle Class
@@ -178,6 +182,18 @@ $gradient-blue: #47BCBB;
 #horizon {
   margin-top: 34vw;
   position: absolute;
+
+  @media (max-width: 1199px) {
+    margin-top: 400px;
+  }
+
+  @media (max-width: 991px) {
+    margin-top: 500px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 700px;
+  }
 }
 
 // **** navbar ****
@@ -197,6 +213,18 @@ $gradient-blue: #47BCBB;
   .nav-link:hover {
     transition: .3s ease;
     opacity: 0.7;
+  }
+
+  @media (max-width: 1199px) {
+    margin-top: -59vw;
+  }
+
+  @media (max-width: 991px) {
+    margin-top: -56vw;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: -66vw;
   }
 }
 
@@ -218,7 +246,7 @@ $gradient-blue: #47BCBB;
 
 .intro {
   #moving-wave {
-    margin-top: -23vw;
+    margin-top: -300px;
     position: absolute;
   }
 
@@ -247,14 +275,6 @@ $gradient-blue: #47BCBB;
 }
 
 @media only screen and (max-width: 1199px) {
-  #horizon {
-    margin-top: 38vw;
-  }
-
-  #navbar {
-    margin-top: -55vw;
-  }
-
   .intro {
     #moving-wave {
       margin-top: -25vw;
@@ -268,14 +288,6 @@ $gradient-blue: #47BCBB;
 @media only screen and (max-width: 991px) {
   .hero {
     height: 133vw;
-  }
-
-  #horizon {
-    margin-top: 47vw;
-  }
-
-  #navbar {
-    margin-top: -61vw;
   }
 
   .intro {
@@ -303,14 +315,6 @@ $gradient-blue: #47BCBB;
       margin-top: 120px;
       width: 500px;
     }
-  }
-
-  #horizon {
-    margin-top: 100vw;
-  }
-
-  #navbar {
-    margin-top: -59vw;
   }
 
   .intro {
@@ -374,10 +378,12 @@ $gradient-blue: #47BCBB;
     @include box($lavender);
     text-align: left;
     width: 90%;
-    height: 75%;
     padding: 4%;
     margin-top: 3%;
     margin-bottom: 15%;
+    .btn {
+      margin: 3% 0%;
+    }
 }
 
 .hacker-illustration, .mentor-illustration, .volunteer-illustration {
@@ -385,7 +391,7 @@ $gradient-blue: #47BCBB;
 }
 
 //mobile
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 767px) {
     .registration {
         padding: 0px;
     }
@@ -393,10 +399,10 @@ $gradient-blue: #47BCBB;
         text-align: center;
         width: 100%;
         padding: 3%;
-        margin-bottom: 15%;
-    }
-    .btn{
-        margin-bottom: 7%;
+        margin-bottom: 3%;
+        .btn {
+          margin: 0;
+        }
     }
 }
 

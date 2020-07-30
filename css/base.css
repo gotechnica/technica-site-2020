@@ -19,8 +19,15 @@ body {
 h1 {
   font-family: DINPro;
   font-weight: bold;
-  font-size: 64px;
+  font-size: 60px;
   line-height: 82px; }
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 50px;
+      text-align: center; } }
+  @media (max-width: 575px) {
+    h1 {
+      font-size: 40px; } }
 
 h2 {
   font-family: DINPro;
@@ -38,3 +45,6 @@ h3 {
   font-size: 36px;
   line-height: 46px;
   text-transform: uppercase; }
+
+h4 {
+  font-size: 1.25rem; }
