@@ -365,6 +365,11 @@ $gradient-blue: #47BCBB;
 
 .beginner, .general, .research {
   @include box($light-lavender);
+  border-radius: 8px;
+}
+
+.track-flick-item {
+  width: 60%;
 }
 
 // **** registration section ****

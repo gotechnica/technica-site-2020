@@ -40,6 +40,7 @@
     <link rel="shortcut icon" href="./favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/main.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -47,6 +48,7 @@
     <script src="https://rawgithub.com/tobia/Pause/master/jquery.pause.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -188,30 +190,47 @@
           <h1>Tracks</h1>
         </div>
         <!-- Body -->
-        <div class="text-center">
+        <div class="text-center d-none d-lg-block">
           <div class="row">
-            <div class="col-sm">
+            <div class="col-lg">
               <div class="beginner">
                 <div class="beginner-circle"></div>
                 <h3>Beginner</h3>
                 <p>Calling all undergraduates interested in research! Come explore the fields of research within computer science. You’ll get to work hands-on with experienced faculty researchers and other students to use technology to address social issues!</p>
               </div>
             </div>
-            <div class="col-sm">
+            <div class="col-lg">
               <div class="general">
                 <div class="general-circle"></div>
                 <h3>General</h3>
                 <p>Calling all undergraduates interested in research! Come explore the fields of research within computer science. You’ll get to work hands-on with experienced faculty researchers and other students to use technology to address social issues!</p>
               </div>
             </div>
-            <div class="col-sm">
+            <div class="col-lg">
               <div class="research">
                 <div class="research-circle"></div>
                 <h3>Research</h3>
                 <p>Calling all undergraduates interested in research! Come explore the fields of research within computer science. You’ll get to work hands-on with experienced faculty researchers and other students to use technology to address social issues!</p>
-            </div>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="d-block d-lg-none text-center gallery">
+        <div class="beginner track-flick-item">
+          <div class="beginner-circle"></div>
+          <h3>Beginner</h3>
+          <p>Calling all undergraduates interested in research! Come explore the fields of research within computer science. You’ll get to work hands-on with experienced faculty researchers and other students to use technology to address social issues!</p>
+        </div>
+        <div class="general track-flick-item">
+          <div class="general-circle"></div>
+          <h3>General</h3>
+          <p>Calling all undergraduates interested in research! Come explore the fields of research within computer science. You’ll get to work hands-on with experienced faculty researchers and other students to use technology to address social issues!</p>
+        </div>
+        <div class="research track-flick-item">
+          <div class="research-circle"></div>
+          <h3>Research</h3>
+          <p>Calling all undergraduates interested in research! Come explore the fields of research within computer science. You’ll get to work hands-on with experienced faculty researchers and other students to use technology to address social issues!</p>
         </div>
       </div>
     </div>
@@ -485,6 +504,64 @@
         }, 1000);
         e.preventDefault();
       });
+    });
+
+    //track carousel
+    var flky = new Flickity( '.gallery', {
+      // options, defaults listed
+      accessibility: true,
+      // enable keyboard navigation, pressing left & right keys
+      adaptiveHeight: false,
+      // set carousel height to the selected slide
+      autoPlay: false,
+      cellAlign: 'center',
+      // alignment of cells, 'center', 'left', or 'right'
+      // or a decimal 0-1, 0 is beginning (left) of container, 1 is end (right)
+      cellSelector: undefined,
+      // specify selector for cell elements
+      contain: false,
+      // will contain cells to container
+      // so no excess scroll at beginning or end
+      // has no effect if wrapAround is enabled
+      draggable: '>1',
+      // enables dragging & flicking
+      // if at least 2 cells
+      dragThreshold: 3,
+      // number of pixels a user must scroll horizontally to start dragging
+      // increase to allow more room for vertical scroll for touch devices
+      freeScroll: false,
+      // enables content to be freely scrolled and flicked
+      // without aligning cells
+      friction: 0.2,
+      // smaller number = easier to flick farther
+      groupCells: false,
+      // group cells together in slides
+      initialIndex: 0,
+      // zero-based index of the initial selected cell
+      lazyLoad: true,
+      // enable lazy-loading images
+      // set img data-flickity-lazyload="src.jpg"
+      // set to number to load images adjacent cells
+      percentPosition: true,
+      // sets positioning in percent values, rather than pixels
+      // Enable if items have percent widths
+      // Disable if items have pixel widths, like images
+      prevNextButtons: true,
+      // creates and enables buttons to click to previous & next cells
+      pageDots: false,
+      // create and enable page dots
+      resize: true,
+      // listens to window resize events to adjust size & positions
+      rightToLeft: false,
+      // enables right-to-left layout
+      setGallerySize: true,
+      // sets the height of gallery
+      // disable if gallery already has height set with CSS
+      watchCSS: false,
+      // watches the content of :after of the element
+      // activates if #element:after { content: 'flickity' }
+      wrapAround: true
+      // at end of cells, wraps-around to first for infinite scrolling
     });
     </script>
   </body>
