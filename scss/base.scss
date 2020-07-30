@@ -23,8 +23,17 @@ body {
 h1 {
   font-family: DINPro;
   font-weight: bold;
-  font-size: 64px;
+  font-size: 60px;
   line-height: 82px;
+
+  @media (max-width: 767px) {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 40px;
+  }
 }
 
 h2 {
@@ -44,4 +53,26 @@ h3 {
   font-size: 36px;
   line-height: 46px;
   text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+html {
+  // Extra small devices (portrait phones, less than 576px): Optimize for mobile
+  @media (max-width: 575px) {
+  }
+  // Small devices (landscape phones, 576px and up): Change to mobile layout
+  @media (min-width: 576px) and (max-width: 767px) {
+  }
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) and (max-width: 991px) {
+  }
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) and (max-width: 1199px) {
+  }
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+  }
 }
