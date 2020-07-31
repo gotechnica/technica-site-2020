@@ -356,17 +356,21 @@ $gradient-blue: #47BCBB;
   padding-bottom: 1%;
 }
 
-.beginner-circle {
-  @include circle($cyan, 183px);
+.track-image {
+  margin: 2% 5%;
 }
 
-.general-circle {
-  @include circle($lavender, 183px);
-}
-
-.research-circle {
-  @include circle($pink, 183px);
-}
+// .beginner-circle {
+//   @include circle($cyan, 183px);
+// }
+//
+// .general-circle {
+//   @include circle($lavender, 183px);
+// }
+//
+// .research-circle {
+//   @include circle($pink, 183px);
+// }
 
 .beginner, .general, .research {
   @include box($light-lavender);
@@ -387,13 +391,18 @@ $gradient-blue: #47BCBB;
 .hacker, .mentor, .volunteer {
     @include box($lavender);
     text-align: left;
-    width: 90%;
     padding: 4%;
-    margin-top: 3%;
-    margin-bottom: 15%;
     .btn {
       margin: 3% 0%;
     }
+}
+
+.registration-image {
+  height: 400px;
+  @media (max-width: 575px) {
+    height: auto;
+    width: 100%;
+  }
 }
 
 .hacker-illustration, .mentor-illustration, .volunteer-illustration {

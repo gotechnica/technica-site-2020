@@ -244,26 +244,8 @@
 .track-header {
   padding-bottom: 1%; }
 
-.beginner-circle {
-  background-color: #82ECEC;
-  width: 183px;
-  height: 183px;
-  border-radius: 50%;
-  display: inline-block; }
-
-.general-circle {
-  background-color: #A88AA8;
-  width: 183px;
-  height: 183px;
-  border-radius: 50%;
-  display: inline-block; }
-
-.research-circle {
-  background-color: #FF6B98;
-  width: 183px;
-  height: 183px;
-  border-radius: 50%;
-  display: inline-block; }
+.track-image {
+  margin: 2% 5%; }
 
 .beginner, .general, .research {
   border: 3px solid #CCA8C1;
@@ -287,12 +269,16 @@
   box-sizing: border-box;
   padding: 10px;
   text-align: left;
-  width: 90%;
-  padding: 4%;
-  margin-top: 3%;
-  margin-bottom: 15%; }
+  padding: 4%; }
   .hacker .btn, .mentor .btn, .volunteer .btn {
     margin: 3% 0%; }
+
+.registration-image {
+  height: 400px; }
+  @media (max-width: 575px) {
+    .registration-image {
+      height: auto;
+      width: 100%; } }
 
 .hacker-illustration, .mentor-illustration, .volunteer-illustration {
   border: 1px solid #000; }
