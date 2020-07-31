@@ -34,6 +34,11 @@ $gradient-blue: #47BCBB;
     }
 }
 
+.btn:hover {
+  opacity: 0.8;
+  transition: .5s ease;
+}
+
 // Track Circle Class
 @mixin circle($color, $size) {
   background-color: $color;
@@ -212,7 +217,7 @@ $gradient-blue: #47BCBB;
   }
   .nav-link:hover {
     transition: .3s ease;
-    opacity: 0.7;
+    opacity: 0.8;
   }
 
   @media (max-width: 1199px) {
@@ -466,6 +471,12 @@ $gradient-blue: #47BCBB;
 
 .contact-content a:link {
     color: #000;
+}
+
+.social-buttons > a:hover {
+  text-decoration: none;
+  transition: ease 0.3s;
+  opacity: 0.8;
 }
 
 //contact us circles
