@@ -48,4 +48,8 @@ h3 {
       font-size: 30px; } }
 
 h4 {
-  font-size: 1.25rem; }
+  font-family: DINPro;
+  font-size: 1.3rem; }
+  @media (max-width: 575px) {
+    h4 {
+      font-size: 1.15rem; } }

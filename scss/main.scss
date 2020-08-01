@@ -24,15 +24,12 @@ $gradient-blue: #47BCBB;
 }
 
 .btn {
-    @include dinpro-text(150%, bold, #fff);
+    @include dinpro-text(140%, bold, #fff);
     background-color: $lavender;
-    border-radius: 20px;
+    border-radius: 50px;
     text-transform: uppercase;
     margin-top: 3%;
-
-    @media (max-width: 991px) {
-      font-size: 17px;
-    }
+    padding: 3px 25px;
 }
 
 .btn:hover {
@@ -43,7 +40,7 @@ $gradient-blue: #47BCBB;
 .section {
   padding: 3%;
   @media (max-width: 767px) {
-    padding: 30px 0%;
+    padding: 30px 0px;
   }
 }
 
@@ -51,19 +48,11 @@ $gradient-blue: #47BCBB;
   padding-bottom: 1%;
 }
 
-// Track Circle Class
-@mixin circle($color, $size) {
-  background-color: $color;
-  width: $size;
-  height: $size;
-  border-radius: 50%;
-  display: inline-block;
-}
 // Track Box Class
 @mixin box($color) {
   border: 3px solid $color;
   background: rgba(255, 255, 255, 0.85);
-  border-radius: 5px;
+  border-radius: 7px;
   box-sizing: border-box;
   padding: 10px;
 }
@@ -176,13 +165,14 @@ $gradient-blue: #47BCBB;
     margin-top: 30px;
     margin-bottom: 15px;
   }
+  // @media (max-width: 991px) {
+  //   margin-top: 150px;
+  // }
 }
 
 .register-btn {
   position: relative;
   z-index: 1;
-  border-radius: 20px;
-  padding: 3px 35px;
   @include fade-in(1.5s);
 }
 
@@ -208,13 +198,24 @@ $gradient-blue: #47BCBB;
   }
 }
 
+@media only screen and (max-width: 991px) {
+  .hero-information {
+    #hero-logo {
+      margin-top: 150px;
+    }
+  }
+}
+
 // change to mobile
 @media only screen and (max-width: 767px) {
   .hero-information {
     #hero-logo {
-      margin-top: 120px;
+      margin-top: 200px;
       width: 500px;
     }
+  }
+  .register-btn {
+    font-size: 20px !important;
   }
 }
 
@@ -223,7 +224,6 @@ $gradient-blue: #47BCBB;
     font-size: 5vw;
     #hero-logo {
       width: 80vw;
-      margin-top: 150px;
     }
   }
 }
@@ -287,13 +287,6 @@ $gradient-blue: #47BCBB;
 }
 
 // **** intro section ****
-// #moving-wave {
-//   margin-top: -7vw;
-//   position: absolute;
-//   min-height: 75vw;
-//   height: 100vw;
-//   object-fit: cover;
-// }
 
 #moving-wave {
   background-image: url("../img/hero/moving_wave.svg");
@@ -304,10 +297,6 @@ $gradient-blue: #47BCBB;
   margin-top: -65em;
   position: absolute;
   z-index: 2;
-  // @media (min-width: 1800px) {
-  //   height: 1500px;
-  //   margin-top: -54em;
-  // }
 }
 
 #static-wave {
@@ -374,6 +363,10 @@ $gradient-blue: #47BCBB;
 
 .registration {
     background-color: $peach;
+    @include dinpro-text(1.25rem, normal, black)
+    @media (max-width: 575px) {
+      font-size: 1rem;
+    }
 }
 
 .hacker, .mentor, .volunteer {
@@ -397,11 +390,14 @@ $gradient-blue: #47BCBB;
     border: 1px solid #000;
 }
 
+@media only screen and (max-width: 991px) {
+  .registration .btn {
+    font-size: 17px;
+  }
+}
+
 //mobile
 @media only screen and (max-width: 767px) {
-    // .registration {
-    //     padding: 0px;
-    // }
     .hacker, .mentor, .volunteer {
         text-align: center;
         width: 100%;
@@ -417,11 +413,16 @@ $gradient-blue: #47BCBB;
 
 .faq {
   background-color: $blue;
+  @media (max-width: 575px) {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
 }
 
 .faq-container {
   background-color: white;
   padding: 3%;
+  border-radius: 8px;
 }
 
 .accordion {
@@ -433,6 +434,7 @@ $gradient-blue: #47BCBB;
     margin-bottom: 2%;
     border-bottom: 3px solid white;
     transition: ease all 0.3s;
+    cursor: pointer;
 }
 
 .accordion:hover, .accordion-active {
@@ -443,6 +445,7 @@ $gradient-blue: #47BCBB;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.1s ease-out;
+    @include dinpro-text(1.1rem, normal, black)
  }
 
  // **** sponsor section ****
@@ -460,13 +463,21 @@ $gradient-blue: #47BCBB;
 
 // **** footer section ****
 
-.contact{
+.contact {
     background-color: $light-grey;
     text-align: center;
 }
 
-.contact-content a:link {
-    color: #000;
+.contact-header {
+  @include dinpro-text(36px, bold, black)
+}
+
+.contact-content {
+  margin-bottom: 20px;
+}
+
+.contact-content a {
+  color: black;
 }
 
 .social-buttons > a:hover {
@@ -475,29 +486,53 @@ $gradient-blue: #47BCBB;
   opacity: 0.8;
 }
 
+// contact Circle Class
+@mixin circle($color, $size) {
+  background-color: $color;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 //contact us circles
 %contact-circle {
   padding: 8px;
   margin: 0px 10px;
+  @include circle($cyan, 50px);
+  @media (max-width: 575px) {
+    margin: 0px 5px;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+  }
 }
+
 .blue-circle {
   @extend %contact-circle;
-  @include circle($cyan, 51px);
+  background-color: $cyan;
 }
 
 .purple-circle {
   @extend %contact-circle;
-  @include circle($lavender, 51px);
+  background-color: $lavender;
 }
 
 .pink-circle {
   @extend %contact-circle;
-  @include circle($pink, 51px);
+  background-color: $pink;
 }
 
 .footer {
     background-color: $grey;
     text-align: center;
+    @media (max-width: 575px) {
+      font-size: 0.9rem;
+      padding-top: 1rem;
+    }
+    #footer-links {
+      margin-bottom: 5px;
+    }
 }
 
 .footer a:link, a:visited {

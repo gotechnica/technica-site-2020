@@ -1,16 +1,14 @@
 /*@use 'vars';*/
 .btn {
   font-family: DINPro;
-  font-size: 150%;
+  font-size: 140%;
   font-weight: bold;
   color: #fff;
   background-color: #A88AA8;
-  border-radius: 20px;
+  border-radius: 50px;
   text-transform: uppercase;
-  margin-top: 3%; }
-  @media (max-width: 991px) {
-    .btn {
-      font-size: 17px; } }
+  margin-top: 3%;
+  padding: 3px 25px; }
 
 .btn:hover {
   opacity: 0.8;
@@ -20,7 +18,7 @@
   padding: 3%; }
   @media (max-width: 767px) {
     .section {
-      padding: 30px 0%; } }
+      padding: 30px 0px; } }
 
 .header {
   padding-bottom: 1%; }
@@ -121,8 +119,6 @@
 .register-btn {
   position: relative;
   z-index: 1;
-  border-radius: 20px;
-  padding: 3px 35px;
   animation: wait 1.5s, fade-in 800ms 1.5s;
   animation-duration: 2s; }
 
@@ -144,17 +140,22 @@
       padding-top: 700px;
       background-image: linear-gradient(#47BCBB, #C4A3BE 25%, #EDA29F 70%); } }
 
+@media only screen and (max-width: 991px) {
+  .hero-information #hero-logo {
+    margin-top: 150px; } }
+
 @media only screen and (max-width: 767px) {
   .hero-information #hero-logo {
-    margin-top: 120px;
-    width: 500px; } }
+    margin-top: 200px;
+    width: 500px; }
+  .register-btn {
+    font-size: 20px !important; } }
 
 @media only screen and (max-width: 575px) {
   .hero-information {
     font-size: 5vw; }
     .hero-information #hero-logo {
-      width: 80vw;
-      margin-top: 150px; } }
+      width: 80vw; } }
 
 #navbar {
   background-color: none;
@@ -257,7 +258,7 @@
 .beginner, .general, .research {
   border: 3px solid #CCA8C1;
   background: rgba(255, 255, 255, 0.85);
-  border-radius: 5px;
+  border-radius: 7px;
   box-sizing: border-box;
   padding: 10px;
   border-radius: 8px; }
@@ -269,12 +270,19 @@
       width: 80%; } }
 
 .registration {
-  background-color: #EBB8BE; }
+  background-color: #EBB8BE;
+  font-family: DINPro;
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: black; }
+  @media (max-width: 575px) {
+    .registration {
+      font-size: 1rem; } }
 
 .hacker, .mentor, .volunteer {
   border: 3px solid #A88AA8;
   background: rgba(255, 255, 255, 0.85);
-  border-radius: 5px;
+  border-radius: 7px;
   box-sizing: border-box;
   padding: 10px;
   text-align: left;
@@ -292,6 +300,10 @@
 .hacker-illustration, .mentor-illustration, .volunteer-illustration {
   border: 1px solid #000; }
 
+@media only screen and (max-width: 991px) {
+  .registration .btn {
+    font-size: 17px; } }
+
 @media only screen and (max-width: 767px) {
   .hacker, .mentor, .volunteer {
     text-align: center;
@@ -303,10 +315,15 @@
 
 .faq {
   background-color: #C3DDE2; }
+  @media (max-width: 575px) {
+    .faq {
+      padding-left: 3%;
+      padding-right: 3%; } }
 
 .faq-container {
   background-color: white;
-  padding: 3%; }
+  padding: 3%;
+  border-radius: 8px; }
 
 .accordion {
   display: flex;
@@ -316,7 +333,8 @@
   padding-top: 2%;
   margin-bottom: 2%;
   border-bottom: 3px solid white;
-  transition: ease all 0.3s; }
+  transition: ease all 0.3s;
+  cursor: pointer; }
 
 .accordion:hover, .accordion-active {
   border-color: #A88AA8; }
@@ -324,7 +342,11 @@
 .panel {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.1s ease-out; }
+  transition: max-height 0.1s ease-out;
+  font-family: DINPro;
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: black; }
 
 .sponsors-list {
   overflow: hidden; }
@@ -339,8 +361,17 @@
   background-color: #E5E5E5;
   text-align: center; }
 
-.contact-content a:link {
-  color: #000; }
+.contact-header {
+  font-family: DINPro;
+  font-size: 36px;
+  font-weight: bold;
+  color: black; }
+
+.contact-content {
+  margin-bottom: 20px; }
+
+.contact-content a {
+  color: black; }
 
 .social-buttons > a:hover {
   text-decoration: none;
@@ -349,32 +380,37 @@
 
 .blue-circle, .purple-circle, .pink-circle {
   padding: 8px;
-  margin: 0px 10px; }
+  margin: 0px 10px;
+  background-color: #82ECEC;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-block; }
+  @media (max-width: 575px) {
+    .blue-circle, .purple-circle, .pink-circle {
+      margin: 0px 5px;
+      padding: 5px;
+      width: 40px;
+      height: 40px; } }
 
 .blue-circle {
-  background-color: #82ECEC;
-  width: 51px;
-  height: 51px;
-  border-radius: 50%;
-  display: inline-block; }
+  background-color: #82ECEC; }
 
 .purple-circle {
-  background-color: #A88AA8;
-  width: 51px;
-  height: 51px;
-  border-radius: 50%;
-  display: inline-block; }
+  background-color: #A88AA8; }
 
 .pink-circle {
-  background-color: #FF6B98;
-  width: 51px;
-  height: 51px;
-  border-radius: 50%;
-  display: inline-block; }
+  background-color: #FF6B98; }
 
 .footer {
   background-color: #C4C4C4;
   text-align: center; }
+  @media (max-width: 575px) {
+    .footer {
+      font-size: 0.9rem;
+      padding-top: 1rem; } }
+  .footer #footer-links {
+    margin-bottom: 5px; }
 
 .footer a:link, a:visited {
   color: #000; }
