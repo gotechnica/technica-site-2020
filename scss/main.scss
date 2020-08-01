@@ -167,10 +167,17 @@ $wave-blue: #628CB2;
   z-index: 2;
   @include fade-in(600ms);
   @include dinpro-text(30px, normal, white)
-  #hero-logo {
+  .hero-logo {
+      margin-top: 20px;
+      margin-bottom: 15px;
+  }
+  #theme-logo {
+    width: 250px;
+    display: block;
+    margin-bottom: 30px;
+  }
+  #technica-logo {
     width: 600px;
-    margin-top: 30px;
-    margin-bottom: 15px;
   }
 }
 
@@ -204,8 +211,8 @@ $wave-blue: #628CB2;
 
 @media only screen and (max-width: 991px) {
   .hero-information {
-    #hero-logo {
-      margin-top: 150px;
+    .hero-logo {
+      margin-top: 100px;
     }
   }
 }
@@ -213,9 +220,14 @@ $wave-blue: #628CB2;
 // change to mobile
 @media only screen and (max-width: 767px) {
   .hero-information {
-    #hero-logo {
+    .hero-logo {
       margin-top: 200px;
+    }
+    #technica-logo {
       width: 500px;
+    }
+    #theme-logo {
+      width: 200px;
     }
   }
   .register-btn {
@@ -226,8 +238,13 @@ $wave-blue: #628CB2;
 @media only screen and (max-width: 575px) {
   .hero-information {
     font-size: 5vw;
-    #hero-logo {
+    #technica-logo {
       width: 80vw;
+    }
+    #theme-logo {
+      width: 37vw;
+      min-width: 120px;
+      margin-bottom: 15px;
     }
   }
 }
@@ -237,7 +254,7 @@ $wave-blue: #628CB2;
 #navbar {
   background-color: none;
   transition: background-color 200ms linear;
-  margin-top: 28vw;
+  margin-top: 22vw;
   display: flex;
   padding-top: 0.01rem;
   padding-bottom: 0.01rem;
@@ -255,11 +272,11 @@ $wave-blue: #628CB2;
   }
 
   @media (max-width: 1199px) {
-    margin-top: 32vw;
+    margin-top: 23vw;
   }
 
   @media (max-width: 991px) {
-    margin-top: 30vw;
+    margin-top: 22.5vw;
   }
 
   @media (max-width: 767px) {
@@ -296,10 +313,10 @@ $wave-blue: #628CB2;
   position: relative;
   z-index: 0; //hides overflow wave
   @media (max-width: 767px) {
-    margin-top: 57vw;
+    margin-top: 45vw;
   }
   @media (max-width: 575px) {
-    margin-top: 375px;
+    margin-top: 310px;
   }
 }
 
