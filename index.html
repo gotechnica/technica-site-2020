@@ -111,10 +111,11 @@
     </script>
   </head>
   <body>
+    <div class="hero-horizon">
+      <img src="./img/hero/horizon_with_waves.svg">
+    </div>
+
     <div class="hero">
-      <div class="hero-horizon">
-        <img id="horizon" src="./img/hero/horizon_with_waves.svg">
-      </div>
       <div class="container">
         <!-- clouds -->
         <img id="cloud1" src="./img/hero/cloud1.svg">
@@ -138,7 +139,7 @@
     </div>
 
     <!-- navbar -->
-    <nav id="navbar" class="navbar navbar-expand-sm navbar-light sticky-top">
+    <nav id="navbar" class="navbar navbar-expand-sm navbar-light sticky-top d-sm-block d-none">
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
      <span class="navbar-toggler-icon"></span>
     </button>
@@ -163,13 +164,16 @@
      </div>
    </nav>
 
-    <div class="intro" id="about">
+   <div id="moving-wave">
+     <!-- <img id="static-wave" src="./img/hero/static_wave.svg"> -->
+   </div>
+
+   <div class="horizon-wave">
       <!-- <img id="moving-wave" src="./img/hero/moving_wave.svg">
       <img id="static-wave" src="./img/hero/static_wave.svg"> -->
-      <div class="container intro-container">
-        <div class="intro-header">
-          <h1>What is Technica?</h1>
-        </div>
+      <div class="intro section">
+        <div class="container intro-container" id="about">
+          <h1 class="header">What is Technica?</h1>
           <div class="row">
             <div class="col-lg-6">
               <p>Technica is the world’s largest all-women and nonbinary hackathon, hosted annually at the University of Maryland.</p>
@@ -180,15 +184,14 @@
                 <iframe id="intro-vid" src="https://www.youtube.com/embed/Rcoc0Yo37Nk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
+        </div>
       </div>
     </div>
 
-    <div class="tracks">
+    <div class="tracks section">
       <div class="container">
         <!-- Header -->
-        <div class="track-header" id="tracks">
-          <h1>Tracks</h1>
-        </div>
+        <h1 class="header" id="tracks">Tracks</h1>
         <!-- Body -->
         <div class="text-center d-none d-lg-block">
           <div class="row">
@@ -219,29 +222,26 @@
       <div class="d-block d-lg-none text-center gallery">
         <div class="beginner track-flick-item">
           <img class="track-image" src="./img/beginner_waves.svg"></img>
-          <h3>Beginner</h3>
+          <h3 class="track-title">Beginner</h3>
           <p>Calling all undergraduates interested in research! Come explore the fields of research within computer science. You’ll get to work hands-on with experienced faculty researchers and other students to use technology to address social issues!</p>
         </div>
         <div class="general track-flick-item">
           <img class="track-image" src="./img/hacker_mountain.svg"></img>
-          <h3>General</h3>
+          <h3 class="track-title">General</h3>
           <p>Calling all undergraduates interested in research! Come explore the fields of research within computer science. You’ll get to work hands-on with experienced faculty researchers and other students to use technology to address social issues!</p>
         </div>
         <div class="research track-flick-item">
           <img class="track-image" src="./img/research_cloud.svg"></img>
-          <h3>Research</h3>
+          <h3 class="track-title">Research</h3>
           <p>Calling all undergraduates interested in research! Come explore the fields of research within computer science. You’ll get to work hands-on with experienced faculty researchers and other students to use technology to address social issues!</p>
         </div>
       </div>
     </div>
 
-    <div class="registration">
+    <div class="registration section">
       <div class="container">
         <!-- Header -->
-        <div class="registration-header" id="registration" style="margin-bottom: 2%;">
-          <h1>Registration</h1>
-        </div>
-
+        <h1 class="header" id="registration">Registration</h1>
         <!-- Body -->
         <div class="text-center">
           <div class="row">
@@ -281,11 +281,9 @@
       </div>
     </div>
 
-    <div class="faq">
-      <div class="container faq-container">
-          <div class="faq-header" id="faq">
-            <h1>Frequently Asked Questions</h1>
-          </div>
+    <div class="faq section">
+      <div class="container faq-container" id="faq">
+          <h1 class="header">Frequently Asked Questions</h1>
           <div class="row">
             <div class="col-md">
                 <div class="accordion">
@@ -390,7 +388,7 @@
       </div>
     </div> -->
 
-    <div class="contact">
+    <div class="contact section">
       <div class="container" style="padding: 1%;">
         <div class="contact-header">
           <h4>Contact Us</h4>

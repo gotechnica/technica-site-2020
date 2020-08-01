@@ -9,7 +9,8 @@ $peach: #EBB8BE;
 $blue: #C3DDE2;
 $grey: #C4C4C4;
 $light-grey: #E5E5E5;
-//for the gradient
+
+//for the sky gradient
 $gradient-peach: #EDA29F;
 $gradient-lavender: #C4A3BE;
 $gradient-blue: #47BCBB;
@@ -39,6 +40,17 @@ $gradient-blue: #47BCBB;
   transition: .5s ease;
 }
 
+.section {
+  padding: 3%;
+  @media (max-width: 767px) {
+    padding: 30px 0%;
+  }
+}
+
+.header {
+  padding-bottom: 1%;
+}
+
 // Track Circle Class
 @mixin circle($color, $size) {
   background-color: $color;
@@ -59,12 +71,6 @@ $gradient-blue: #47BCBB;
 // **** hero section ****
 
 .hero {
-  background-image: linear-gradient($gradient-blue, $gradient-lavender 12%, $gradient-peach 37%);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 120vw;
-  max-width: 100vw;
   overflow: hidden;
   position: relative;
 }
@@ -145,11 +151,6 @@ $gradient-blue: #47BCBB;
     animation-delay: -70s;
 }
 
-@mixin fade-in($waitTime) {
-    animation: wait $waitTime, fade-in 800ms $waitTime;
-    animation-duration: 2s;
-}
-
 @keyframes wait {
     0% { opacity: 0; }
     100% { opacity: 0; }
@@ -158,6 +159,11 @@ $gradient-blue: #47BCBB;
 @keyframes fade-in {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+@mixin fade-in($waitTime) {
+    animation: wait $waitTime, fade-in 800ms $waitTime;
+    animation-duration: 2s;
 }
 
 .hero-information {
@@ -181,156 +187,33 @@ $gradient-blue: #47BCBB;
 }
 
 .hero-horizon {
-  width: 100vw;
-}
-
-#horizon {
-  margin-top: 34vw;
   position: absolute;
-
-  @media (max-width: 1199px) {
-    margin-top: 400px;
-  }
+  width: 100vw;
+  padding-top: 450px;
+  background-image: linear-gradient($gradient-blue, $gradient-lavender 12%, $gradient-peach 37%);
 
   @media (max-width: 991px) {
-    margin-top: 500px;
+    padding-top: 550px;
+    background-image: linear-gradient($gradient-blue, $gradient-lavender 15%, $gradient-peach 40%);
   }
 
   @media (max-width: 767px) {
-    margin-top: 700px;
-  }
-}
-
-// **** navbar ****
-
-#navbar {
-  background-color: none;
-  transition: background-color 200ms linear;
-  margin-top: -60vw;
-  display: flex;
-  padding-top: 0.01rem;
-  padding-bottom: 0.01rem;
-  .nav-link {
-    @include dinpro-text(24px,bold,white);
-    transition: color 200ms linear;
-    text-transform: uppercase;
-  }
-  .nav-link:hover {
-    transition: .3s ease;
-    opacity: 0.8;
+    padding-top: 700px;
+    background-image: linear-gradient($gradient-blue, $gradient-lavender 20%, $gradient-peach 55%);
   }
 
-  @media (max-width: 1199px) {
-    margin-top: -59vw;
-  }
-
-  @media (max-width: 991px) {
-    margin-top: -56vw;
-  }
-
-  @media (max-width: 767px) {
-    margin-top: -66vw;
-  }
-}
-
-.scrolled {
-  background-color: #fff !important;
-  transition: background-color 200ms linear;
-  .nav-link {
-    color: $lavender !important;
-    transition: color 200ms linear;
-  }
-}
-
-.navbar-nav > li{
-  margin-left: 33px;
-  margin-right: 33px;
-}
-
-// **** intro section ****
-
-.intro {
-  #moving-wave {
-    margin-top: -300px;
-    position: absolute;
-  }
-
-  #static-wave {
-    margin-top: -7vw;
-    position: absolute;
-  }
-
-  #intro-vid {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.intro-container {
-  margin-top: 100px;
-  position: relative;
-  z-index: 3;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
-  padding: 3%;
-}
-
-.intro-header {
-  padding-bottom: 1%;
-}
-
-@media only screen and (max-width: 1199px) {
-  .intro {
-    #moving-wave {
-      margin-top: -25vw;
-    }
-    #static-wave {
-      margin-top: -10vw;
-    }
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  .hero {
-    height: 133vw;
-  }
-
-  .intro {
-    #moving-wave {
-      margin-top: -26vw;
-    }
-    #static-wave {
-      margin-top: -10vw;
-    }
-    #intro-vid {
-      height: 300px;
-    }
+  @media (max-width: 575px) {
+    padding-top: 700px;
+    background-image: linear-gradient($gradient-blue, $gradient-lavender 25%, $gradient-peach 70%);
   }
 }
 
 // change to mobile
 @media only screen and (max-width: 767px) {
-  .hero {
-    height: 185vw;
-    background-image: linear-gradient($gradient-blue, $gradient-lavender 20%, $gradient-peach 60%);
-  }
-
   .hero-information {
     #hero-logo {
       margin-top: 120px;
       width: 500px;
-    }
-  }
-
-  .intro {
-    #moving-wave {
-      margin-top: -32vw;
-    }
-    #static-wave {
-      margin-top: -15vw;
-    }
-    #intro-vid {
-      height: 200px;
     }
   }
 }
@@ -345,32 +228,126 @@ $gradient-blue: #47BCBB;
   }
 }
 
+// **** navbar ****
+
+#navbar {
+  background-color: none;
+  transition: background-color 200ms linear;
+  margin-top: 25vw;
+  display: flex;
+  padding-top: 0.01rem;
+  padding-bottom: 0.01rem;
+  .nav-link {
+    @include dinpro-text(24px,bold,white);
+    transition: color 200ms linear;
+    text-transform: uppercase;
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+  .nav-link:hover {
+    transition: .3s ease;
+    opacity: 0.8;
+  }
+
+  @media (max-width: 1199px) {
+    margin-top: 27vw;
+  }
+
+  @media (max-width: 991px) {
+    margin-top: 45vw;
+  }
+
+  @media (max-width: 870px) {
+    margin-top: 47vw;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 65vw;
+  }
+}
+
+.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+  .nav-link {
+    color: $lavender !important;
+    transition: color 200ms linear;
+  }
+}
+
+.navbar-nav > li{
+  margin: 0vw 4vw;
+  @media (max-width: 991px) {
+    margin: 0vw 2vw;
+  }
+  @media (max-width: 767px) {
+    margin: 0vw 1vw;
+  }
+}
+
+// **** intro section ****
+// #moving-wave {
+//   margin-top: -7vw;
+//   position: absolute;
+//   min-height: 75vw;
+//   height: 100vw;
+//   object-fit: cover;
+// }
+
+#moving-wave {
+  background-image: url("../img/hero/moving_wave.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  margin-top: -65em;
+  position: absolute;
+  z-index: 2;
+  // @media (min-width: 1800px) {
+  //   height: 1500px;
+  //   margin-top: -54em;
+  // }
+}
+
+#static-wave {
+  // margin-top: -7vw;
+  position: absolute;
+}
+
+#intro-vid {
+  width: 100%;
+  height: 100%;
+  @media (max-width: 991px) {
+    height: 350px;
+  }
+  @media (max-width: 767px) {
+    height: 250px;
+  }
+}
+
+.intro-container {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  position: relative;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  padding: 3%;
+}
+
 // **** tracks section ****
 
 .tracks {
   background-color: $light-lavender;
-  padding: 32px;
-}
-
-.track-header {
-  padding-bottom: 1%;
+  position: relative;
+  z-index: 5;
 }
 
 .track-image {
   margin: 2% 5%;
+  max-width: 275px;
 }
-
-// .beginner-circle {
-//   @include circle($cyan, 183px);
-// }
-//
-// .general-circle {
-//   @include circle($lavender, 183px);
-// }
-//
-// .research-circle {
-//   @include circle($pink, 183px);
-// }
 
 .beginner, .general, .research {
   @include box($light-lavender);
@@ -379,13 +356,15 @@ $gradient-blue: #47BCBB;
 
 .track-flick-item {
   width: 60%;
+  @media (max-width: 767px) {
+    width: 80%;
+  }
 }
 
 // **** registration section ****
 
 .registration {
     background-color: $peach;
-    padding: 32px;
 }
 
 .hacker, .mentor, .volunteer {
@@ -411,9 +390,9 @@ $gradient-blue: #47BCBB;
 
 //mobile
 @media only screen and (max-width: 767px) {
-    .registration {
-        padding: 0px;
-    }
+    // .registration {
+    //     padding: 0px;
+    // }
     .hacker, .mentor, .volunteer {
         text-align: center;
         width: 100%;
@@ -428,8 +407,7 @@ $gradient-blue: #47BCBB;
 // **** FAQ section ****
 
 .faq {
-    background-color: $blue;
-    padding: 3%;
+  background-color: $blue;
 }
 
 .faq-container {
