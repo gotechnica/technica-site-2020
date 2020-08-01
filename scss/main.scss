@@ -363,7 +363,7 @@ $wave-blue: #628CB2;
 
 .registration-image {
   height: 400px;
-  @media (max-width: 991px) { //should be 767, but waiting for new pngs from annie
+  @media (max-width: 850px) {
     height: auto;
     width: 100%;
   }
