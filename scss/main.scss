@@ -16,6 +16,8 @@ $gradient-lavender: #C4A3BE;
 $gradient-blue: #47BCBB;
 $wave-blue: #628CB2;
 
+$animation-length: 80s;
+
 
 @mixin dinpro-text($size, $weight, $color){
     font-family: DINPro;
@@ -77,8 +79,9 @@ $wave-blue: #628CB2;
 @keyframes move_cloud {
   0% {opacity: 0; left: -25%}
   5% {opacity: 1;}
-  95% {opacity: 1;}
-  100% {opacity: 0;left: 90%;}
+  60% {opacity: 1;}
+  65% {opacity: 0;left: 90%;}
+  100% {opacity: 0;}
 }
 
 %cloud {
@@ -86,65 +89,73 @@ $wave-blue: #628CB2;
   position: absolute;
   width: 50%;
   z-index: 1;
-  animation: move_cloud 80s infinite linear;
+  animation: move_cloud $animation-length infinite linear;
 }
 
+// pass in percentage of how far in the animation the cloud should start in
+@mixin cloud-wait($percentange) {
+  animation-delay: -$animation-length*$percentange;
+}
+
+// start with cloud 1 at end of screen and stagger from there
 #cloud1 {
+  margin-top: 5%;
   @extend %cloud;
-  animation-delay: -50s;
+  @include cloud-wait(.5)
 }
 
 #cloud2 {
     width: 15%;
     height: 15%;
-    margin-top: 15%;
+    margin-top: 30%;
     @extend %cloud;
-    animation-delay: -60s;
+    @include cloud-wait(.6)
 }
 
 #cloud3 {
-    width: 35%;
-    height: 35%;
-    margin-top: 10%;
+    margin-top: 32%;
     @extend %cloud;
-    animation-delay: -35s;
+    @include cloud-wait(.37)
 }
 
 #cloud4 {
     width: 15%;
     height: 15%;
-    margin-top: 5%;
+    margin-top: 15%;
     @extend %cloud;
-    animation-delay: -35s;
+    @include cloud-wait(.35)
 }
 
 #cloud5 {
-    width: 22%;
-    height: 22%;
-    margin-top: 15%;
+    width: 35%;
+    height: 35%;
+    margin-top: 30%;
     @extend %cloud;
-    animation-delay: -15s;
+    @include cloud-wait(.12)
 }
 
 #cloud6 {
-    width: 10%;
-    height: 10%;
-    margin-top: 15%;
+    width: 12%;
+    height: 12%;
+    margin-top: 20%;
     @extend %cloud;
-    animation-delay: -5s;
+    @include cloud-wait(.05)
 }
 
 #cloud7 {
+    width: 40%;
+    height: 40%;
     @extend %cloud;
-    animation-delay: -80s;
+    margin-top: 5%;
+    @include cloud-wait(.85)
 }
 
 #cloud8 {
     width: 20%;
     height: 20%;
-    margin-top: 22%;
+    margin-top: 37%;
     @extend %cloud;
-    animation-delay: -70s;
+    @include cloud-wait(.9)
 }
 
 @keyframes wait {
@@ -162,13 +173,16 @@ $wave-blue: #628CB2;
     animation-duration: 2s;
 }
 
+.hero {
+  padding-bottom: 15px;
+}
+
 .hero-information {
   position: relative; //allows us to set z index so it appears on top of illustrations
   z-index: 2;
   @include fade-in(600ms);
   @include dinpro-text(30px, normal, white)
   .hero-logo {
-      margin-top: 20px;
       margin-bottom: 15px;
   }
   #theme-logo {
@@ -276,7 +290,7 @@ $wave-blue: #628CB2;
   }
 
   @media (max-width: 991px) {
-    margin-top: 22.5vw;
+    margin-top: 20.7vw;
   }
 
   @media (max-width: 767px) {
@@ -313,10 +327,10 @@ $wave-blue: #628CB2;
   position: relative;
   z-index: 0; //hides overflow wave
   @media (max-width: 767px) {
-    margin-top: 45vw;
+    margin-top: 43vw;
   }
   @media (max-width: 575px) {
-    margin-top: 310px;
+    margin-top: 285px;
   }
 }
 

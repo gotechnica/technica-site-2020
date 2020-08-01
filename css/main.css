@@ -40,11 +40,13 @@
     left: -25%; }
   5% {
     opacity: 1; }
-  95% {
+  60% {
     opacity: 1; }
-  100% {
+  65% {
     opacity: 0;
-    left: 90%; } }
+    left: 90%; }
+  100% {
+    opacity: 0; } }
 
 #cloud1, #cloud2, #cloud3, #cloud4, #cloud5, #cloud6, #cloud7, #cloud8 {
   pointer-events: none;
@@ -54,46 +56,48 @@
   animation: move_cloud 80s infinite linear; }
 
 #cloud1 {
-  animation-delay: -50s; }
+  margin-top: 5%;
+  animation-delay: -40s; }
 
 #cloud2 {
   width: 15%;
   height: 15%;
-  margin-top: 15%;
-  animation-delay: -60s; }
+  margin-top: 30%;
+  animation-delay: -48s; }
 
 #cloud3 {
-  width: 35%;
-  height: 35%;
-  margin-top: 10%;
-  animation-delay: -35s; }
+  margin-top: 32%;
+  animation-delay: -29.6s; }
 
 #cloud4 {
   width: 15%;
   height: 15%;
-  margin-top: 5%;
-  animation-delay: -35s; }
+  margin-top: 15%;
+  animation-delay: -28s; }
 
 #cloud5 {
-  width: 22%;
-  height: 22%;
-  margin-top: 15%;
-  animation-delay: -15s; }
+  width: 35%;
+  height: 35%;
+  margin-top: 30%;
+  animation-delay: -9.6s; }
 
 #cloud6 {
-  width: 10%;
-  height: 10%;
-  margin-top: 15%;
-  animation-delay: -5s; }
+  width: 12%;
+  height: 12%;
+  margin-top: 20%;
+  animation-delay: -4s; }
 
 #cloud7 {
-  animation-delay: -80s; }
+  width: 40%;
+  height: 40%;
+  margin-top: 5%;
+  animation-delay: -68s; }
 
 #cloud8 {
   width: 20%;
   height: 20%;
-  margin-top: 22%;
-  animation-delay: -70s; }
+  margin-top: 37%;
+  animation-delay: -72s; }
 
 @keyframes wait {
   0% {
@@ -107,6 +111,9 @@
   100% {
     opacity: 1; } }
 
+.hero {
+  padding-bottom: 15px; }
+
 .hero-information {
   position: relative;
   z-index: 2;
@@ -117,7 +124,6 @@
   font-weight: normal;
   color: white; }
   .hero-information .hero-logo {
-    margin-top: 20px;
     margin-bottom: 15px; }
   .hero-information #theme-logo {
     width: 250px;
@@ -199,7 +205,7 @@
       margin-top: 23vw; } }
   @media (max-width: 991px) {
     #navbar {
-      margin-top: 22.5vw; } }
+      margin-top: 20.7vw; } }
   @media (max-width: 767px) {
     #navbar {
       display: none !important; } }
@@ -229,10 +235,10 @@
   z-index: 0; }
   @media (max-width: 767px) {
     .intro {
-      margin-top: 45vw; } }
+      margin-top: 43vw; } }
   @media (max-width: 575px) {
     .intro {
-      margin-top: 310px; } }
+      margin-top: 285px; } }
 
 .intro-container {
   margin-top: 5%;
