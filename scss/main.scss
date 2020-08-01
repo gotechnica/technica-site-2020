@@ -315,15 +315,13 @@ $gradient-blue: #47BCBB;
   position: absolute;
 }
 
-#intro-vid {
-  width: 100%;
-  height: 100%;
-  @media (max-width: 991px) {
-    height: 350px;
-  }
-  @media (max-width: 767px) {
-    height: 250px;
-  }
+.horizon-wave {
+  background-image: url("../img/hero/static_wave.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
 }
 
 .intro-container {
@@ -334,6 +332,17 @@ $gradient-blue: #47BCBB;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   padding: 3%;
+}
+
+#intro-vid {
+  width: 100%;
+  height: 100%;
+  @media (max-width: 991px) {
+    height: 350px;
+  }
+  @media (max-width: 767px) {
+    height: 250px;
+  }
 }
 
 // **** tracks section ****
