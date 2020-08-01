@@ -69,6 +69,11 @@ $wave-blue: #628CB2;
   padding-top: 7%;
 }
 
+#birds {
+  position: relative;
+  z-index: 3;
+}
+
 @keyframes move_cloud {
   0% {opacity: 0; left: -25%}
   5% {opacity: 1;}
@@ -80,6 +85,7 @@ $wave-blue: #628CB2;
   pointer-events: none;
   position: absolute;
   width: 50%;
+  z-index: 1;
   animation: move_cloud 80s infinite linear;
 }
 
@@ -158,7 +164,7 @@ $wave-blue: #628CB2;
 
 .hero-information {
   position: relative; //allows us to set z index so it appears on top of illustrations
-  z-index: 1;
+  z-index: 2;
   @include fade-in(600ms);
   @include dinpro-text(30px, normal, white)
   #hero-logo {
@@ -170,7 +176,7 @@ $wave-blue: #628CB2;
 
 .register-btn {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   @include fade-in(1.5s);
 }
 
@@ -178,6 +184,7 @@ $wave-blue: #628CB2;
   position: absolute;
   width: 100vw;
   padding-top: 500px;
+  z-index: 1;
   background-image: linear-gradient($gradient-blue, $gradient-lavender 12%, $gradient-peach 55%, $gradient-peach 98%, $wave-blue 98%);
 
   @media (max-width: 991px) {
@@ -287,9 +294,9 @@ $wave-blue: #628CB2;
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
-  z-index: -1; //hides overflow wave
+  z-index: 0; //hides overflow wave
   @media (max-width: 767px) {
-    margin-top: 56vw;
+    margin-top: 57vw;
   }
   @media (max-width: 575px) {
     margin-top: 375px;
@@ -300,7 +307,6 @@ $wave-blue: #628CB2;
   margin-top: 5%;
   margin-bottom: 5%;
   position: relative;
-  z-index: 3;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   padding: 3%;
@@ -484,7 +490,7 @@ $wave-blue: #628CB2;
   margin: 0px 10px;
   @include circle($cyan, 50px);
   @media (max-width: 575px) {
-    margin: 0px 5px;
+    margin: 0px 3px;
     padding: 5px;
     width: 40px;
     height: 40px;

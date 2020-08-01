@@ -30,6 +30,10 @@
 #birds > img {
   padding-top: 7%; }
 
+#birds {
+  position: relative;
+  z-index: 3; }
+
 @keyframes move_cloud {
   0% {
     opacity: 0;
@@ -46,6 +50,7 @@
   pointer-events: none;
   position: absolute;
   width: 50%;
+  z-index: 1;
   animation: move_cloud 80s infinite linear; }
 
 #cloud1 {
@@ -104,7 +109,7 @@
 
 .hero-information {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   animation: wait 600ms, fade-in 800ms 600ms;
   animation-duration: 2s;
   font-family: DINPro;
@@ -118,7 +123,7 @@
 
 .register-btn {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   animation: wait 1.5s, fade-in 800ms 1.5s;
   animation-duration: 2s; }
 
@@ -126,6 +131,7 @@
   position: absolute;
   width: 100vw;
   padding-top: 500px;
+  z-index: 1;
   background-image: linear-gradient(#47BCBB, #C4A3BE 12%, #EDA29F 55%, #EDA29F 98%, #628CB2 98%); }
   @media (max-width: 991px) {
     .hero-horizon {
@@ -208,10 +214,10 @@
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
-  z-index: -1; }
+  z-index: 0; }
   @media (max-width: 767px) {
     .intro {
-      margin-top: 56vw; } }
+      margin-top: 57vw; } }
   @media (max-width: 575px) {
     .intro {
       margin-top: 375px; } }
@@ -220,7 +226,6 @@
   margin-top: 5%;
   margin-bottom: 5%;
   position: relative;
-  z-index: 3;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   padding: 3%; }
@@ -377,7 +382,7 @@
   display: inline-block; }
   @media (max-width: 575px) {
     .blue-circle, .purple-circle, .pink-circle {
-      margin: 0px 5px;
+      margin: 0px 3px;
       padding: 5px;
       width: 40px;
       height: 40px; } }
