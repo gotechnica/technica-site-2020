@@ -14,6 +14,7 @@ $light-grey: #E5E5E5;
 $gradient-peach: #EDA29F;
 $gradient-lavender: #C4A3BE;
 $gradient-blue: #47BCBB;
+$wave-blue: #628CB2;
 
 
 @mixin dinpro-text($size, $weight, $color){
@@ -165,9 +166,6 @@ $gradient-blue: #47BCBB;
     margin-top: 30px;
     margin-bottom: 15px;
   }
-  // @media (max-width: 991px) {
-  //   margin-top: 150px;
-  // }
 }
 
 .register-btn {
@@ -179,22 +177,21 @@ $gradient-blue: #47BCBB;
 .hero-horizon {
   position: absolute;
   width: 100vw;
-  padding-top: 450px;
-  background-image: linear-gradient($gradient-blue, $gradient-lavender 12%, $gradient-peach 37%);
+  padding-top: 500px;
+  background-image: linear-gradient($gradient-blue, $gradient-lavender 12%, $gradient-peach 55%, $gradient-peach 98%, $wave-blue 98%);
 
   @media (max-width: 991px) {
     padding-top: 550px;
-    background-image: linear-gradient($gradient-blue, $gradient-lavender 15%, $gradient-peach 40%);
   }
 
   @media (max-width: 767px) {
     padding-top: 700px;
-    background-image: linear-gradient($gradient-blue, $gradient-lavender 20%, $gradient-peach 55%);
+    background-image: linear-gradient($gradient-blue, $gradient-lavender 22%, $gradient-peach 70%, $gradient-peach 98%, $wave-blue 98%);
   }
 
   @media (max-width: 575px) {
     padding-top: 700px;
-    background-image: linear-gradient($gradient-blue, $gradient-lavender 25%, $gradient-peach 70%);
+    background-image: linear-gradient($gradient-blue, $gradient-lavender 25%, $gradient-peach 80%, $gradient-peach 98%, $wave-blue 98%);
   }
 }
 
@@ -233,7 +230,7 @@ $gradient-blue: #47BCBB;
 #navbar {
   background-color: none;
   transition: background-color 200ms linear;
-  margin-top: 25vw;
+  margin-top: 28vw;
   display: flex;
   padding-top: 0.01rem;
   padding-bottom: 0.01rem;
@@ -251,19 +248,15 @@ $gradient-blue: #47BCBB;
   }
 
   @media (max-width: 1199px) {
-    margin-top: 27vw;
+    margin-top: 32vw;
   }
 
   @media (max-width: 991px) {
-    margin-top: 45vw;
-  }
-
-  @media (max-width: 870px) {
-    margin-top: 47vw;
+    margin-top: 30vw;
   }
 
   @media (max-width: 767px) {
-    margin-top: 65vw;
+    display: none !important;
   }
 }
 
@@ -288,29 +281,19 @@ $gradient-blue: #47BCBB;
 
 // **** intro section ****
 
-#moving-wave {
-  background-image: url("../img/hero/moving_wave.svg");
+.intro {
+  background-image: url("../img/hero/horizon_bot.svg");
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 200px;
-  margin-top: -65em;
-  position: absolute;
-  z-index: 2;
-}
-
-#static-wave {
-  // margin-top: -7vw;
-  position: absolute;
-}
-
-.horizon-wave {
-  background-image: url("../img/hero/static_wave.svg");
-  background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   position: relative;
-  z-index: 2;
+  z-index: -1; //hides overflow wave
+  @media (max-width: 767px) {
+    margin-top: 56vw;
+  }
+  @media (max-width: 575px) {
+    margin-top: 375px;
+  }
 }
 
 .intro-container {
@@ -380,7 +363,7 @@ $gradient-blue: #47BCBB;
 
 .registration-image {
   height: 400px;
-  @media (max-width: 575px) {
+  @media (max-width: 991px) { //should be 767, but waiting for new pngs from annie
     height: auto;
     width: 100%;
   }
