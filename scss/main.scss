@@ -9,10 +9,12 @@ $peach: #EBB8BE;
 $blue: #C3DDE2;
 $grey: #C4C4C4;
 $light-grey: #E5E5E5;
-//for the gradient
+
+//for the sky gradient
 $gradient-peach: #EDA29F;
 $gradient-lavender: #C4A3BE;
 $gradient-blue: #47BCBB;
+$wave-blue: #628CB2;
 
 
 @mixin dinpro-text($size, $weight, $color){
@@ -23,15 +25,12 @@ $gradient-blue: #47BCBB;
 }
 
 .btn {
-    @include dinpro-text(150%, bold, #fff);
+    @include dinpro-text(140%, bold, #fff);
     background-color: $lavender;
-    border-radius: 20px;
+    border-radius: 50px;
     text-transform: uppercase;
     margin-top: 3%;
-
-    @media (max-width: 991px) {
-      font-size: 17px;
-    }
+    padding: 3px 25px;
 }
 
 .btn:hover {
@@ -39,19 +38,22 @@ $gradient-blue: #47BCBB;
   transition: .5s ease;
 }
 
-// Track Circle Class
-@mixin circle($color, $size) {
-  background-color: $color;
-  width: $size;
-  height: $size;
-  border-radius: 50%;
-  display: inline-block;
+.section {
+  padding: 3%;
+  @media (max-width: 767px) {
+    padding: 30px 0px;
+  }
 }
+
+.header {
+  padding-bottom: 1%;
+}
+
 // Track Box Class
 @mixin box($color) {
   border: 3px solid $color;
   background: rgba(255, 255, 255, 0.85);
-  border-radius: 5px;
+  border-radius: 7px;
   box-sizing: border-box;
   padding: 10px;
 }
@@ -59,12 +61,6 @@ $gradient-blue: #47BCBB;
 // **** hero section ****
 
 .hero {
-  background-image: linear-gradient($gradient-blue, $gradient-lavender 12%, $gradient-peach 37%);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 120vw;
-  max-width: 100vw;
   overflow: hidden;
   position: relative;
 }
@@ -145,11 +141,6 @@ $gradient-blue: #47BCBB;
     animation-delay: -70s;
 }
 
-@mixin fade-in($waitTime) {
-    animation: wait $waitTime, fade-in 800ms $waitTime;
-    animation-duration: 2s;
-}
-
 @keyframes wait {
     0% { opacity: 0; }
     100% { opacity: 0; }
@@ -158,6 +149,11 @@ $gradient-blue: #47BCBB;
 @keyframes fade-in {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+@mixin fade-in($waitTime) {
+    animation: wait $waitTime, fade-in 800ms $waitTime;
+    animation-duration: 2s;
 }
 
 .hero-information {
@@ -175,29 +171,57 @@ $gradient-blue: #47BCBB;
 .register-btn {
   position: relative;
   z-index: 1;
-  border-radius: 20px;
-  padding: 3px 35px;
   @include fade-in(1.5s);
 }
 
 .hero-horizon {
-  width: 100vw;
-}
-
-#horizon {
-  margin-top: 34vw;
   position: absolute;
-
-  @media (max-width: 1199px) {
-    margin-top: 400px;
-  }
+  width: 100vw;
+  padding-top: 500px;
+  background-image: linear-gradient($gradient-blue, $gradient-lavender 12%, $gradient-peach 55%, $gradient-peach 98%, $wave-blue 98%);
 
   @media (max-width: 991px) {
-    margin-top: 500px;
+    padding-top: 550px;
   }
 
   @media (max-width: 767px) {
-    margin-top: 700px;
+    padding-top: 700px;
+    background-image: linear-gradient($gradient-blue, $gradient-lavender 22%, $gradient-peach 70%, $gradient-peach 98%, $wave-blue 98%);
+  }
+
+  @media (max-width: 575px) {
+    padding-top: 700px;
+    background-image: linear-gradient($gradient-blue, $gradient-lavender 25%, $gradient-peach 80%, $gradient-peach 98%, $wave-blue 98%);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .hero-information {
+    #hero-logo {
+      margin-top: 150px;
+    }
+  }
+}
+
+// change to mobile
+@media only screen and (max-width: 767px) {
+  .hero-information {
+    #hero-logo {
+      margin-top: 200px;
+      width: 500px;
+    }
+  }
+  .register-btn {
+    font-size: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .hero-information {
+    font-size: 5vw;
+    #hero-logo {
+      width: 80vw;
+    }
   }
 }
 
@@ -206,7 +230,7 @@ $gradient-blue: #47BCBB;
 #navbar {
   background-color: none;
   transition: background-color 200ms linear;
-  margin-top: -60vw;
+  margin-top: 28vw;
   display: flex;
   padding-top: 0.01rem;
   padding-bottom: 0.01rem;
@@ -214,6 +238,9 @@ $gradient-blue: #47BCBB;
     @include dinpro-text(24px,bold,white);
     transition: color 200ms linear;
     text-transform: uppercase;
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
   }
   .nav-link:hover {
     transition: .3s ease;
@@ -221,15 +248,15 @@ $gradient-blue: #47BCBB;
   }
 
   @media (max-width: 1199px) {
-    margin-top: -59vw;
+    margin-top: 32vw;
   }
 
   @media (max-width: 991px) {
-    margin-top: -56vw;
+    margin-top: 30vw;
   }
 
   @media (max-width: 767px) {
-    margin-top: -66vw;
+    display: none !important;
   }
 }
 
@@ -243,31 +270,35 @@ $gradient-blue: #47BCBB;
 }
 
 .navbar-nav > li{
-  margin-left: 33px;
-  margin-right: 33px;
+  margin: 0vw 4vw;
+  @media (max-width: 991px) {
+    margin: 0vw 2vw;
+  }
+  @media (max-width: 767px) {
+    margin: 0vw 1vw;
+  }
 }
 
 // **** intro section ****
 
 .intro {
-  #moving-wave {
-    margin-top: -300px;
-    position: absolute;
+  background-image: url("../img/hero/horizon_bot.svg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -1; //hides overflow wave
+  @media (max-width: 767px) {
+    margin-top: 56vw;
   }
-
-  #static-wave {
-    margin-top: -7vw;
-    position: absolute;
-  }
-
-  #intro-vid {
-    width: 100%;
-    height: 100%;
+  @media (max-width: 575px) {
+    margin-top: 375px;
   }
 }
 
 .intro-container {
-  margin-top: 100px;
+  margin-top: 5%;
+  margin-bottom: 5%;
   position: relative;
   z-index: 3;
   background-color: rgba(255, 255, 255, 0.8);
@@ -275,73 +306,14 @@ $gradient-blue: #47BCBB;
   padding: 3%;
 }
 
-.intro-header {
-  padding-bottom: 1%;
-}
-
-@media only screen and (max-width: 1199px) {
-  .intro {
-    #moving-wave {
-      margin-top: -25vw;
-    }
-    #static-wave {
-      margin-top: -10vw;
-    }
+#intro-vid {
+  width: 100%;
+  height: 100%;
+  @media (max-width: 991px) {
+    height: 350px;
   }
-}
-
-@media only screen and (max-width: 991px) {
-  .hero {
-    height: 133vw;
-  }
-
-  .intro {
-    #moving-wave {
-      margin-top: -26vw;
-    }
-    #static-wave {
-      margin-top: -10vw;
-    }
-    #intro-vid {
-      height: 300px;
-    }
-  }
-}
-
-// change to mobile
-@media only screen and (max-width: 767px) {
-  .hero {
-    height: 185vw;
-    background-image: linear-gradient($gradient-blue, $gradient-lavender 20%, $gradient-peach 60%);
-  }
-
-  .hero-information {
-    #hero-logo {
-      margin-top: 120px;
-      width: 500px;
-    }
-  }
-
-  .intro {
-    #moving-wave {
-      margin-top: -32vw;
-    }
-    #static-wave {
-      margin-top: -15vw;
-    }
-    #intro-vid {
-      height: 200px;
-    }
-  }
-}
-
-@media only screen and (max-width: 575px) {
-  .hero-information {
-    font-size: 5vw;
-    #hero-logo {
-      width: 80vw;
-      margin-top: 150px;
-    }
+  @media (max-width: 767px) {
+    height: 250px;
   }
 }
 
@@ -349,28 +321,14 @@ $gradient-blue: #47BCBB;
 
 .tracks {
   background-color: $light-lavender;
-  padding: 32px;
-}
-
-.track-header {
-  padding-bottom: 1%;
+  position: relative;
+  z-index: 5;
 }
 
 .track-image {
   margin: 2% 5%;
+  max-width: 275px;
 }
-
-// .beginner-circle {
-//   @include circle($cyan, 183px);
-// }
-//
-// .general-circle {
-//   @include circle($lavender, 183px);
-// }
-//
-// .research-circle {
-//   @include circle($pink, 183px);
-// }
 
 .beginner, .general, .research {
   @include box($light-lavender);
@@ -379,13 +337,19 @@ $gradient-blue: #47BCBB;
 
 .track-flick-item {
   width: 60%;
+  @media (max-width: 767px) {
+    width: 80%;
+  }
 }
 
 // **** registration section ****
 
 .registration {
     background-color: $peach;
-    padding: 32px;
+    @include dinpro-text(1.25rem, normal, black)
+    @media (max-width: 575px) {
+      font-size: 1rem;
+    }
 }
 
 .hacker, .mentor, .volunteer {
@@ -399,7 +363,7 @@ $gradient-blue: #47BCBB;
 
 .registration-image {
   height: 400px;
-  @media (max-width: 575px) {
+  @media (max-width: 991px) { //should be 767, but waiting for new pngs from annie
     height: auto;
     width: 100%;
   }
@@ -409,11 +373,14 @@ $gradient-blue: #47BCBB;
     border: 1px solid #000;
 }
 
+@media only screen and (max-width: 991px) {
+  .registration .btn {
+    font-size: 17px;
+  }
+}
+
 //mobile
 @media only screen and (max-width: 767px) {
-    .registration {
-        padding: 0px;
-    }
     .hacker, .mentor, .volunteer {
         text-align: center;
         width: 100%;
@@ -428,13 +395,17 @@ $gradient-blue: #47BCBB;
 // **** FAQ section ****
 
 .faq {
-    background-color: $blue;
-    padding: 3%;
+  background-color: $blue;
+  @media (max-width: 575px) {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
 }
 
 .faq-container {
   background-color: white;
   padding: 3%;
+  border-radius: 8px;
 }
 
 .accordion {
@@ -446,6 +417,7 @@ $gradient-blue: #47BCBB;
     margin-bottom: 2%;
     border-bottom: 3px solid white;
     transition: ease all 0.3s;
+    cursor: pointer;
 }
 
 .accordion:hover, .accordion-active {
@@ -456,6 +428,7 @@ $gradient-blue: #47BCBB;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.1s ease-out;
+    @include dinpro-text(1.1rem, normal, black)
  }
 
  // **** sponsor section ****
@@ -473,13 +446,21 @@ $gradient-blue: #47BCBB;
 
 // **** footer section ****
 
-.contact{
+.contact {
     background-color: $light-grey;
     text-align: center;
 }
 
-.contact-content a:link {
-    color: #000;
+.contact-header {
+  @include dinpro-text(36px, bold, black)
+}
+
+.contact-content {
+  margin-bottom: 20px;
+}
+
+.contact-content a {
+  color: black;
 }
 
 .social-buttons > a:hover {
@@ -488,29 +469,53 @@ $gradient-blue: #47BCBB;
   opacity: 0.8;
 }
 
+// contact Circle Class
+@mixin circle($color, $size) {
+  background-color: $color;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 //contact us circles
 %contact-circle {
   padding: 8px;
   margin: 0px 10px;
+  @include circle($cyan, 50px);
+  @media (max-width: 575px) {
+    margin: 0px 5px;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+  }
 }
+
 .blue-circle {
   @extend %contact-circle;
-  @include circle($cyan, 51px);
+  background-color: $cyan;
 }
 
 .purple-circle {
   @extend %contact-circle;
-  @include circle($lavender, 51px);
+  background-color: $lavender;
 }
 
 .pink-circle {
   @extend %contact-circle;
-  @include circle($pink, 51px);
+  background-color: $pink;
 }
 
 .footer {
     background-color: $grey;
     text-align: center;
+    @media (max-width: 575px) {
+      font-size: 0.9rem;
+      padding-top: 1rem;
+    }
+    #footer-links {
+      margin-bottom: 5px;
+    }
 }
 
 .footer a:link, a:visited {
