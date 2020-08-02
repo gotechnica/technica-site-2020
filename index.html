@@ -63,7 +63,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@gotechnica">
     <meta name="twitter:title" content="Technica">
-    <meta name="twitter:description" content="All-women hackathon at University of Maryland.">
+    <meta name="twitter:description" content="All-women and non-binary hackathon at University of Maryland.">
     <meta name="twitter:creator" content="@gotechnica">
     <meta name="twitter:image" content="http://gotechnica.org/img/share-link.png">
     <meta name="twitter:domain" content="http://gotechnica.org">
@@ -73,7 +73,7 @@
 
     <!-- Open Graph data (Facebook) -->
     <meta property="og:title" content="Technica">
-    <meta property="og:description" content="All-women hackathon at University of Maryland.">
+    <meta property="og:description" content="All-women and non-binary hackathon at University of Maryland.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://gotechnica.org">
     <meta property="og:image" content="http://gotechnica.org/img/share-link.png">
@@ -115,32 +115,6 @@
       <img src="./img/hero/horizon_top.svg">
     </div>
 
-    <div class="hero">
-      <div class="container">
-        <!-- clouds -->
-        <img id="cloud1" src="./img/hero/cloud1.svg" alt="cloud">
-        <img id="cloud2" src="./img/hero/cloud2.svg" alt="cloud">
-        <img id="cloud3" src="./img/hero/cloud3.svg" alt="cloud">
-        <img id="cloud4" src="./img/hero/cloud4.svg" alt="cloud">
-        <img id="cloud5" src="./img/hero/cloud5.svg" alt="cloud">
-        <img id="cloud6" src="./img/hero/cloud6.svg" alt="cloud">
-        <img id="cloud7" src="./img/hero/cloud7.svg" alt="cloud">
-        <img id="cloud8" src="./img/hero/cloud8.svg" alt="cloud">
-        <!-- birds -->
-        <div id="birds">
-          <img data-depth="0.4" src="./img/hero/birds.svg" alt="birds">
-        </div>
-        <div class="hero-information">
-          <div class="hero-logo">
-            <img id="theme-logo" src="img/hero/expand_horizon.svg" alt="Expand Your Horizons">
-            <img id="technica-logo" src="img/technica-logo-white.svg" alt="Technica logo">
-          </div>
-          <p><b>Oct 24-25, 2020</b> ⊹ Virtual Environment</p>
-        </div>
-        <button class="register-btn btn">Register</button>
-      </div>
-    </div>
-
     <!-- navbar -->
     <nav id="navbar" class="navbar navbar-expand-sm navbar-light sticky-top d-sm-block d-none">
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -167,7 +141,33 @@
      </div>
    </nav>
 
-    <div class="intro section">
+    <div class="hero">
+      <div class="container">
+        <!-- clouds -->
+        <img id="cloud1" src="./img/hero/cloud1.svg" alt="cloud">
+        <img id="cloud2" src="./img/hero/cloud2.svg" alt="cloud">
+        <img id="cloud3" src="./img/hero/cloud3.svg" alt="cloud">
+        <img id="cloud4" src="./img/hero/cloud4.svg" alt="cloud">
+        <img id="cloud5" src="./img/hero/cloud5.svg" alt="cloud">
+        <img id="cloud6" src="./img/hero/cloud6.svg" alt="cloud">
+        <img id="cloud7" src="./img/hero/cloud7.svg" alt="cloud">
+        <img id="cloud8" src="./img/hero/cloud8.svg" alt="cloud">
+        <!-- birds -->
+        <div id="birds">
+          <img data-depth="0.4" src="./img/hero/birds.svg" alt="birds">
+        </div>
+        <div class="hero-information">
+          <div class="hero-logo">
+            <img id="theme-logo" src="img/hero/expand_horizon.svg" alt="Expand Your Horizons">
+            <img id="technica-logo" src="img/technica-logo-white.svg" alt="Technica logo">
+          </div>
+          <p><b>Oct 24-25, 2020</b> ⊹ Virtual Environment</p>
+        </div>
+        <button class="register-btn btn">Register</button>
+      </div>
+    </div>
+
+    <div class="intro section" id="intro">
       <div class="container intro-container" id="about">
         <h1 class="header">What is Technica?</h1>
         <div class="row">
@@ -500,7 +500,7 @@
     $(function () {
       $(document).scroll(function () {
         var $nav = $(".navbar");
-        if($(window).scrollTop() >= $("#navbar").offset().top) {
+        if($(window).scrollTop() >= $("#intro").offset().top) {
           $nav.addClass('scrolled');
         } else {
           $nav.removeClass('scrolled');
