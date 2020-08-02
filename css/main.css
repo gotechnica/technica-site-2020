@@ -25,7 +25,8 @@
 
 .hero {
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  padding-bottom: 15px; }
 
 #birds > img {
   padding-top: 7%; }
@@ -123,9 +124,6 @@
   100% {
     opacity: 1; } }
 
-.hero {
-  padding-bottom: 15px; }
-
 .hero-information {
   position: relative;
   z-index: 2;
@@ -165,7 +163,7 @@
       background-image: linear-gradient(#47BCBB, #C4A3BE 22%, #EDA29F 70%, #EDA29F 98%, #628CB2 98%); } }
   @media (max-width: 575px) {
     .hero-horizon {
-      padding-top: 700px;
+      padding-top: 600px;
       background-image: linear-gradient(#47BCBB, #C4A3BE 25%, #EDA29F 80%, #EDA29F 98%, #628CB2 98%); } }
 
 @media only screen and (max-width: 991px) {
@@ -183,6 +181,8 @@
     font-size: 20px !important; } }
 
 @media only screen and (max-width: 575px) {
+  .hero {
+    padding-bottom: 75px; }
   .hero-information {
     font-size: 5vw; }
     .hero-information #technica-logo {
@@ -218,7 +218,7 @@
 #navbar {
   background-color: none;
   transition: background-color 200ms linear;
-  margin-top: 22vw;
+  margin-top: 21.5vw;
   display: flex;
   padding-top: 0.01rem;
   padding-bottom: 0.01rem; }
@@ -237,7 +237,7 @@
     opacity: 0.8; }
   @media (max-width: 1199px) {
     #navbar {
-      margin-top: 23vw; } }
+      margin-top: 22.5vw; } }
   @media (max-width: 991px) {
     #navbar {
       margin-top: 19vw; } }
@@ -273,7 +273,7 @@
       margin-top: 42vw; } }
   @media (max-width: 575px) {
     .intro {
-      margin-top: 250px; } }
+      margin-top: 130px; } }
 
 .intro-container {
   margin-top: 5%;

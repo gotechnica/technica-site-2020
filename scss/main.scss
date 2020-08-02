@@ -66,6 +66,7 @@ $animation-length: 80s;
 .hero {
   overflow: hidden;
   position: relative;
+  padding-bottom: 15px;
 }
 
 #birds > img {
@@ -179,10 +180,6 @@ $animation-length: 80s;
     animation-duration: 2s;
 }
 
-.hero {
-  padding-bottom: 15px;
-}
-
 .hero-information {
   position: relative; //allows us to set z index so it appears on top of illustrations
   z-index: 2;
@@ -224,7 +221,7 @@ $animation-length: 80s;
   }
 
   @media (max-width: 575px) {
-    padding-top: 700px;
+    padding-top: 600px;
     background-image: linear-gradient($gradient-blue, $gradient-lavender 25%, $gradient-peach 80%, $gradient-peach 98%, $wave-blue 98%);
   }
 }
@@ -256,6 +253,9 @@ $animation-length: 80s;
 }
 
 @media only screen and (max-width: 575px) {
+  .hero {
+    padding-bottom: 75px;
+  }
   .hero-information {
     font-size: 5vw;
     #technica-logo {
@@ -305,7 +305,7 @@ $animation-length: 80s;
 #navbar {
   background-color: none;
   transition: background-color 200ms linear;
-  margin-top: 22vw;
+  margin-top: 21.5vw;
   display: flex;
   padding-top: 0.01rem;
   padding-bottom: 0.01rem;
@@ -323,7 +323,7 @@ $animation-length: 80s;
   }
 
   @media (max-width: 1199px) {
-    margin-top: 23vw;
+    margin-top: 22.5vw;
   }
 
   @media (max-width: 991px) {
@@ -367,7 +367,7 @@ $animation-length: 80s;
     margin-top: 42vw;
   }
   @media (max-width: 575px) {
-    margin-top: 250px;
+    margin-top: 130px;
   }
 }
 
