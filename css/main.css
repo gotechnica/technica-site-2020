@@ -23,10 +23,50 @@
 .header {
   padding-bottom: 1%; }
 
+#navbar {
+  background-color: none;
+  transition: background-color 200ms linear;
+  display: flex;
+  padding-top: 0.01rem;
+  padding-bottom: 0.01rem; }
+  #navbar .nav-link {
+    font-family: DINPro;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    transition: color 200ms linear;
+    text-transform: uppercase; }
+    @media (max-width: 767px) {
+      #navbar .nav-link {
+        font-size: 18px; } }
+  #navbar .nav-link:hover {
+    transition: .3s ease;
+    opacity: 0.8; }
+  @media (max-width: 575px) {
+    #navbar {
+      display: none !important; } }
+
+.scrolled {
+  background-color: #fff !important;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  transition: background-color 200ms linear; }
+  .scrolled .nav-link {
+    color: #A88AA8 !important;
+    transition: color 200ms linear; }
+
+.navbar-nav > li {
+  margin: 0vw 4vw; }
+  @media (max-width: 991px) {
+    .navbar-nav > li {
+      margin: 0vw 2vw; } }
+  @media (max-width: 767px) {
+    .navbar-nav > li {
+      margin: 0vw 1vw; } }
+
 .hero {
   overflow: hidden;
   position: relative;
-  padding-bottom: 15px; }
+  padding-bottom: 75px; }
 
 #birds > img {
   padding-top: 7%; }
@@ -73,43 +113,43 @@
 
 #cloud1 {
   width: 700px;
-  margin-top: 20px;
+  margin-top: -30px;
   animation-delay: -40s; }
 
 #cloud2 {
   width: 225px;
   height: 15%;
-  margin-top: 350px;
+  margin-top: 300px;
   animation-delay: -48s; }
 
 #cloud3 {
   width: 700px;
-  margin-top: 375px;
+  margin-top: 325px;
   animation-delay: -26.4s; }
 
 #cloud4 {
   width: 200px;
-  margin-top: 200px;
+  margin-top: 150px;
   animation-delay: -28s; }
 
 #cloud5 {
   width: 350px;
-  margin-top: 300px;
+  margin-top: 250px;
   animation-delay: -9.6s; }
 
 #cloud6 {
   width: 100px;
-  margin-top: 250px;
+  margin-top: 220px;
   animation-delay: -4s; }
 
 #cloud7 {
   width: 550px;
-  margin-top: 75px;
+  margin-top: 25px;
   animation-delay: -68s; }
 
 #cloud8 {
   width: 275px;
-  margin-top: 450px;
+  margin-top: 400px;
   animation-delay: -72s; }
 
 @keyframes wait {
@@ -126,7 +166,8 @@
 
 .hero-information {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  margin-top: -50px;
   animation: wait 600ms, fade-in 800ms 600ms;
   animation-duration: 2s;
   font-family: DINPro;
@@ -215,65 +256,23 @@
     animation: move_cloud_mobile 80s infinite linear;
     animation-delay: -72s; } }
 
-#navbar {
-  background-color: none;
-  transition: background-color 200ms linear;
-  margin-top: 21.5vw;
-  display: flex;
-  padding-top: 0.01rem;
-  padding-bottom: 0.01rem; }
-  #navbar .nav-link {
-    font-family: DINPro;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    transition: color 200ms linear;
-    text-transform: uppercase; }
-    @media (max-width: 767px) {
-      #navbar .nav-link {
-        font-size: 18px; } }
-  #navbar .nav-link:hover {
-    transition: .3s ease;
-    opacity: 0.8; }
-  @media (max-width: 1199px) {
-    #navbar {
-      margin-top: 22.5vw; } }
-  @media (max-width: 991px) {
-    #navbar {
-      margin-top: 19vw; } }
-  @media (max-width: 767px) {
-    #navbar {
-      display: none !important; } }
-
-.scrolled {
-  background-color: #fff !important;
-  transition: background-color 200ms linear; }
-  .scrolled .nav-link {
-    color: #A88AA8 !important;
-    transition: color 200ms linear; }
-
-.navbar-nav > li {
-  margin: 0vw 4vw; }
-  @media (max-width: 991px) {
-    .navbar-nav > li {
-      margin: 0vw 2vw; } }
-  @media (max-width: 767px) {
-    .navbar-nav > li {
-      margin: 0vw 1vw; } }
-
 .intro {
   background-image: url("../img/hero/horizon_bot.svg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
+  margin-top: 21vw;
   z-index: 0; }
+  @media (max-width: 991px) {
+    .intro {
+      margin-top: 17vw; } }
   @media (max-width: 767px) {
     .intro {
-      margin-top: 42vw; } }
+      margin-top: 35vw; } }
   @media (max-width: 575px) {
     .intro {
-      margin-top: 130px; } }
+      margin-top: 100px; } }
 
 .intro-container {
   margin-top: 5%;
