@@ -15,4 +15,17 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./ s3://technica-site-staging --delete --acl public-read
+      run: aws s3 sync ./ s3://technica-site-staging --delete --acl public-read && aws cloudfront create-invalidation --distribution-id=E3MDHB3ELK6ABW --paths /*
+  slackNotification:
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    # Notify slack that a run has been triggered
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@master
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_MESSAGE: Completed new frontend deploy to website staging. View the latest version at http://d4dqpsc7nn2y2.cloudfront.net/index.html
+        MSG_MINIMAL: true
+        SLACK_TITLE: Event

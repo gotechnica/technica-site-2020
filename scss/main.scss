@@ -61,12 +61,58 @@ $animation-length: 80s;
   padding: 10px;
 }
 
+// **** navbar ****
+
+#navbar {
+  background-color: none;
+  transition: background-color 200ms linear;
+  display: flex;
+  padding-top: 0.01rem;
+  padding-bottom: 0.01rem;
+  .nav-link {
+    @include dinpro-text(24px,bold,white);
+    transition: color 200ms linear;
+    text-transform: uppercase;
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+  .nav-link:hover {
+    transition: .3s ease;
+    opacity: 0.8;
+  }
+  @media (max-width: 575px) {
+    display: none !important;
+  }
+}
+
+.scrolled {
+  background-color: #fff !important;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  transition: background-color 200ms linear;
+  .nav-link {
+    color: $lavender !important;
+    transition: color 200ms linear;
+  }
+}
+
+.navbar-nav > li{
+  margin: 0vw 4vw;
+  @media (max-width: 991px) {
+    margin: 0vw 2vw;
+  }
+  @media (max-width: 767px) {
+    margin: 0vw 1vw;
+  }
+}
+
+
 // **** hero section ****
 
 .hero {
   overflow: hidden;
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 75px;
 }
 
 #birds > img {
@@ -110,7 +156,7 @@ $animation-length: 80s;
 // start with cloud 1 at end of screen and stagger from there
 #cloud1 {
   width: 700px;
-  margin-top: 20px;
+  margin-top: -30px;
   @extend %cloud;
   @include cloud-wait(.5)
 }
@@ -118,35 +164,35 @@ $animation-length: 80s;
 #cloud2 {
   width: 225px;
   height: 15%;
-  margin-top: 350px;
+  margin-top: 300px;
   @extend %cloud;
   @include cloud-wait(.6)
 }
 
 #cloud3 {
   width: 700px;
-  margin-top: 375px;
+  margin-top: 325px;
   @extend %cloud;
   @include cloud-wait(.33)
 }
 
 #cloud4 {
     width: 200px;
-    margin-top: 200px;
+    margin-top: 150px;
     @extend %cloud;
     @include cloud-wait(.35)
 }
 
 #cloud5 {
     width: 350px;
-    margin-top: 300px;
+    margin-top: 250px;
     @extend %cloud;
     @include cloud-wait(.12)
 }
 
 #cloud6 {
     width: 100px;
-    margin-top: 250px;
+    margin-top: 220px;
     @extend %cloud;
     @include cloud-wait(.05)
 }
@@ -154,13 +200,13 @@ $animation-length: 80s;
 #cloud7 {
     width: 550px;
     @extend %cloud;
-    margin-top: 75px;
+    margin-top: 25px;
     @include cloud-wait(.85)
 }
 
 #cloud8 {
     width: 275px;
-    margin-top: 450px;
+    margin-top: 400px;
     @extend %cloud;
     @include cloud-wait(.9)
 }
@@ -182,7 +228,8 @@ $animation-length: 80s;
 
 .hero-information {
   position: relative; //allows us to set z index so it appears on top of illustrations
-  z-index: 2;
+  z-index: 3;
+  margin-top: -50px;
   @include fade-in(600ms);
   @include dinpro-text(30px, normal, white)
   .hero-logo {
@@ -300,60 +347,6 @@ $animation-length: 80s;
   }
 }
 
-// **** navbar ****
-
-#navbar {
-  background-color: none;
-  transition: background-color 200ms linear;
-  margin-top: 21.5vw;
-  display: flex;
-  padding-top: 0.01rem;
-  padding-bottom: 0.01rem;
-  .nav-link {
-    @include dinpro-text(24px,bold,white);
-    transition: color 200ms linear;
-    text-transform: uppercase;
-    @media (max-width: 767px) {
-      font-size: 18px;
-    }
-  }
-  .nav-link:hover {
-    transition: .3s ease;
-    opacity: 0.8;
-  }
-
-  @media (max-width: 1199px) {
-    margin-top: 22.5vw;
-  }
-
-  @media (max-width: 991px) {
-    margin-top: 19vw;
-  }
-
-  @media (max-width: 767px) {
-    display: none !important;
-  }
-}
-
-.scrolled {
-  background-color: #fff !important;
-  transition: background-color 200ms linear;
-  .nav-link {
-    color: $lavender !important;
-    transition: color 200ms linear;
-  }
-}
-
-.navbar-nav > li{
-  margin: 0vw 4vw;
-  @media (max-width: 991px) {
-    margin: 0vw 2vw;
-  }
-  @media (max-width: 767px) {
-    margin: 0vw 1vw;
-  }
-}
-
 // **** intro section ****
 
 .intro {
@@ -362,12 +355,16 @@ $animation-length: 80s;
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
+  margin-top: 21vw;
   z-index: 0; //hides overflow wave
+  @media (max-width: 991px) {
+    margin-top: 17vw;
+  }
   @media (max-width: 767px) {
-    margin-top: 42vw;
+    margin-top: 35vw;
   }
   @media (max-width: 575px) {
-    margin-top: 130px;
+    margin-top: 150px;
   }
 }
 
@@ -537,8 +534,15 @@ $animation-length: 80s;
   margin-bottom: 20px;
 }
 
-.contact-content a {
+.link {
   color: black;
+}
+
+.link:hover {
+  color: black;
+  transition: ease 0.3s;
+  opacity: 0.7;
+  text-decoration: none;
 }
 
 .social-buttons > a:hover {
