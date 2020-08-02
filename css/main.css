@@ -300,7 +300,7 @@
 
 .track-image {
   margin: 2% 5%;
-  max-width: 275px; }
+  max-width: 190px; }
 
 .beginner, .general, .research {
   border: 3px solid #CCA8C1;
@@ -308,7 +308,10 @@
   border-radius: 7px;
   box-sizing: border-box;
   padding: 10px;
-  border-radius: 8px; }
+  border-radius: 8px;
+  padding: 25px 10px; }
+  .beginner h3, .general h3, .research h3 {
+    margin: 3% 0%; }
 
 .track-flick-item {
   width: 60%; }

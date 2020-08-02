@@ -401,12 +401,16 @@ $animation-length: 80s;
 
 .track-image {
   margin: 2% 5%;
-  max-width: 275px;
+  max-width: 190px;
 }
 
 .beginner, .general, .research {
   @include box($light-lavender);
   border-radius: 8px;
+  padding: 25px 10px;
+  h3 {
+    margin: 3% 0%;
+  }
 }
 
 .track-flick-item {
