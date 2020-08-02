@@ -320,11 +320,7 @@
       width: 80%; } }
 
 .registration {
-  background-color: #EBB8BE;
-  font-family: DINPro;
-  font-size: 1.25rem;
-  font-weight: normal;
-  color: black; }
+  background-color: #EBB8BE; }
   @media (max-width: 575px) {
     .registration {
       font-size: 1rem; } }
@@ -335,7 +331,7 @@
   border-radius: 7px;
   box-sizing: border-box;
   padding: 10px;
-  text-align: left;
+  text-align: center;
   padding: 4%; }
   .hacker .btn, .mentor .btn, .volunteer .btn {
     margin: 3% 0%; }
