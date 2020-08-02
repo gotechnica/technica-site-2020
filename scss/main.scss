@@ -424,7 +424,6 @@ $animation-length: 80s;
 
 .registration {
     background-color: $peach;
-    @include dinpro-text(1.25rem, normal, black)
     @media (max-width: 575px) {
       font-size: 1rem;
     }
@@ -432,7 +431,7 @@ $animation-length: 80s;
 
 .hacker, .mentor, .volunteer {
     @include box($lavender);
-    text-align: left;
+    text-align: center;
     padding: 4%;
     .btn {
       margin: 3% 0%;
