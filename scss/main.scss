@@ -1,6 +1,7 @@
 /*@use 'vars';*/
 //temporary until resolve _vars.scss issue
 $cyan: #82ECEC;
+$dark-cyan: #4CA1A7;
 $pink: #FF6B98;
 $lavender: #A88AA8;
 
@@ -566,7 +567,7 @@ $animation-length: 80s;
 
 .blue-circle {
   @extend %contact-circle;
-  background-color: $cyan;
+  background-color: $dark-cyan;
 }
 
 .purple-circle {
