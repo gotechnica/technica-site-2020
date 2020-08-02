@@ -272,7 +272,7 @@
       margin-top: 35vw; } }
   @media (max-width: 575px) {
     .intro {
-      margin-top: 100px; } }
+      margin-top: 150px; } }
 
 .intro-container {
   margin-top: 5%;
@@ -416,8 +416,14 @@
   margin-top: -10px;
   margin-bottom: 20px; }
 
-.contact-content a {
+.link {
   color: black; }
+
+.link:hover {
+  color: black;
+  transition: ease 0.3s;
+  opacity: 0.7;
+  text-decoration: none; }
 
 .social-buttons > a:hover {
   text-decoration: none;
