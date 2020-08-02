@@ -364,7 +364,7 @@ $animation-length: 80s;
     margin-top: 35vw;
   }
   @media (max-width: 575px) {
-    margin-top: 100px;
+    margin-top: 150px;
   }
 }
 
@@ -534,8 +534,15 @@ $animation-length: 80s;
   margin-bottom: 20px;
 }
 
-.contact-content a {
+.link {
   color: black;
+}
+
+.link:hover {
+  color: black;
+  transition: ease 0.3s;
+  opacity: 0.7;
+  text-decoration: none;
 }
 
 .social-buttons > a:hover {
