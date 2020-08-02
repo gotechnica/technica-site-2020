@@ -534,6 +534,7 @@ $animation-length: 80s;
 }
 
 .contact-content {
+  margin-top: -10px;
   margin-bottom: 20px;
 }
 
@@ -589,7 +590,7 @@ $animation-length: 80s;
     text-align: center;
     @media (max-width: 575px) {
       font-size: 0.9rem;
-      padding-top: 1rem;
+      padding: 0.5rem 0rem;
     }
     #footer-links {
       margin-bottom: 5px;

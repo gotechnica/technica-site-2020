@@ -418,6 +418,7 @@
   color: black; }
 
 .contact-content {
+  margin-top: -10px;
   margin-bottom: 20px; }
 
 .contact-content a {
@@ -458,7 +459,7 @@
   @media (max-width: 575px) {
     .footer {
       font-size: 0.9rem;
-      padding-top: 1rem; } }
+      padding: 0.5rem 0rem; } }
   .footer #footer-links {
     margin-bottom: 5px; }
 
