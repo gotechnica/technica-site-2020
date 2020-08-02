@@ -15,7 +15,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./ s3://technica-site-staging --delete --acl public-read && aws cloudfront create-invalidation --distribution-id=E3MDHB3ELK6ABW --paths /
+      run: aws s3 sync ./ s3://technica-site-staging --delete --acl public-read && aws cloudfront create-invalidation --distribution-id=E3MDHB3ELK6ABW --paths /*
   slackNotification:
     name: Slack Notification
     runs-on: ubuntu-latest
