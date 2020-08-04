@@ -301,7 +301,7 @@
   margin: 2% 5%;
   max-width: 190px; }
 
-.beginner, .general, .research {
+.beginner, .hardware, .general, .research {
   border: 3px solid #CCA8C1;
   background: rgba(255, 255, 255, 0.85);
   border-radius: 7px;
@@ -309,7 +309,7 @@
   padding: 10px;
   border-radius: 8px;
   padding: 25px 10px; }
-  .beginner h3, .general h3, .research h3 {
+  .beginner h3, .hardware h3, .general h3, .research h3 {
     margin: 3% 0%; }
 
 .track-flick-item {
