@@ -401,7 +401,7 @@ $animation-length: 80s;
   max-width: 190px;
 }
 
-.beginner, .general, .research {
+.beginner, .hardware, .general, .research {
   @include box($light-lavender);
   border-radius: 8px;
   padding: 25px 10px;
