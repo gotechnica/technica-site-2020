@@ -46,6 +46,19 @@
     #navbar {
       display: none !important; } }
 
+.logo {
+  background: linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50px; }
+
+.navbar-brand {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.navbar-toggler {
+  border: none; }
+
 .scrolled {
   background-color: #fff !important;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
@@ -113,7 +126,7 @@
 
 #cloud1 {
   width: 700px;
-  margin-top: -30px;
+  margin-top: 30px;
   animation-delay: -40s; }
 
 #cloud2 {
