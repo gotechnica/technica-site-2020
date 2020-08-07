@@ -323,29 +323,35 @@
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
-  margin-top: 21vw;
+  margin-top: 20vw;
   z-index: 0; }
   @media (max-width: 991px) {
     .intro {
-      margin-top: 17vw; } }
+      margin-top: 16vw; } }
   @media (max-width: 767px) {
     .intro {
-      margin-top: 35vw; } }
+      margin-top: 34vw; } }
   @media (max-width: 575px) {
     .intro {
-      margin-top: 150px; } }
+      margin-top: 150px;
+      padding-left: 3%;
+      padding-right: 3%; } }
+  @media (max-width: 400px) {
+    .intro {
+      margin-top: 175px; } }
 
 .intro-container {
   margin-top: 5%;
   margin-bottom: 5%;
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 3%; }
 
 #intro-vid {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  border-radius: 8px; }
   @media (max-width: 991px) {
     #intro-vid {
       height: 350px; } }
@@ -368,6 +374,9 @@
 .tracks {
   position: relative;
   z-index: 5; }
+  @media (max-width: 575px) {
+    .tracks {
+      margin-top: -1px; } }
 
 .track-image {
   margin: 2% 5%;
