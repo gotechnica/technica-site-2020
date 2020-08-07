@@ -16,6 +16,7 @@ $gradient-peach: #EDA29F;
 $gradient-lavender: #C4A3BE;
 $gradient-blue: #47BCBB;
 $wave-blue: #628CB2;
+$wave-light-blue: #C2DDE3;
 
 $animation-length: 80s;
 
@@ -87,8 +88,10 @@ $animation-length: 80s;
 }
 
 .scrolled {
-  background-color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   transition: background-color 200ms linear;
   .nav-link {
     color: $lavender !important;
@@ -388,10 +391,30 @@ $animation-length: 80s;
   }
 }
 
+// *** body ***
+.main {
+  background-color: $wave-light-blue;
+  transition: background-color 200ms linear;
+}
+
+.scroll-tracks {
+  background-color: $light-lavender !important;
+  transition: background-color 200ms linear;
+}
+
+.scroll-registration {
+  background-color: $peach !important;
+  transition: background-color 200ms linear;
+}
+
+.scroll-faq {
+  background-color: $blue !important;
+  transition: background-color 200ms linear;
+}
+
 // **** tracks section ****
 
 .tracks {
-  background-color: $light-lavender;
   position: relative;
   z-index: 5;
 }
@@ -403,6 +426,7 @@ $animation-length: 80s;
 
 .beginner, .hardware, .general, .research {
   @include box($light-lavender);
+  border: 0px;
   border-radius: 8px;
   padding: 25px 10px;
   h3 {
@@ -420,7 +444,6 @@ $animation-length: 80s;
 // **** registration section ****
 
 .registration {
-    background-color: $peach;
     @media (max-width: 575px) {
       font-size: 1rem;
     }
@@ -469,7 +492,6 @@ $animation-length: 80s;
 // **** FAQ section ****
 
 .faq {
-  background-color: $blue;
   @media (max-width: 575px) {
     padding-left: 3%;
     padding-right: 3%;
