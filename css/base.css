@@ -53,3 +53,7 @@ h4 {
   @media (max-width: 575px) {
     h4 {
       font-size: 1.15rem; } }
+
+@media (max-width: 575px) {
+  html, body {
+    overflow-x: hidden; } }
