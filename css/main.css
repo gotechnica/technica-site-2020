@@ -8,11 +8,15 @@
   border-radius: 50px;
   text-transform: uppercase;
   margin-top: 3%;
-  padding: 3px 25px; }
+  padding: 3px 25px;
+  transition: .3s ease; }
 
 .btn:hover {
-  opacity: 0.8;
-  transition: .5s ease; }
+  transform: scale(1.05);
+  opacity: 0.95; }
+
+.disabled-btn {
+  pointer-events: none !important; }
 
 .section {
   padding: 3%; }
@@ -126,7 +130,7 @@
 
 #cloud3 {
   width: 700px;
-  margin-top: 325px;
+  margin-top: 350px;
   animation-delay: -26.4s; }
 
 #cloud4 {
@@ -295,7 +299,7 @@
       height: 250px; } }
 
 .main {
-  background-color: #C2DDE3;
+  background-color: #C3DDE2;
   transition: background-color 200ms linear; }
 
 .scroll-tracks {
@@ -320,7 +324,7 @@
 
 .beginner, .hardware, .general, .research {
   border: 3px solid #CCA8C1;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 7px;
   box-sizing: border-box;
   padding: 10px;
@@ -331,6 +335,7 @@
     margin: 3% 0%; }
 
 .track-flick-item {
+  margin: 0px 3px;
   width: 60%; }
   @media (max-width: 767px) {
     .track-flick-item {
@@ -342,7 +347,7 @@
 
 .hacker, .mentor, .volunteer {
   border: 3px solid #A88AA8;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 7px;
   box-sizing: border-box;
   padding: 10px;
@@ -452,9 +457,26 @@
   z-index: 1;
   margin: 0px 50px; }
 
-.contact {
-  background-color: #E5E5E5;
-  text-align: center; }
+.contact-footer {
+  background-image: url("../img/contact_horizon.svg");
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat; }
+  @media (max-width: 1199px) {
+    .contact-footer {
+      background-size: 1199px; } }
+  @media (max-width: 991px) {
+    .contact-footer {
+      background-size: 1000px;
+      background-position: 40% 70%; } }
+  @media (max-width: 767px) {
+    .contact-footer {
+      background-size: 1300px;
+      background-position: 10% 70%; } }
+  @media (max-width: 575px) {
+    .contact-footer {
+      background-size: 1100px;
+      background-position: 10% 0%; } }
 
 .contact-header {
   font-family: DINPro;
@@ -505,7 +527,8 @@
   background-color: #FF6B98; }
 
 .footer {
-  background-color: #C4C4C4;
+  padding-top: 20px;
+  padding-bottom: 10px;
   text-align: center; }
   @media (max-width: 575px) {
     .footer {

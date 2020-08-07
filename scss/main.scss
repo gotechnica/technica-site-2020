@@ -16,7 +16,6 @@ $gradient-peach: #EDA29F;
 $gradient-lavender: #C4A3BE;
 $gradient-blue: #47BCBB;
 $wave-blue: #628CB2;
-$wave-light-blue: #C2DDE3;
 
 $animation-length: 80s;
 
@@ -35,11 +34,16 @@ $animation-length: 80s;
     text-transform: uppercase;
     margin-top: 3%;
     padding: 3px 25px;
+    transition: .3s ease;
 }
 
 .btn:hover {
-  opacity: 0.8;
-  transition: .5s ease;
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+.disabled-btn {
+  pointer-events: none !important;
 }
 
 .section {
@@ -56,7 +60,7 @@ $animation-length: 80s;
 // Track Box Class
 @mixin box($color) {
   border: 3px solid $color;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, .9);
   border-radius: 7px;
   box-sizing: border-box;
   padding: 10px;
@@ -174,7 +178,7 @@ $animation-length: 80s;
 
 #cloud3 {
   width: 700px;
-  margin-top: 325px;
+  margin-top: 350px;
   @extend %cloud;
   @include cloud-wait(.33)
 }
@@ -393,7 +397,7 @@ $animation-length: 80s;
 
 // *** body ***
 .main {
-  background-color: $wave-light-blue;
+  background-color: $blue;
   transition: background-color 200ms linear;
 }
 
@@ -435,6 +439,7 @@ $animation-length: 80s;
 }
 
 .track-flick-item {
+  margin: 0px 3px;
   width: 60%;
   @media (max-width: 767px) {
     width: 80%;
@@ -588,9 +593,26 @@ $animation-length: 80s;
 
 // **** footer section ****
 
-.contact {
-    background-color: $light-grey;
-    text-align: center;
+.contact-footer {
+  background-image: url("../img/contact_horizon.svg");
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  @media (max-width: 1199px) {
+    background-size: 1199px;
+  }
+  @media (max-width: 991px) {
+    background-size: 1000px;
+    background-position: 40% 70%;
+  }
+  @media (max-width: 767px) {
+    background-size: 1300px;
+    background-position: 10% 70%;
+  }
+  @media (max-width: 575px) {
+    background-size: 1100px;
+    background-position: 10% 0%;
+  }
 }
 
 .contact-header {
@@ -657,7 +679,8 @@ $animation-length: 80s;
 }
 
 .footer {
-    background-color: $grey;
+    padding-top: 20px;
+    padding-bottom: 10px;
     text-align: center;
     @media (max-width: 575px) {
       font-size: 0.9rem;
