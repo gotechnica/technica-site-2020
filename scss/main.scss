@@ -67,8 +67,8 @@ $animation-length: 80s;
   background-color: none;
   transition: background-color 200ms linear;
   display: flex;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   .nav-link {
     @include dinpro-text(24px,bold,white);
     transition: color 200ms linear;
@@ -106,12 +106,24 @@ $animation-length: 80s;
   .navbar-brand {
     margin-left: 10px;
     margin-right: 10px;
-    position: absolute;
   }
 
   .navbar-toggler {
     border: none;
   }
+}
+
+.navbar-brand {
+    position: absolute;
+}
+
+@media (max-width: 767px) {
+    .scrolled{
+        .logo {
+            width: 35px;
+            height: 35px;
+        }
+    }
 }
 
 .navbar-nav > li{

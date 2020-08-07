@@ -27,8 +27,8 @@
   background-color: none;
   transition: background-color 200ms linear;
   display: flex;
-  padding-top: 1%;
-  padding-bottom: 1%; }
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem; }
   #navbar .nav-link {
     font-family: DINPro;
     font-size: 24px;
@@ -60,10 +60,17 @@
     border-radius: 50px; }
   .scrolled .navbar-brand {
     margin-left: 10px;
-    margin-right: 10px;
-    position: absolute; }
+    margin-right: 10px; }
   .scrolled .navbar-toggler {
     border: none; }
+
+.navbar-brand {
+  position: absolute; }
+
+@media (max-width: 767px) {
+  .scrolled .logo {
+    width: 35px;
+    height: 35px; } }
 
 .navbar-nav > li {
   margin: 0vw 4vw; }
