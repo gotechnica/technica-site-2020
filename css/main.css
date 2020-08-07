@@ -295,7 +295,7 @@
       height: 250px; } }
 
 .main {
-  background-color: #C2DDE3;
+  background-color: #C3DDE2;
   transition: background-color 200ms linear; }
 
 .scroll-tracks {
@@ -452,9 +452,26 @@
   z-index: 1;
   margin: 0px 50px; }
 
-.contact {
-  background-color: #E5E5E5;
-  text-align: center; }
+.contact-footer {
+  background-image: url("../img/contact_horizon.svg");
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat; }
+  @media (max-width: 1199px) {
+    .contact-footer {
+      background-size: 1199px; } }
+  @media (max-width: 991px) {
+    .contact-footer {
+      background-size: 1000px;
+      background-position: 40% 70%; } }
+  @media (max-width: 767px) {
+    .contact-footer {
+      background-size: 1300px;
+      background-position: 10% 70%; } }
+  @media (max-width: 575px) {
+    .contact-footer {
+      background-size: 1100px;
+      background-position: 10% 0%; } }
 
 .contact-header {
   font-family: DINPro;
@@ -505,7 +522,8 @@
   background-color: #FF6B98; }
 
 .footer {
-  background-color: #C4C4C4;
+  padding-top: 20px;
+  padding-bottom: 10px;
   text-align: center; }
   @media (max-width: 575px) {
     .footer {
