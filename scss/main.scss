@@ -72,8 +72,8 @@ $animation-length: 80s;
   background-color: none;
   transition: background-color 200ms linear;
   display: flex;
-  padding-top: 0.01rem;
-  padding-bottom: 0.01rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   .nav-link {
     @include dinpro-text(24px,bold,white);
     transition: color 200ms linear;
@@ -97,10 +97,40 @@ $animation-length: 80s;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   transition: background-color 200ms linear;
+
   .nav-link {
     color: $lavender !important;
     transition: color 200ms linear;
   }
+    
+  .logo {
+    background: linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  .navbar-brand {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+}
+
+.navbar-brand {
+    position: absolute;
+}
+
+@media (max-width: 767px) {
+    .scrolled{
+        .logo {
+            width: 35px;
+            height: 35px;
+        }
+    }
 }
 
 .navbar-nav > li{
@@ -158,12 +188,13 @@ $animation-length: 80s;
 // pass in percentage of how far in the animation the cloud should start in
 @mixin cloud-wait($percentange) {
   animation-delay: -$animation-length*$percentange;
+  // freeze to test cloud position
+  //animation-play-state: paused;
 }
 
 // start with cloud 1 at end of screen and stagger from there
 #cloud1 {
   width: 700px;
-  margin-top: -30px;
   @extend %cloud;
   @include cloud-wait(.5)
 }

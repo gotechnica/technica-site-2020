@@ -31,8 +31,8 @@
   background-color: none;
   transition: background-color 200ms linear;
   display: flex;
-  padding-top: 0.01rem;
-  padding-bottom: 0.01rem; }
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem; }
   #navbar .nav-link {
     font-family: DINPro;
     font-size: 24px;
@@ -59,6 +59,24 @@
   .scrolled .nav-link {
     color: #A88AA8 !important;
     transition: color 200ms linear; }
+  .scrolled .logo {
+    background: linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px; }
+  .scrolled .navbar-brand {
+    margin-left: 10px;
+    margin-right: 10px; }
+  .scrolled .navbar-toggler {
+    border: none; }
+
+.navbar-brand {
+  position: absolute; }
+
+@media (max-width: 767px) {
+  .scrolled .logo {
+    width: 35px;
+    height: 35px; } }
 
 .navbar-nav > li {
   margin: 0vw 4vw; }
@@ -119,7 +137,6 @@
 
 #cloud1 {
   width: 700px;
-  margin-top: -30px;
   animation-delay: -40s; }
 
 #cloud2 {
