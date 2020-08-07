@@ -434,6 +434,7 @@ $animation-length: 80s;
 }
 
 .track-flick-item {
+  margin: 0px 3px;
   width: 60%;
   @media (max-width: 767px) {
     width: 80%;

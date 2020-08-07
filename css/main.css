@@ -331,6 +331,7 @@
     margin: 3% 0%; }
 
 .track-flick-item {
+  margin: 0px 3px;
   width: 60%; }
   @media (max-width: 767px) {
     .track-flick-item {
