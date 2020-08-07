@@ -67,8 +67,8 @@ $animation-length: 80s;
   background-color: none;
   transition: background-color 200ms linear;
   display: flex;
-  padding-top: 0.01rem;
-  padding-bottom: 0.01rem;
+  padding-top: 1%;
+  padding-bottom: 1%;
   .nav-link {
     @include dinpro-text(24px,bold,white);
     transition: color 200ms linear;
@@ -86,29 +86,31 @@ $animation-length: 80s;
   }
 }
 
-.logo {
-  background: linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-}
-
-.navbar-brand {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.navbar-toggler {
-  border: none;
-}
-
 .scrolled {
   background-color: #fff !important;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
   transition: background-color 200ms linear;
+
   .nav-link {
     color: $lavender !important;
     transition: color 200ms linear;
+  }
+    
+  .logo {
+    background: linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  .navbar-brand {
+    margin-left: 10px;
+    margin-right: 10px;
+    position: absolute;
+  }
+
+  .navbar-toggler {
+    border: none;
   }
 }
 
@@ -174,7 +176,6 @@ $animation-length: 80s;
 // start with cloud 1 at end of screen and stagger from there
 #cloud1 {
   width: 700px;
-  margin-top: 30px;
   @extend %cloud;
   @include cloud-wait(.5)
 }
