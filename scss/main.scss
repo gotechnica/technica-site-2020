@@ -34,11 +34,16 @@ $animation-length: 80s;
     text-transform: uppercase;
     margin-top: 3%;
     padding: 3px 25px;
+    transition: .3s ease;
 }
 
 .btn:hover {
-  opacity: 0.8;
-  transition: .5s ease;
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+.disabled-btn {
+  pointer-events: none !important;
 }
 
 .section {
