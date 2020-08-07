@@ -130,7 +130,7 @@
 
 #cloud3 {
   width: 700px;
-  margin-top: 325px;
+  margin-top: 350px;
   animation-delay: -26.4s; }
 
 #cloud4 {
@@ -324,7 +324,7 @@
 
 .beginner, .hardware, .general, .research {
   border: 3px solid #CCA8C1;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 7px;
   box-sizing: border-box;
   padding: 10px;
@@ -347,7 +347,7 @@
 
 .hacker, .mentor, .volunteer {
   border: 3px solid #A88AA8;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 7px;
   box-sizing: border-box;
   padding: 10px;

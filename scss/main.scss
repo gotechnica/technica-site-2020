@@ -60,7 +60,7 @@ $animation-length: 80s;
 // Track Box Class
 @mixin box($color) {
   border: 3px solid $color;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, .9);
   border-radius: 7px;
   box-sizing: border-box;
   padding: 10px;
@@ -178,7 +178,7 @@ $animation-length: 80s;
 
 #cloud3 {
   width: 700px;
-  margin-top: 325px;
+  margin-top: 350px;
   @extend %cloud;
   @include cloud-wait(.33)
 }
