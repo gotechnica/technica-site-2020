@@ -51,10 +51,8 @@
       display: none !important; } }
 
 .scrolled {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: white;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
   transition: background-color 200ms linear; }
   .scrolled .nav-link {
     color: #A88AA8 !important;
@@ -98,6 +96,20 @@
 #birds {
   position: relative;
   z-index: 3; }
+
+@keyframes move_cloud_large {
+  0% {
+    opacity: 0;
+    left: -20vw; }
+  5% {
+    opacity: 1; }
+  60% {
+    opacity: 1; }
+  65% {
+    opacity: 0;
+    left: 95vw; }
+  100% {
+    opacity: 0; } }
 
 @keyframes move_cloud {
   0% {
@@ -244,6 +256,32 @@
   .register-btn {
     font-size: 20px !important; } }
 
+@media only screen and (min-width: 1200px) {
+  #cloud1 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -40s; }
+  #cloud2 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -48s; }
+  #cloud3 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -26.4s; }
+  #cloud4 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -28s; }
+  #cloud5 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -9.6s; }
+  #cloud6 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -4s; }
+  #cloud7 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -68s; }
+  #cloud8 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -72s; } }
+
 @media only screen and (max-width: 575px) {
   .hero {
     padding-bottom: 75px; }
@@ -319,16 +357,12 @@
   background-color: #C3DDE2;
   transition: background-color 200ms linear; }
 
-.scroll-tracks {
-  background-color: #CCA8C1 !important;
-  transition: background-color 200ms linear; }
-
 .scroll-registration {
   background-color: #EBB8BE !important;
   transition: background-color 200ms linear; }
 
 .scroll-faq {
-  background-color: #C3DDE2 !important;
+  background-color: #CCA8C1 !important;
   transition: background-color 200ms linear; }
 
 .tracks {
@@ -374,7 +408,7 @@
     margin: 3% 0%; }
 
 .registration-image {
-  height: 400px; }
+  height: 450px; }
   @media (max-width: 850px) {
     .registration-image {
       height: auto;
@@ -477,11 +511,12 @@
 .contact-footer {
   background-image: url("../img/contact_horizon.svg");
   background-size: 100%;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat; }
   @media (max-width: 1199px) {
     .contact-footer {
-      background-size: 1199px; } }
+      background-size: 1199px;
+      background-position: bottom; } }
   @media (max-width: 991px) {
     .contact-footer {
       background-size: 1000px;

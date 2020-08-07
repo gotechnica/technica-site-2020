@@ -92,17 +92,15 @@ $animation-length: 80s;
 }
 
 .scrolled {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 1);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
   transition: background-color 200ms linear;
 
   .nav-link {
     color: $lavender !important;
     transition: color 200ms linear;
   }
-    
+
   .logo {
     background: linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
     width: 50px;
@@ -159,6 +157,14 @@ $animation-length: 80s;
 #birds {
   position: relative;
   z-index: 3;
+}
+
+@keyframes move_cloud_large {
+  0% {opacity: 0; left: -20vw}
+  5% {opacity: 1;}
+  60% {opacity: 1;}
+  65% {opacity: 0;left: 95vw}
+  100% {opacity: 0;}
 }
 
 @keyframes move_cloud {
@@ -337,6 +343,42 @@ $animation-length: 80s;
   }
 }
 
+//hardcoding for now - fix later to a responsive cloud animation
+@media only screen and (min-width: 1200px) {
+  #cloud1 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.5)
+  }
+  #cloud2 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.6)
+  }
+  #cloud3 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.33)
+  }
+  #cloud4 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.35)
+  }
+  #cloud5 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.12)
+  }
+  #cloud6 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.05)
+  }
+  #cloud7 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.85)
+  }
+  #cloud8 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.9)
+  }
+}
+
 @media only screen and (max-width: 575px) {
   .hero {
     padding-bottom: 75px;
@@ -433,8 +475,8 @@ $animation-length: 80s;
 }
 
 .scroll-tracks {
-  background-color: $light-lavender !important;
-  transition: background-color 200ms linear;
+  // background-color: $light-lavender !important;
+  // transition: background-color 200ms linear;
 }
 
 .scroll-registration {
@@ -443,7 +485,7 @@ $animation-length: 80s;
 }
 
 .scroll-faq {
-  background-color: $blue !important;
+  background-color: $light-lavender !important;
   transition: background-color 200ms linear;
 }
 
@@ -495,7 +537,7 @@ $animation-length: 80s;
 }
 
 .registration-image {
-  height: 400px;
+  height: 450px;
   @media (max-width: 850px) {
     height: auto;
     width: 100%;
@@ -627,10 +669,11 @@ $animation-length: 80s;
 .contact-footer {
   background-image: url("../img/contact_horizon.svg");
   background-size: 100%;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
   @media (max-width: 1199px) {
     background-size: 1199px;
+    background-position: bottom;
   }
   @media (max-width: 991px) {
     background-size: 1000px;
