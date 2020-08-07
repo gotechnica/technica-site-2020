@@ -47,8 +47,10 @@
       display: none !important; } }
 
 .scrolled {
-  background-color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   transition: background-color 200ms linear; }
   .scrolled .nav-link {
     color: #A88AA8 !important;
@@ -292,8 +294,23 @@
     #intro-vid {
       height: 250px; } }
 
+.main {
+  background-color: #C2DDE3;
+  transition: background-color 200ms linear; }
+
+.scroll-tracks {
+  background-color: #CCA8C1 !important;
+  transition: background-color 200ms linear; }
+
+.scroll-registration {
+  background-color: #EBB8BE !important;
+  transition: background-color 200ms linear; }
+
+.scroll-faq {
+  background-color: #C3DDE2 !important;
+  transition: background-color 200ms linear; }
+
 .tracks {
-  background-color: #CCA8C1;
   position: relative;
   z-index: 5; }
 
@@ -307,6 +324,7 @@
   border-radius: 7px;
   box-sizing: border-box;
   padding: 10px;
+  border: 0px;
   border-radius: 8px;
   padding: 25px 10px; }
   .beginner h3, .hardware h3, .general h3, .research h3 {
@@ -318,11 +336,9 @@
     .track-flick-item {
       width: 80%; } }
 
-.registration {
-  background-color: #EBB8BE; }
-  @media (max-width: 575px) {
-    .registration {
-      font-size: 1rem; } }
+@media (max-width: 575px) {
+  .registration {
+    font-size: 1rem; } }
 
 .hacker, .mentor, .volunteer {
   border: 3px solid #A88AA8;
@@ -358,12 +374,10 @@
     .hacker .btn, .mentor .btn, .volunteer .btn {
       margin: 0; } }
 
-.faq {
-  background-color: #C3DDE2; }
-  @media (max-width: 575px) {
-    .faq {
-      padding-left: 3%;
-      padding-right: 3%; } }
+@media (max-width: 575px) {
+  .faq {
+    padding-left: 3%;
+    padding-right: 3%; } }
 
 .faq-container {
   background-color: white;
