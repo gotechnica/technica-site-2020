@@ -72,13 +72,13 @@ $animation-length: 80s;
 
 #navbar {
   background-color: none;
-  transition: background-color 200ms linear;
   display: flex;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  visibility: hidden;
+  transition: all 200ms linear;
   .nav-link {
-    @include dinpro-text(24px,bold,white);
-    transition: color 200ms linear;
+    @include dinpro-text(24px,bold,rgba(0, 0, 0, 0));
     text-transform: uppercase;
     @media (max-width: 767px) {
       font-size: 18px;
@@ -94,9 +94,10 @@ $animation-length: 80s;
 }
 
 .scrolled {
-  background-color: rgba(255, 255, 255, 1);
+  visibility: visible !important;
+  background-color: rgba(255, 255, 255, 1) !important;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-  transition: background-color 200ms linear;
+  transition: all 200ms linear;
 
   .nav-link {
     color: $lavender !important;

@@ -519,7 +519,7 @@
       $(document).scroll(function () {
         var $nav = $(".navbar");
         var $main = $(".main");
-        if($(window).scrollTop() >= $("#intro").offset().top) {
+        if($(window).scrollTop() >= $("#intro").offset().top - 100) {
           $nav.addClass('scrolled');
         } else {
           $nav.removeClass('scrolled');
