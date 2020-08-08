@@ -51,10 +51,8 @@
       display: none !important; } }
 
 .scrolled {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: white;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
   transition: background-color 200ms linear; }
   .scrolled .nav-link {
     color: #A88AA8 !important;
@@ -98,6 +96,20 @@
 #birds {
   position: relative;
   z-index: 3; }
+
+@keyframes move_cloud_large {
+  0% {
+    opacity: 0;
+    left: -20vw; }
+  5% {
+    opacity: 1; }
+  60% {
+    opacity: 1; }
+  65% {
+    opacity: 0;
+    left: 95vw; }
+  100% {
+    opacity: 0; } }
 
 @keyframes move_cloud {
   0% {
@@ -209,8 +221,10 @@
 .register-btn {
   position: relative;
   z-index: 2;
-  animation: wait 1.5s, fade-in 800ms 1.5s;
-  animation-duration: 2s; }
+  opacity: 0;
+  animation: fade-in 2s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards; }
 
 .hero-horizon {
   position: absolute;
@@ -243,6 +257,32 @@
     width: 200px; }
   .register-btn {
     font-size: 20px !important; } }
+
+@media only screen and (min-width: 1200px) {
+  #cloud1 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -40s; }
+  #cloud2 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -48s; }
+  #cloud3 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -26.4s; }
+  #cloud4 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -28s; }
+  #cloud5 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -9.6s; }
+  #cloud6 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -4s; }
+  #cloud7 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -68s; }
+  #cloud8 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -72s; } }
 
 @media only screen and (max-width: 575px) {
   .hero {
@@ -285,29 +325,35 @@
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
-  margin-top: 21vw;
+  margin-top: 20vw;
   z-index: 0; }
   @media (max-width: 991px) {
     .intro {
-      margin-top: 17vw; } }
+      margin-top: 16vw; } }
   @media (max-width: 767px) {
     .intro {
-      margin-top: 35vw; } }
+      margin-top: 34vw; } }
   @media (max-width: 575px) {
     .intro {
-      margin-top: 150px; } }
+      margin-top: 150px;
+      padding-left: 3%;
+      padding-right: 3%; } }
+  @media (max-width: 400px) {
+    .intro {
+      margin-top: 175px; } }
 
 .intro-container {
   margin-top: 5%;
   margin-bottom: 5%;
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 3%; }
 
 #intro-vid {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  border-radius: 8px; }
   @media (max-width: 991px) {
     #intro-vid {
       height: 350px; } }
@@ -319,34 +365,33 @@
   background-color: #C3DDE2;
   transition: background-color 200ms linear; }
 
-.scroll-tracks {
-  background-color: #CCA8C1 !important;
-  transition: background-color 200ms linear; }
-
 .scroll-registration {
   background-color: #EBB8BE !important;
   transition: background-color 200ms linear; }
 
 .scroll-faq {
-  background-color: #C3DDE2 !important;
+  background-color: #CCA8C1 !important;
   transition: background-color 200ms linear; }
 
 .tracks {
   position: relative;
   z-index: 5; }
+  @media (max-width: 575px) {
+    .tracks {
+      margin-top: -1px; } }
 
 .track-image {
   margin: 2% 5%;
   max-width: 190px; }
 
 .beginner, .hardware, .general, .research {
-  border: 3px solid #CCA8C1;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 7px;
+  border-radius: 8px;
   box-sizing: border-box;
   padding: 10px;
-  border: 0px;
-  border-radius: 8px;
   padding: 25px 10px; }
   .beginner h3, .hardware h3, .general h3, .research h3 {
     margin: 3% 0%; }
@@ -363,9 +408,11 @@
     font-size: 1rem; } }
 
 .hacker, .mentor, .volunteer {
-  border: 3px solid #A88AA8;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 7px;
+  border-radius: 8px;
   box-sizing: border-box;
   padding: 10px;
   text-align: center;
@@ -374,7 +421,7 @@
     margin: 3% 0%; }
 
 .registration-image {
-  height: 400px; }
+  height: 450px; }
   @media (max-width: 850px) {
     .registration-image {
       height: auto;
@@ -477,11 +524,12 @@
 .contact-footer {
   background-image: url("../img/contact_horizon.svg");
   background-size: 100%;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat; }
   @media (max-width: 1199px) {
     .contact-footer {
-      background-size: 1199px; } }
+      background-size: 1199px;
+      background-position: bottom; } }
   @media (max-width: 991px) {
     .contact-footer {
       background-size: 1000px;

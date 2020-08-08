@@ -59,9 +59,11 @@ $animation-length: 80s;
 
 // Track Box Class
 @mixin box($color) {
-  border: 3px solid $color;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
   background: rgba(255, 255, 255, .9);
-  border-radius: 7px;
+  border-radius: 8px;
   box-sizing: border-box;
   padding: 10px;
 }
@@ -92,17 +94,15 @@ $animation-length: 80s;
 }
 
 .scrolled {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 1);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
   transition: background-color 200ms linear;
 
   .nav-link {
     color: $lavender !important;
     transition: color 200ms linear;
   }
-    
+
   .logo {
     background: linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
     width: 50px;
@@ -159,6 +159,14 @@ $animation-length: 80s;
 #birds {
   position: relative;
   z-index: 3;
+}
+
+@keyframes move_cloud_large {
+  0% {opacity: 0; left: -20vw}
+  5% {opacity: 1;}
+  60% {opacity: 1;}
+  65% {opacity: 0;left: 95vw}
+  100% {opacity: 0;}
 }
 
 @keyframes move_cloud {
@@ -286,7 +294,10 @@ $animation-length: 80s;
 .register-btn {
   position: relative;
   z-index: 2;
-  @include fade-in(1.5s);
+  opacity: 0;
+  animation: fade-in 2s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 .hero-horizon {
@@ -334,6 +345,42 @@ $animation-length: 80s;
   }
   .register-btn {
     font-size: 20px !important;
+  }
+}
+
+//hardcoding for now - fix later to a responsive cloud animation
+@media only screen and (min-width: 1200px) {
+  #cloud1 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.5)
+  }
+  #cloud2 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.6)
+  }
+  #cloud3 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.33)
+  }
+  #cloud4 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.35)
+  }
+  #cloud5 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.12)
+  }
+  #cloud6 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.05)
+  }
+  #cloud7 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.85)
+  }
+  #cloud8 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.9)
   }
 }
 
@@ -393,16 +440,21 @@ $animation-length: 80s;
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
-  margin-top: 21vw;
+  margin-top: 20vw;
   z-index: 0; //hides overflow wave
   @media (max-width: 991px) {
-    margin-top: 17vw;
+    margin-top: 16vw;
   }
   @media (max-width: 767px) {
-    margin-top: 35vw;
+    margin-top: 34vw;
   }
   @media (max-width: 575px) {
     margin-top: 150px;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  @media (max-width: 400px) {
+    margin-top: 175px;
   }
 }
 
@@ -411,13 +463,14 @@ $animation-length: 80s;
   margin-bottom: 5%;
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 3%;
 }
 
 #intro-vid {
   width: 100%;
   height: 100%;
+  border-radius: 8px;
   @media (max-width: 991px) {
     height: 350px;
   }
@@ -432,18 +485,13 @@ $animation-length: 80s;
   transition: background-color 200ms linear;
 }
 
-.scroll-tracks {
-  background-color: $light-lavender !important;
-  transition: background-color 200ms linear;
-}
-
 .scroll-registration {
   background-color: $peach !important;
   transition: background-color 200ms linear;
 }
 
 .scroll-faq {
-  background-color: $blue !important;
+  background-color: $light-lavender !important;
   transition: background-color 200ms linear;
 }
 
@@ -452,6 +500,9 @@ $animation-length: 80s;
 .tracks {
   position: relative;
   z-index: 5;
+  @media (max-width: 575px) {
+    margin-top: -1px; //white line was appearing between sections
+  }
 }
 
 .track-image {
@@ -461,8 +512,6 @@ $animation-length: 80s;
 
 .beginner, .hardware, .general, .research {
   @include box($light-lavender);
-  border: 0px;
-  border-radius: 8px;
   padding: 25px 10px;
   h3 {
     margin: 3% 0%;
@@ -495,7 +544,7 @@ $animation-length: 80s;
 }
 
 .registration-image {
-  height: 400px;
+  height: 450px;
   @media (max-width: 850px) {
     height: auto;
     width: 100%;
@@ -627,10 +676,11 @@ $animation-length: 80s;
 .contact-footer {
   background-image: url("../img/contact_horizon.svg");
   background-size: 100%;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
   @media (max-width: 1199px) {
     background-size: 1199px;
+    background-position: bottom;
   }
   @media (max-width: 991px) {
     background-size: 1000px;

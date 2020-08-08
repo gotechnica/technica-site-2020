@@ -212,7 +212,7 @@
               <div class="general" style="height: 100%">
                 <img class="track-image" src="./img/hacker_mountain.svg" alt="simple mountains and sun sketch"></img>
                 <h3>General</h3>
-                <p>Come build using hardware, software, or anything you want with other hackers! You don't have to know how to code to be a hacker. Hackers can be students, designers, or just any tech-lover out there!</p>
+                <p>For any and all hackers! Come build using hardware, software, or anything you want with other hackers! You don't have to know how to code to be a hacker. Hackers can be students, designers, or just any tech-lover out there!</p>
               </div>
             </div>
             <div class="col-lg">
@@ -538,8 +538,8 @@
         } else {
           $main.removeClass('scroll-registration');
         }
-        //registration
-        if($(window).scrollTop() >= $("#faq").offset().top - 100) {
+        //faq
+        if($(window).scrollTop() >= $("#faq").offset().top - 100 || $(window).scrollTop() + $(window).height() > $(document).height() - 100) {
           $main.addClass('scroll-faq');
         } else {
           $main.removeClass('scroll-faq');
