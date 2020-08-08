@@ -221,8 +221,10 @@
 .register-btn {
   position: relative;
   z-index: 2;
-  animation: wait 1.5s, fade-in 800ms 1.5s;
-  animation-duration: 2s; }
+  opacity: 0;
+  animation: fade-in 2s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards; }
 
 .hero-horizon {
   position: absolute;
