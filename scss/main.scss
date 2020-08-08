@@ -551,7 +551,7 @@ $animation-length: 80s;
 
 .registration-image {
   height: 450px;
-  @media (max-width: 850px) {
+  @media (max-width: 1000px) {
     height: auto;
     width: 100%;
   }

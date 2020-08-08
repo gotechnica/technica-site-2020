@@ -428,7 +428,7 @@
 
 .registration-image {
   height: 450px; }
-  @media (max-width: 850px) {
+  @media (max-width: 1000px) {
     .registration-image {
       height: auto;
       width: 100%; } }
