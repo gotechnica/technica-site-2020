@@ -8,11 +8,15 @@
   border-radius: 50px;
   text-transform: uppercase;
   margin-top: 3%;
-  padding: 3px 25px; }
+  padding: 3px 25px;
+  transition: .3s ease; }
 
 .btn:hover {
-  opacity: 0.8;
-  transition: .5s ease; }
+  transform: scale(1.05);
+  opacity: 0.95; }
+
+.disabled-btn {
+  pointer-events: none !important; }
 
 .section {
   padding: 3%; }
@@ -25,16 +29,16 @@
 
 #navbar {
   background-color: none;
-  transition: background-color 200ms linear;
   display: flex;
-  padding-top: 0.01rem;
-  padding-bottom: 0.01rem; }
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  visibility: hidden;
+  transition: all 200ms linear; }
   #navbar .nav-link {
     font-family: DINPro;
     font-size: 24px;
     font-weight: bold;
-    color: white;
-    transition: color 200ms linear;
+    color: rgba(0, 0, 0, 0);
     text-transform: uppercase; }
     @media (max-width: 767px) {
       #navbar .nav-link {
@@ -47,12 +51,31 @@
       display: none !important; } }
 
 .scrolled {
-  background-color: #fff !important;
+  visibility: visible !important;
+  background-color: white !important;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-  transition: background-color 200ms linear; }
+  transition: all 200ms linear; }
   .scrolled .nav-link {
     color: #A88AA8 !important;
     transition: color 200ms linear; }
+  .scrolled .logo {
+    background: linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px; }
+  .scrolled .navbar-brand {
+    margin-left: 10px;
+    margin-right: 10px; }
+  .scrolled .navbar-toggler {
+    border: none; }
+
+.navbar-brand {
+  position: absolute; }
+
+@media (max-width: 767px) {
+  .scrolled .logo {
+    width: 35px;
+    height: 35px; } }
 
 .navbar-nav > li {
   margin: 0vw 4vw; }
@@ -68,12 +91,35 @@
   position: relative;
   padding-bottom: 75px; }
 
-#birds > img {
-  padding-top: 7%; }
-
 #birds {
-  position: relative;
-  z-index: 3; }
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  padding: 0% 5%;
+  padding-top: 30px; }
+  @media (max-width: 991px) {
+    #birds {
+      padding-top: 100px; } }
+  @media (max-width: 767px) {
+    #birds {
+      padding-top: 200px; } }
+  @media (max-width: 767px) {
+    #birds {
+      padding-top: 175px; } }
+
+@keyframes move_cloud_large {
+  0% {
+    opacity: 0;
+    left: -20vw; }
+  5% {
+    opacity: 1; }
+  60% {
+    opacity: 1; }
+  65% {
+    opacity: 0;
+    left: 95vw; }
+  100% {
+    opacity: 0; } }
 
 @keyframes move_cloud {
   0% {
@@ -113,7 +159,6 @@
 
 #cloud1 {
   width: 700px;
-  margin-top: -30px;
   animation-delay: -40s; }
 
 #cloud2 {
@@ -167,7 +212,7 @@
 .hero-information {
   position: relative;
   z-index: 3;
-  margin-top: -50px;
+  margin-top: 100px;
   animation: wait 600ms, fade-in 800ms 600ms;
   animation-duration: 2s;
   font-family: DINPro;
@@ -186,8 +231,10 @@
 .register-btn {
   position: relative;
   z-index: 2;
-  animation: wait 1.5s, fade-in 800ms 1.5s;
-  animation-duration: 2s; }
+  opacity: 0;
+  animation: fade-in 2s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards; }
 
 .hero-horizon {
   position: absolute;
@@ -209,17 +256,43 @@
 
 @media only screen and (max-width: 991px) {
   .hero-information .hero-logo {
-    margin-top: 100px; } }
+    margin-top: 150px; } }
 
 @media only screen and (max-width: 767px) {
   .hero-information .hero-logo {
-    margin-top: 200px; }
+    margin-top: 225px; }
   .hero-information #technica-logo {
     width: 500px; }
   .hero-information #theme-logo {
     width: 200px; }
   .register-btn {
     font-size: 20px !important; } }
+
+@media only screen and (min-width: 1200px) {
+  #cloud1 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -40s; }
+  #cloud2 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -48s; }
+  #cloud3 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -26.4s; }
+  #cloud4 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -28s; }
+  #cloud5 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -9.6s; }
+  #cloud6 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -4s; }
+  #cloud7 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -68s; }
+  #cloud8 {
+    animation: move_cloud_large 80s infinite linear;
+    animation-delay: -72s; } }
 
 @media only screen and (max-width: 575px) {
   .hero {
@@ -229,7 +302,7 @@
     .hero-information #technica-logo {
       width: 80vw; }
     .hero-information #theme-logo {
-      width: 37vw;
+      width: 40vw;
       min-width: 120px; }
   #cloud1 {
     animation: move_cloud_mobile 80s infinite linear;
@@ -262,29 +335,32 @@
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
-  margin-top: 21vw;
+  margin-top: 20vw;
   z-index: 0; }
   @media (max-width: 991px) {
     .intro {
-      margin-top: 17vw; } }
+      margin-top: 16vw; } }
   @media (max-width: 767px) {
     .intro {
-      margin-top: 35vw; } }
+      margin-top: 34vw; } }
   @media (max-width: 575px) {
     .intro {
-      margin-top: 150px; } }
+      margin-top: 150px;
+      padding-left: 3%;
+      padding-right: 3%; } }
 
 .intro-container {
   margin-top: 5%;
   margin-bottom: 5%;
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 3%; }
 
 #intro-vid {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  border-radius: 8px; }
   @media (max-width: 991px) {
     #intro-vid {
       height: 350px; } }
@@ -292,42 +368,58 @@
     #intro-vid {
       height: 250px; } }
 
+.main {
+  background-color: #C3DDE2;
+  transition: background-color 200ms linear; }
+
+.scroll-registration {
+  background-color: #EBB8BE !important;
+  transition: background-color 200ms linear; }
+
+.scroll-faq {
+  background-color: #CCA8C1 !important;
+  transition: background-color 200ms linear; }
+
 .tracks {
-  background-color: #CCA8C1;
   position: relative;
   z-index: 5; }
+  @media (max-width: 575px) {
+    .tracks {
+      margin-top: -1px; } }
 
 .track-image {
   margin: 2% 5%;
   max-width: 190px; }
 
-.beginner, .general, .research {
-  border: 3px solid #CCA8C1;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 7px;
+.beginner, .hardware, .general, .research {
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
   box-sizing: border-box;
   padding: 10px;
-  border-radius: 8px;
   padding: 25px 10px; }
-  .beginner h3, .general h3, .research h3 {
+  .beginner h3, .hardware h3, .general h3, .research h3 {
     margin: 3% 0%; }
 
 .track-flick-item {
+  margin: 0px 3px;
   width: 60%; }
   @media (max-width: 767px) {
     .track-flick-item {
       width: 80%; } }
 
-.registration {
-  background-color: #EBB8BE; }
-  @media (max-width: 575px) {
-    .registration {
-      font-size: 1rem; } }
+@media (max-width: 575px) {
+  .registration {
+    font-size: 1rem; } }
 
 .hacker, .mentor, .volunteer {
-  border: 3px solid #A88AA8;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 7px;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
   box-sizing: border-box;
   padding: 10px;
   text-align: center;
@@ -336,8 +428,8 @@
     margin: 3% 0%; }
 
 .registration-image {
-  height: 400px; }
-  @media (max-width: 850px) {
+  height: 450px; }
+  @media (max-width: 1000px) {
     .registration-image {
       height: auto;
       width: 100%; } }
@@ -358,12 +450,10 @@
     .hacker .btn, .mentor .btn, .volunteer .btn {
       margin: 0; } }
 
-.faq {
-  background-color: #C3DDE2; }
-  @media (max-width: 575px) {
-    .faq {
-      padding-left: 3%;
-      padding-right: 3%; } }
+@media (max-width: 575px) {
+  .faq {
+    padding-left: 3%;
+    padding-right: 3%; } }
 
 .faq-container {
   background-color: white;
@@ -380,18 +470,54 @@
   border-bottom: 3px solid white;
   transition: ease all 0.3s;
   cursor: pointer; }
+  .accordion h4 {
+    max-width: 95%; }
 
 .accordion:hover, .accordion-active {
   border-color: #A88AA8; }
+
+.faq-toggle-icon {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin-top: 8px;
+  /* Vertical line */
+  /* horizontal line */ }
+  .faq-toggle-icon:before, .faq-toggle-icon:after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    transition: transform 0.25s ease-out; }
+  .faq-toggle-icon:before {
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px; }
+  .faq-toggle-icon:after {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    margin-top: -1px; }
+
+.accordion-active .faq-toggle-icon:before {
+  transform: rotate(90deg); }
+
+.accordion-active .faq-toggle-icon:after {
+  transform: rotate(180deg); }
 
 .panel {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.1s ease-out;
   font-family: DINPro;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: normal;
   color: black; }
+  @media (max-width: 575px) {
+    .panel {
+      font-size: 1rem; } }
 
 .sponsors-list {
   overflow: hidden; }
@@ -402,9 +528,27 @@
   z-index: 1;
   margin: 0px 50px; }
 
-.contact {
-  background-color: #E5E5E5;
-  text-align: center; }
+.contact-footer {
+  background-image: url("../img/contact_horizon.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat; }
+  @media (max-width: 1199px) {
+    .contact-footer {
+      background-size: 1199px;
+      background-position: bottom; } }
+  @media (max-width: 991px) {
+    .contact-footer {
+      background-size: 1000px;
+      background-position: 40% 70%; } }
+  @media (max-width: 767px) {
+    .contact-footer {
+      background-size: 1300px;
+      background-position: 10% 70%; } }
+  @media (max-width: 575px) {
+    .contact-footer {
+      background-size: 1100px;
+      background-position: 10% 0%; } }
 
 .contact-header {
   font-family: DINPro;
@@ -455,7 +599,8 @@
   background-color: #FF6B98; }
 
 .footer {
-  background-color: #C4C4C4;
+  padding-top: 20px;
+  padding-bottom: 10px;
   text-align: center; }
   @media (max-width: 575px) {
     .footer {
@@ -466,3 +611,7 @@
 
 .footer a:link, a:visited {
   color: #000; }
+
+@media (max-width: 991px) {
+  #mlh-trust-badge {
+    right: 15px !important; } }

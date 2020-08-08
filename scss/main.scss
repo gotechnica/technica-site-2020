@@ -34,11 +34,16 @@ $animation-length: 80s;
     text-transform: uppercase;
     margin-top: 3%;
     padding: 3px 25px;
+    transition: .3s ease;
 }
 
 .btn:hover {
-  opacity: 0.8;
-  transition: .5s ease;
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+.disabled-btn {
+  pointer-events: none !important;
 }
 
 .section {
@@ -54,9 +59,11 @@ $animation-length: 80s;
 
 // Track Box Class
 @mixin box($color) {
-  border: 3px solid $color;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 7px;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  background: rgba(255, 255, 255, .9);
+  border-radius: 8px;
   box-sizing: border-box;
   padding: 10px;
 }
@@ -65,13 +72,13 @@ $animation-length: 80s;
 
 #navbar {
   background-color: none;
-  transition: background-color 200ms linear;
   display: flex;
-  padding-top: 0.01rem;
-  padding-bottom: 0.01rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  visibility: hidden;
+  transition: all 200ms linear;
   .nav-link {
-    @include dinpro-text(24px,bold,white);
-    transition: color 200ms linear;
+    @include dinpro-text(24px,bold,rgba(0, 0, 0, 0));
     text-transform: uppercase;
     @media (max-width: 767px) {
       font-size: 18px;
@@ -87,13 +94,44 @@ $animation-length: 80s;
 }
 
 .scrolled {
-  background-color: #fff !important;
+  visibility: visible !important;
+  background-color: rgba(255, 255, 255, 1) !important;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-  transition: background-color 200ms linear;
+  transition: all 200ms linear;
+
   .nav-link {
     color: $lavender !important;
     transition: color 200ms linear;
   }
+
+  .logo {
+    background: linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  .navbar-brand {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+}
+
+.navbar-brand {
+    position: absolute;
+}
+
+@media (max-width: 767px) {
+    .scrolled{
+        .logo {
+            width: 35px;
+            height: 35px;
+        }
+    }
 }
 
 .navbar-nav > li{
@@ -115,13 +153,30 @@ $animation-length: 80s;
   padding-bottom: 75px;
 }
 
-#birds > img {
-  padding-top: 7%;
+#birds {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  padding: 0% 5%;
+  padding-top: 30px;
+  @media (max-width: 991px) {
+    padding-top: 100px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 200px;
+  }
+  @media (max-width: 767px) {
+    padding-top: 175px;
+  }
 }
 
-#birds {
-  position: relative;
-  z-index: 3;
+@keyframes move_cloud_large {
+  0% {opacity: 0; left: -20vw}
+  5% {opacity: 1;}
+  60% {opacity: 1;}
+  65% {opacity: 0;left: 95vw}
+  100% {opacity: 0;}
 }
 
 @keyframes move_cloud {
@@ -151,12 +206,13 @@ $animation-length: 80s;
 // pass in percentage of how far in the animation the cloud should start in
 @mixin cloud-wait($percentange) {
   animation-delay: -$animation-length*$percentange;
+  // freeze to test cloud position
+  //animation-play-state: paused;
 }
 
 // start with cloud 1 at end of screen and stagger from there
 #cloud1 {
   width: 700px;
-  margin-top: -30px;
   @extend %cloud;
   @include cloud-wait(.5)
 }
@@ -229,7 +285,7 @@ $animation-length: 80s;
 .hero-information {
   position: relative; //allows us to set z index so it appears on top of illustrations
   z-index: 3;
-  margin-top: -50px;
+  margin-top: 100px;
   @include fade-in(600ms);
   @include dinpro-text(30px, normal, white)
   .hero-logo {
@@ -248,7 +304,10 @@ $animation-length: 80s;
 .register-btn {
   position: relative;
   z-index: 2;
-  @include fade-in(1.5s);
+  opacity: 0;
+  animation: fade-in 2s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 .hero-horizon {
@@ -276,7 +335,7 @@ $animation-length: 80s;
 @media only screen and (max-width: 991px) {
   .hero-information {
     .hero-logo {
-      margin-top: 100px;
+      margin-top: 150px;
     }
   }
 }
@@ -285,7 +344,7 @@ $animation-length: 80s;
 @media only screen and (max-width: 767px) {
   .hero-information {
     .hero-logo {
-      margin-top: 200px;
+      margin-top: 225px;
     }
     #technica-logo {
       width: 500px;
@@ -299,6 +358,42 @@ $animation-length: 80s;
   }
 }
 
+//hardcoding for now - fix later to a responsive cloud animation
+@media only screen and (min-width: 1200px) {
+  #cloud1 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.5)
+  }
+  #cloud2 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.6)
+  }
+  #cloud3 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.33)
+  }
+  #cloud4 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.35)
+  }
+  #cloud5 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.12)
+  }
+  #cloud6 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.05)
+  }
+  #cloud7 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.85)
+  }
+  #cloud8 {
+    animation: move_cloud_large $animation-length infinite linear;
+    @include cloud-wait(.9)
+  }
+}
+
 @media only screen and (max-width: 575px) {
   .hero {
     padding-bottom: 75px;
@@ -309,7 +404,7 @@ $animation-length: 80s;
       width: 80vw;
     }
     #theme-logo {
-      width: 37vw;
+      width: 40vw;
       min-width: 120px;
     }
   }
@@ -355,16 +450,18 @@ $animation-length: 80s;
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
-  margin-top: 21vw;
+  margin-top: 20vw;
   z-index: 0; //hides overflow wave
   @media (max-width: 991px) {
-    margin-top: 17vw;
+    margin-top: 16vw;
   }
   @media (max-width: 767px) {
-    margin-top: 35vw;
+    margin-top: 34vw;
   }
   @media (max-width: 575px) {
     margin-top: 150px;
+    padding-left: 3%;
+    padding-right: 3%;
   }
 }
 
@@ -373,13 +470,14 @@ $animation-length: 80s;
   margin-bottom: 5%;
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 3%;
 }
 
 #intro-vid {
   width: 100%;
   height: 100%;
+  border-radius: 8px;
   @media (max-width: 991px) {
     height: 350px;
   }
@@ -388,12 +486,30 @@ $animation-length: 80s;
   }
 }
 
+// *** body ***
+.main {
+  background-color: $blue;
+  transition: background-color 200ms linear;
+}
+
+.scroll-registration {
+  background-color: $peach !important;
+  transition: background-color 200ms linear;
+}
+
+.scroll-faq {
+  background-color: $light-lavender !important;
+  transition: background-color 200ms linear;
+}
+
 // **** tracks section ****
 
 .tracks {
-  background-color: $light-lavender;
   position: relative;
   z-index: 5;
+  @media (max-width: 575px) {
+    margin-top: -1px; //white line was appearing between sections
+  }
 }
 
 .track-image {
@@ -401,9 +517,8 @@ $animation-length: 80s;
   max-width: 190px;
 }
 
-.beginner, .general, .research {
+.beginner, .hardware, .general, .research {
   @include box($light-lavender);
-  border-radius: 8px;
   padding: 25px 10px;
   h3 {
     margin: 3% 0%;
@@ -411,6 +526,7 @@ $animation-length: 80s;
 }
 
 .track-flick-item {
+  margin: 0px 3px;
   width: 60%;
   @media (max-width: 767px) {
     width: 80%;
@@ -420,7 +536,6 @@ $animation-length: 80s;
 // **** registration section ****
 
 .registration {
-    background-color: $peach;
     @media (max-width: 575px) {
       font-size: 1rem;
     }
@@ -436,8 +551,8 @@ $animation-length: 80s;
 }
 
 .registration-image {
-  height: 400px;
-  @media (max-width: 850px) {
+  height: 450px;
+  @media (max-width: 1000px) {
     height: auto;
     width: 100%;
   }
@@ -469,7 +584,6 @@ $animation-length: 80s;
 // **** FAQ section ****
 
 .faq {
-  background-color: $blue;
   @media (max-width: 575px) {
     padding-left: 3%;
     padding-right: 3%;
@@ -492,17 +606,63 @@ $animation-length: 80s;
     border-bottom: 3px solid white;
     transition: ease all 0.3s;
     cursor: pointer;
+    h4 {
+      max-width: 95%;
+    }
 }
 
 .accordion:hover, .accordion-active {
     border-color: $lavender;
 }
 
+.faq-toggle-icon { //https://jsfiddle.net/psullivan6/0eL3jezk/
+    position: relative;
+    width: 10px;
+    height: 10px;
+    margin-top: 8px;
+
+    &:before,
+    &:after{
+        content: "";
+        position: absolute;
+        background-color: black;
+        transition: transform 0.25s ease-out;
+    }
+
+    /* Vertical line */
+    &:before{
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        margin-left: -1px;
+    }
+
+    /* horizontal line */
+    &:after{
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        margin-top: -1px;
+    }
+}
+
+.accordion-active {
+  .faq-toggle-icon {
+      &:before{ transform: rotate(90deg);}
+      &:after{ transform: rotate(180deg);}
+  }
+}
+
 .panel {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.1s ease-out;
-    @include dinpro-text(1.1rem, normal, black)
+    @include dinpro-text(1.05rem, normal, black)
+    @media (max-width: 575px) {
+      font-size: 1rem;
+    }
  }
 
  // **** sponsor section ****
@@ -520,9 +680,27 @@ $animation-length: 80s;
 
 // **** footer section ****
 
-.contact {
-    background-color: $light-grey;
-    text-align: center;
+.contact-footer {
+  background-image: url("../img/contact_horizon.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media (max-width: 1199px) {
+    background-size: 1199px;
+    background-position: bottom;
+  }
+  @media (max-width: 991px) {
+    background-size: 1000px;
+    background-position: 40% 70%;
+  }
+  @media (max-width: 767px) {
+    background-size: 1300px;
+    background-position: 10% 70%;
+  }
+  @media (max-width: 575px) {
+    background-size: 1100px;
+    background-position: 10% 0%;
+  }
 }
 
 .contact-header {
@@ -589,7 +767,8 @@ $animation-length: 80s;
 }
 
 .footer {
-    background-color: $grey;
+    padding-top: 20px;
+    padding-bottom: 10px;
     text-align: center;
     @media (max-width: 575px) {
       font-size: 0.9rem;
@@ -602,4 +781,10 @@ $animation-length: 80s;
 
 .footer a:link, a:visited {
     color: #000;
+}
+
+@media (max-width: 991px) {
+  #mlh-trust-badge {
+    right: 15px !important;
+  }
 }

@@ -27,7 +27,8 @@ h1 {
       text-align: center; } }
   @media (max-width: 575px) {
     h1 {
-      font-size: 40px; } }
+      font-size: 35px;
+      line-height: 50px; } }
 
 h2 {
   font-family: DINPro;
@@ -53,3 +54,7 @@ h4 {
   @media (max-width: 575px) {
     h4 {
       font-size: 1.15rem; } }
+
+@media (max-width: 575px) {
+  html, body {
+    overflow-x: hidden; } }

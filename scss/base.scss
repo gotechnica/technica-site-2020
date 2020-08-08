@@ -32,7 +32,8 @@ h1 {
   }
 
   @media (max-width: 575px) {
-    font-size: 40px;
+    font-size: 35px;
+    line-height: 50px;
   }
 }
 
@@ -61,6 +62,12 @@ h4 {
   font-size: 1.3rem;
   @media (max-width: 575px) {
     font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 575px) {
+  html, body {
+    overflow-x: hidden;
   }
 }
 
