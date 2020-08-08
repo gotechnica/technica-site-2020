@@ -90,12 +90,21 @@
   position: relative;
   padding-bottom: 75px; }
 
-#birds > img {
-  padding-top: 7%; }
-
 #birds {
-  position: relative;
-  z-index: 3; }
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  padding: 0% 5%;
+  padding-top: 30px; }
+  @media (max-width: 991px) {
+    #birds {
+      padding-top: 100px; } }
+  @media (max-width: 767px) {
+    #birds {
+      padding-top: 200px; } }
+  @media (max-width: 767px) {
+    #birds {
+      padding-top: 175px; } }
 
 @keyframes move_cloud_large {
   0% {
@@ -159,7 +168,7 @@
 
 #cloud3 {
   width: 700px;
-  margin-top: 350px;
+  margin-top: 325px;
   animation-delay: -26.4s; }
 
 #cloud4 {
@@ -202,7 +211,7 @@
 .hero-information {
   position: relative;
   z-index: 3;
-  margin-top: -50px;
+  margin-top: 100px;
   animation: wait 600ms, fade-in 800ms 600ms;
   animation-duration: 2s;
   font-family: DINPro;
@@ -246,11 +255,11 @@
 
 @media only screen and (max-width: 991px) {
   .hero-information .hero-logo {
-    margin-top: 100px; } }
+    margin-top: 150px; } }
 
 @media only screen and (max-width: 767px) {
   .hero-information .hero-logo {
-    margin-top: 200px; }
+    margin-top: 225px; }
   .hero-information #technica-logo {
     width: 500px; }
   .hero-information #theme-logo {
@@ -338,9 +347,6 @@
       margin-top: 150px;
       padding-left: 3%;
       padding-right: 3%; } }
-  @media (max-width: 400px) {
-    .intro {
-      margin-top: 175px; } }
 
 .intro-container {
   margin-top: 5%;
