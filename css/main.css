@@ -29,16 +29,16 @@
 
 #navbar {
   background-color: none;
-  transition: background-color 200ms linear;
   display: flex;
   padding-top: 0.25rem;
-  padding-bottom: 0.25rem; }
+  padding-bottom: 0.25rem;
+  visibility: hidden;
+  transition: all 200ms linear; }
   #navbar .nav-link {
     font-family: DINPro;
     font-size: 24px;
     font-weight: bold;
-    color: white;
-    transition: color 200ms linear;
+    color: rgba(0, 0, 0, 0);
     text-transform: uppercase; }
     @media (max-width: 767px) {
       #navbar .nav-link {
@@ -51,9 +51,10 @@
       display: none !important; } }
 
 .scrolled {
-  background-color: white;
+  visibility: visible !important;
+  background-color: white !important;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-  transition: background-color 200ms linear; }
+  transition: all 200ms linear; }
   .scrolled .nav-link {
     color: #A88AA8 !important;
     transition: color 200ms linear; }
@@ -428,7 +429,7 @@
 
 .registration-image {
   height: 450px; }
-  @media (max-width: 850px) {
+  @media (max-width: 1000px) {
     .registration-image {
       height: auto;
       width: 100%; } }
