@@ -301,7 +301,7 @@
     .hero-information #technica-logo {
       width: 80vw; }
     .hero-information #theme-logo {
-      width: 37vw;
+      width: 40vw;
       min-width: 120px; }
   #cloud1 {
     animation: move_cloud_mobile 80s infinite linear;
@@ -610,3 +610,7 @@
 
 .footer a:link, a:visited {
   color: #000; }
+
+@media (max-width: 991px) {
+  #mlh-trust-badge {
+    right: 15px !important; } }
