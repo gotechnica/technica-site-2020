@@ -197,10 +197,10 @@
     </div>
 
     <div class="main">
-    <div class="tracks section">
+    <div class="tracks section" id="tracks">
       <div class="container">
         <!-- Header -->
-        <h1 class="header" id="tracks">Tracks</h1>
+        <h1 class="header">Tracks</h1>
         <!-- Body -->
         <div class="text-center d-none d-lg-block">
           <div class="row">
@@ -536,14 +536,14 @@
         }
 
         //tracks
-        if($(window).scrollTop() >= $("#tracks").offset().top - 101) {
+        if($(window).scrollTop() >= $("#tracks").offset().top - 100) {
           $main.addClass('scroll-tracks');
         } else {
           $main.removeClass('scroll-tracks');
         }
 
         //registration
-        if($(window).scrollTop() >= $("#registration").offset().top - 101) {
+        if($(window).scrollTop() >= $("#registration").offset().top - 100) {
           $main.addClass('scroll-registration');
         } else {
           $main.removeClass('scroll-registration');
@@ -561,10 +561,15 @@
     $(document).ready(function() {
       $('.nav-link').click(function(e) {
         var linkedHref = $(this).attr('href');
-        console.log(linkedHref);
-        $('html, body').animate({
-          scrollTop: $(linkedHref).offset().top - 85
-        }, 1000);
+        if (linkedHref == "#tracks") {
+          $('html, body').animate({
+            scrollTop: $(linkedHref).offset().top - 45
+          }, 1000);
+        } else {
+          $('html, body').animate({
+            scrollTop: $(linkedHref).offset().top - 85
+          }, 1000);
+        }
         e.preventDefault();
       });
     });
