@@ -510,11 +510,7 @@
 .panel {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.1s ease-out;
-  font-family: DINPro;
-  font-size: 1.05rem;
-  font-weight: normal;
-  color: black; }
+  transition: max-height 0.1s ease-out; }
   @media (max-width: 575px) {
     .panel {
       font-size: 1rem; } }
