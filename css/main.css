@@ -557,15 +557,14 @@
   @media (max-width: 991px) {
     .contact-footer {
       background-size: 1000px;
-      background-position: 40% 70%; } }
-  @media (max-width: 767px) {
+      background-position: 80% 70%; } }
+  @media (max-width: 768px) {
     .contact-footer {
-      background-size: 1300px;
-      background-position: 10% 70%; } }
+      background-size: 1000px;
+      background-position: 50% 70%; } }
   @media (max-width: 575px) {
     .contact-footer {
-      background-size: 1100px;
-      background-position: 10% 0%; } }
+      background-size: 0px; } }
 
 .contact-header {
   font-family: DINPro;
