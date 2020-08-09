@@ -38,7 +38,7 @@
     font-family: DINPro;
     font-size: 24px;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0);
+    color: transparent;
     text-transform: uppercase; }
     @media (max-width: 767px) {
       #navbar .nav-link {
@@ -53,12 +53,17 @@
 .scrolled {
   visibility: visible !important;
   background-color: white !important;
+  -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
   transition: all 200ms linear; }
   .scrolled .nav-link {
     color: #A88AA8 !important;
     transition: color 200ms linear; }
   .scrolled .logo {
+    background: -o-linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
+    background: -moz-linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
+    background: -webkit-linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
     background: linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
     width: 50px;
     height: 50px;
@@ -241,6 +246,10 @@
   width: 100vw;
   padding-top: 500px;
   z-index: 1;
+  background: #EDA29F;
+  background-image: -o-linear-gradient(#47BCBB, #C4A3BE 20%, #EDA29F 55%, #EDA29F 98%, #628CB2 98%);
+  background-image: -moz-linear-gradient(#47BCBB, #C4A3BE 20%, #EDA29F 55%, #EDA29F 98%, #628CB2 98%);
+  background-image: -webkit-linear-gradient(#47BCBB, #C4A3BE 20%, #EDA29F 55%, #EDA29F 98%, #628CB2 98%);
   background-image: linear-gradient(#47BCBB, #C4A3BE 20%, #EDA29F 55%, #EDA29F 98%, #628CB2 98%); }
   @media (max-width: 991px) {
     .hero-horizon {
@@ -248,10 +257,16 @@
   @media (max-width: 767px) {
     .hero-horizon {
       padding-top: 700px;
+      background-image: -o-linear-gradient(#47BCBB, #C4A3BE 22%, #EDA29F 70%, #EDA29F 98%, #628CB2 98%);
+      background-image: -moz-linear-gradient(#47BCBB, #C4A3BE 22%, #EDA29F 70%, #EDA29F 98%, #628CB2 98%);
+      background-image: -webkit-linear-gradient(#47BCBB, #C4A3BE 22%, #EDA29F 70%, #EDA29F 98%, #628CB2 98%);
       background-image: linear-gradient(#47BCBB, #C4A3BE 22%, #EDA29F 70%, #EDA29F 98%, #628CB2 98%); } }
   @media (max-width: 575px) {
     .hero-horizon {
       padding-top: 600px;
+      background-image: -o-linear-gradient(#47BCBB, #C4A3BE 25%, #EDA29F 80%, #EDA29F 98%, #628CB2 98%);
+      background-image: -moz-linear-gradient(#47BCBB, #C4A3BE 25%, #EDA29F 80%, #EDA29F 98%, #628CB2 98%);
+      background-image: -webkit-linear-gradient(#47BCBB, #C4A3BE 25%, #EDA29F 80%, #EDA29F 98%, #628CB2 98%);
       background-image: linear-gradient(#47BCBB, #C4A3BE 25%, #EDA29F 80%, #EDA29F 98%, #628CB2 98%); } }
 
 @media only screen and (max-width: 991px) {
@@ -353,6 +368,8 @@
   margin-top: 5%;
   margin-bottom: 5%;
   position: relative;
+  background-color: white;
+  /* IE8 */
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   padding: 3%; }
@@ -395,6 +412,8 @@
   -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  background: white;
+  /* IE8 8 */
   background: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
   box-sizing: border-box;
@@ -418,6 +437,8 @@
   -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  background: white;
+  /* IE8 8 */
   background: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
   box-sizing: border-box;

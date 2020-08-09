@@ -62,6 +62,7 @@ $animation-length: 80s;
   -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  background: white; /* IE8 8 */
   background: rgba(255, 255, 255, .9);
   border-radius: 8px;
   box-sizing: border-box;
@@ -78,7 +79,7 @@ $animation-length: 80s;
   visibility: hidden;
   transition: all 200ms linear;
   .nav-link {
-    @include dinpro-text(24px,bold,rgba(0, 0, 0, 0));
+    @include dinpro-text(24px,bold,transparent);
     text-transform: uppercase;
     @media (max-width: 767px) {
       font-size: 18px;
@@ -95,7 +96,9 @@ $animation-length: 80s;
 
 .scrolled {
   visibility: visible !important;
-  background-color: rgba(255, 255, 255, 1) !important;
+  background-color: white !important;
+  -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
   transition: all 200ms linear;
 
@@ -105,6 +108,9 @@ $animation-length: 80s;
   }
 
   .logo {
+    background: -o-linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
+    background: -moz-linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
+    background: -webkit-linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
     background: linear-gradient(90deg, #00FFFF 0%, #AA96CA 46.35%, #FF6B98 100%);
     width: 50px;
     height: 50px;
@@ -315,6 +321,10 @@ $animation-length: 80s;
   width: 100vw;
   padding-top: 500px;
   z-index: 1;
+  background: $gradient-peach;
+  background-image: -o-linear-gradient($gradient-blue, $gradient-lavender 20%, $gradient-peach 55%, $gradient-peach 98%, $wave-blue 98%);
+  background-image: -moz-linear-gradient($gradient-blue, $gradient-lavender 20%, $gradient-peach 55%, $gradient-peach 98%, $wave-blue 98%);
+  background-image: -webkit-linear-gradient($gradient-blue, $gradient-lavender 20%, $gradient-peach 55%, $gradient-peach 98%, $wave-blue 98%);
   background-image: linear-gradient($gradient-blue, $gradient-lavender 20%, $gradient-peach 55%, $gradient-peach 98%, $wave-blue 98%);
 
   @media (max-width: 991px) {
@@ -323,11 +333,17 @@ $animation-length: 80s;
 
   @media (max-width: 767px) {
     padding-top: 700px;
+    background-image: -o-linear-gradient($gradient-blue, $gradient-lavender 22%, $gradient-peach 70%, $gradient-peach 98%, $wave-blue 98%);
+    background-image: -moz-linear-gradient($gradient-blue, $gradient-lavender 22%, $gradient-peach 70%, $gradient-peach 98%, $wave-blue 98%);
+    background-image: -webkit-linear-gradient($gradient-blue, $gradient-lavender 22%, $gradient-peach 70%, $gradient-peach 98%, $wave-blue 98%);
     background-image: linear-gradient($gradient-blue, $gradient-lavender 22%, $gradient-peach 70%, $gradient-peach 98%, $wave-blue 98%);
   }
 
   @media (max-width: 575px) {
     padding-top: 600px;
+    background-image: -o-linear-gradient($gradient-blue, $gradient-lavender 25%, $gradient-peach 80%, $gradient-peach 98%, $wave-blue 98%);
+    background-image: -moz-linear-gradient($gradient-blue, $gradient-lavender 25%, $gradient-peach 80%, $gradient-peach 98%, $wave-blue 98%);
+    background-image: -webkit-linear-gradient($gradient-blue, $gradient-lavender 25%, $gradient-peach 80%, $gradient-peach 98%, $wave-blue 98%);
     background-image: linear-gradient($gradient-blue, $gradient-lavender 25%, $gradient-peach 80%, $gradient-peach 98%, $wave-blue 98%);
   }
 }
@@ -469,6 +485,7 @@ $animation-length: 80s;
   margin-top: 5%;
   margin-bottom: 5%;
   position: relative;
+  background-color: white; /* IE8 */
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   padding: 3%;
