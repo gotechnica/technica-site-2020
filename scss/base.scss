@@ -16,6 +16,12 @@
   src: url('../fonts/notosans/NotoSans-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'NotoSans';
+  font-weight: 600;
+  src: url('../fonts/notosans/NotoSans-Bold.ttf');
+}
+
 body {
   font-family: 'NotoSans';
 }
