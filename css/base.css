@@ -8,10 +8,20 @@
   font-weight: 600;
   src: url("../fonts/dinpro/DINPro-Bold.otf"); }
 
+@font-face {
+  font-family: 'DINPro';
+  font-weight: 300;
+  src: url("../fonts/dinpro/DINPro-Medium.otf"); }
+
 /* Defines custom NotoSans font */
 @font-face {
   font-family: 'NotoSans';
   src: url("../fonts/notosans/NotoSans-Regular.ttf"); }
+
+@font-face {
+  font-family: 'NotoSans';
+  font-weight: 600;
+  src: url("../fonts/notosans/NotoSans-Bold.ttf"); }
 
 body {
   font-family: 'NotoSans'; }
@@ -41,7 +51,7 @@ h2 {
 
 h3 {
   font-family: DINPro;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 36px;
   text-transform: uppercase; }
   @media (max-width: 575px) {
