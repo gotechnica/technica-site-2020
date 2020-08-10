@@ -404,9 +404,12 @@
     .tracks {
       margin-top: -1px; } }
 
+.track-note {
+  color: grey;
+  font-size: 0.85rem; }
+
 .track-image {
-  margin: 2% 5%;
-  max-width: 190px; }
+  width: 200px; }
 
 .beginner, .hardware, .general, .research {
   -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
@@ -418,16 +421,54 @@
   border-radius: 8px;
   box-sizing: border-box;
   padding: 10px;
-  padding: 25px 10px; }
+  padding: 25px 10px;
+  height: 100%;
+  margin: 0px 5px;
+  width: 675px; }
   .beginner h3, .hardware h3, .general h3, .research h3 {
-    margin: 3% 0%; }
+    margin: 15px 0; }
 
-.track-flick-item {
-  margin: 0px 3px;
-  width: 60%; }
-  @media (max-width: 767px) {
-    .track-flick-item {
-      width: 80%; } }
+.general-text, .beginner-text {
+  padding: 0px 30px; }
+
+.gallery {
+  height: 450px; }
+
+@media (max-width: 991px) {
+  .gallery {
+    height: 500px; }
+  .beginner, .hardware, .general, .research {
+    width: 500px; } }
+
+@media (max-width: 767px) {
+  .gallery {
+    height: 500px;
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%); }
+  .beginner, .hardware, .general, .research {
+    width: 550px;
+    margin: 0px 3px; } }
+
+@media (max-width: 575px) {
+  .gallery {
+    height: 510px; }
+  .beginner, .hardware, .general, .research {
+    width: 85%; } }
+
+@media (max-width: 500px) {
+  .gallery {
+    height: 540px; } }
+
+@media (max-width: 425px) {
+  .gallery {
+    height: 580px; }
+  .general-text, .beginner-text {
+    padding: 0px; } }
+
+@media (max-width: 385px) {
+  .gallery {
+    height: 620px; } }
 
 @media (max-width: 575px) {
   .registration {
@@ -557,15 +598,14 @@
   @media (max-width: 991px) {
     .contact-footer {
       background-size: 1000px;
-      background-position: 40% 70%; } }
-  @media (max-width: 767px) {
+      background-position: 80% 70%; } }
+  @media (max-width: 768px) {
     .contact-footer {
-      background-size: 1300px;
-      background-position: 10% 70%; } }
+      background-size: 1000px;
+      background-position: 50% 70%; } }
   @media (max-width: 575px) {
     .contact-footer {
-      background-size: 1100px;
-      background-position: 10% 0%; } }
+      background-size: 0px; } }
 
 .contact-header {
   font-family: DINPro;
