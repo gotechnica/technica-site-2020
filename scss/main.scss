@@ -525,7 +525,7 @@ $animation-length: 80s;
   position: relative;
   z-index: 5;
   @media (max-width: 575px) {
-    margin-top: -1px; //white line was appearing between sections
+    margin-top: -1vw; //white line was appearing between sections
   }
 }
 
@@ -761,6 +761,9 @@ $animation-length: 80s;
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  @media (min-width: 1500px) {
+    background-position: top;
+  }
   @media (max-width: 1199px) {
     background-size: 1199px;
     background-position: bottom;
@@ -775,6 +778,18 @@ $animation-length: 80s;
   }
   @media (max-width: 575px) {
     background-size: 0px;
+  }
+}
+
+.contact {
+  @media (min-width: 1750px) {
+    padding-bottom: 50px;
+  }
+  @media (min-width: 1850px) {
+    padding-bottom: 10px;
+  }
+  @media (min-width: 2300px) {
+    padding-bottom: 40px;
   }
 }
 
@@ -842,6 +857,16 @@ $animation-length: 80s;
 }
 
 .footer {
+    @media (min-width: 1700px) {
+      padding-top: 40px;
+    }
+    @media (min-width: 1850px) {
+      padding-top: 0px;
+      padding-bottom: 3vw;
+    }
+    @media (min-width: 2300px) {
+      padding-bottom: 4vw;
+    }
     padding-top: 20px;
     padding-bottom: 10px;
     text-align: center;
