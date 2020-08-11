@@ -525,7 +525,7 @@ $animation-length: 80s;
   position: relative;
   z-index: 5;
   @media (max-width: 575px) {
-    margin-top: -1px; //white line was appearing between sections
+    margin-top: -1vw; //white line was appearing between sections
   }
 }
 

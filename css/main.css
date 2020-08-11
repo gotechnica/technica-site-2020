@@ -402,7 +402,7 @@
   z-index: 5; }
   @media (max-width: 575px) {
     .tracks {
-      margin-top: -1px; } }
+      margin-top: -1vw; } }
 
 .track-note {
   color: grey;
