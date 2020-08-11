@@ -589,6 +589,9 @@
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat; }
+  @media (min-width: 1500px) {
+    .contact-footer {
+      background-position: top; } }
   @media (max-width: 1199px) {
     .contact-footer {
       background-size: 1199px;
@@ -604,6 +607,18 @@
   @media (max-width: 575px) {
     .contact-footer {
       background-size: 0px; } }
+
+@media (min-width: 1750px) {
+  .contact {
+    padding-bottom: 50px; } }
+
+@media (min-width: 1850px) {
+  .contact {
+    padding-bottom: 10px; } }
+
+@media (min-width: 2300px) {
+  .contact {
+    padding-bottom: 40px; } }
 
 .contact-header {
   font-family: DINPro;
@@ -657,6 +672,16 @@
   padding-top: 20px;
   padding-bottom: 10px;
   text-align: center; }
+  @media (min-width: 1700px) {
+    .footer {
+      padding-top: 40px; } }
+  @media (min-width: 1850px) {
+    .footer {
+      padding-top: 0px;
+      padding-bottom: 3vw; } }
+  @media (min-width: 2300px) {
+    .footer {
+      padding-bottom: 4vw; } }
   @media (max-width: 575px) {
     .footer {
       font-size: 0.9rem;
