@@ -241,6 +241,13 @@
   animation-delay: 1.5s;
   animation-fill-mode: forwards; }
 
+.register-btn:hover {
+  color: #fff !important;
+  opacity: 0;
+  text-decoration: none;
+  box-shadow: none;
+  transition-delay: 10s; }
+
 .hero-horizon {
   position: absolute;
   width: 100vw;
