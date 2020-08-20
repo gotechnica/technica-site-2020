@@ -46,6 +46,12 @@ $animation-length: 80s;
   pointer-events: none !important;
 }
 
+@media only screen and (min-width: 1750px) {
+    #about{
+        margin-top: 5%;
+    }
+}
+
 .section {
   padding: 3%;
   @media (max-width: 767px) {
