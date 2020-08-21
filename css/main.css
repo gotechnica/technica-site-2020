@@ -18,10 +18,6 @@
 .disabled-btn {
   pointer-events: none !important; }
 
-@media only screen and (min-width: 1750px) {
-  #about {
-    margin-top: 5%; } }
-
 .section {
   padding: 3%; }
   @media (max-width: 767px) {
@@ -367,6 +363,9 @@
       margin-top: 150px;
       padding-left: 3%;
       padding-right: 3%; } }
+  @media only screen and (min-width: 1750px) {
+    .intro {
+      margin-top: 20%; } }
 
 .intro-container {
   margin-top: 5%;
