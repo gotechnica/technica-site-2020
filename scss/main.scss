@@ -796,6 +796,10 @@ $animation-length: 80s;
 
 .contact-header {
   @include dinpro-text(36px, bold, black)
+      
+  @media (max-width: 575px) {
+    padding-bottom: 3%;        
+  }
 }
 
 .contact-content {
