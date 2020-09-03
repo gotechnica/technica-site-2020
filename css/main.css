@@ -15,9 +15,9 @@
   transform: scale(1.05);
   opacity: 0.95; }
 
-.disabled-btn {
-  pointer-events: none !important; }
-
+/*.disabled-btn {
+  pointer-events: none !important;
+}*/
 .section {
   padding: 3%; }
   @media (max-width: 767px) {
