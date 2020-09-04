@@ -280,7 +280,7 @@ $animation-length: 80s;
 
 @keyframes fade-in {
     0% { opacity: 0; }
-    100% { opacity: 1; }
+    100% { opacity: 1; pointer-events:auto;}
 }
 
 @mixin fade-in($waitTime) {
@@ -314,6 +314,7 @@ $animation-length: 80s;
   animation: fade-in 2s;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
+  pointer-events: none;
 }
 
 .hero-horizon {
