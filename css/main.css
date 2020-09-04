@@ -212,7 +212,8 @@
   0% {
     opacity: 0; }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+    pointer-events: auto; } }
 
 .hero-information {
   position: relative;
@@ -239,7 +240,8 @@
   opacity: 0;
   animation: fade-in 2s;
   animation-delay: 1.5s;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+  pointer-events: none; }
 
 .hero-horizon {
   position: absolute;
