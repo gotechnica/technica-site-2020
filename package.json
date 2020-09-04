@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "build-scss": "node-sass -o ./css ./scss; npm run min",
-    "web": "nodemon -e scss -x \"npm run build-scss\"",
-    "min": "minify ./css/main.css > ./css/main.min.css; minify ./css/base.css > ./css/base.min.css"
+    "web": "nodemon -e scss,js --ignore js/effects.min.js -x \"npm run build-scss\"",
+    "min": "minify ./css/main.css > ./css/main.min.css; minify ./css/base.css > ./css/base.min.css; minify ./js/effects.js > ./js/effects.min.js"
   },
   "repository": {
     "type": "git",
