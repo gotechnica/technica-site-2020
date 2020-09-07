@@ -586,8 +586,8 @@
   overflow: hidden; }
 
 .sponsor-img {
-  width: 373px;
-  height: 119px;
+  filter: brightness(200%) grayscale(1);
+  height: 75px;
   z-index: 1;
   margin: 0px 50px; }
 
