@@ -751,21 +751,22 @@ $animation-length: 80s;
    overflow: hidden;
  }
 
-.sponsor-img {
-    //width: 373px;
-    //height: 119px;
-    filter: brightness(200%) grayscale(1);
-    height: 75px;
-    z-index: 1;
-    margin: 0px 50px;
-}
-
 .sponsor-level-row {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.sponsor-tier {
+    margin-bottom: 5%;
+}
+
+.sponsor-img {
+    filter: brightness(200%) grayscale(1);
+    width: 200px;
+    z-index: 1;
+    margin: 0px 50px;
+}
 // **** footer section ****
 
 .contact-footer {
