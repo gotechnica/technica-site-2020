@@ -770,10 +770,7 @@ $animation-length: 80s;
     width: 200px;
     z-index: 1;
     margin: 0px 50px;
-}
-
-.sponsor-img.smaller {
-    width: 500px;
+    transition: .3s ease;
 }
 
 // **** footer section ****
