@@ -15,6 +15,9 @@
   transform: scale(1.05);
   opacity: 0.95; }
 
+.sponsor-img:hover {
+  transform: scale(1.05); }
+
 /*.disabled-btn {
   pointer-events: none !important;
 }*/
@@ -596,6 +599,9 @@
   width: 200px;
   z-index: 1;
   margin: 0px 50px; }
+
+.sponsor-img.smaller {
+  width: 500px; }
 
 .contact-footer {
   background-image: url("../img/contact_horizon.svg");
