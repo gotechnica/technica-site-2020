@@ -238,10 +238,12 @@
   position: relative;
   z-index: 2;
   opacity: 0;
-  pointer-events: none;
   animation: fade-in 2s;
   animation-delay: 1.5s;
   animation-fill-mode: forwards; }
+  @media (min-width: 1200px) {
+    .register-btn {
+      pointer-events: none; } }
 
 .hero-horizon {
   position: absolute;
