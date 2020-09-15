@@ -27,6 +27,9 @@
 .header {
   padding-bottom: 1%; }
 
+.white {
+  color: white; }
+
 #navbar {
   background-color: none;
   display: flex;
@@ -622,7 +625,7 @@
 
 .sponsor-img {
   filter: brightness(200%) grayscale(1);
-  opacity: .8;
+  opacity: .75;
   width: 200px;
   z-index: 1;
   margin: 0px 50px;
@@ -684,25 +687,35 @@
 .link {
   color: black; }
 
+.white-link {
+  color: white !important; }
+
 .link:hover {
   color: black;
   transition: ease 0.3s;
   opacity: 0.7;
   text-decoration: none; }
 
-.social-buttons > a:hover {
-  text-decoration: none;
+.white-link:hover {
+  color: white;
   transition: ease 0.3s;
-  opacity: 0.8; }
+  opacity: 0.7;
+  text-decoration: none; }
+
+.social-buttons > a:hover {
+  text-decoration: none; }
 
 .blue-circle, .purple-circle, .pink-circle {
   padding: 8px;
   margin: 0px 10px;
+  transition: ease 0.2s;
   background-color: #82ECEC;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   display: inline-block; }
+  .blue-circle:hover, .purple-circle:hover, .pink-circle:hover {
+    transform: scale(1.06); }
   @media (max-width: 575px) {
     .blue-circle, .purple-circle, .pink-circle {
       margin: 0px 3px;
@@ -741,7 +754,7 @@
     margin-bottom: 5px; }
 
 .footer a:link, a:visited {
-  color: #000; }
+  color: white; }
 
 @media (max-width: 991px) {
   #mlh-trust-badge {

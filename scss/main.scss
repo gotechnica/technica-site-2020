@@ -70,6 +70,10 @@ $animation-length: 80s;
   padding: 10px;
 }
 
+.white {
+  color: white;
+}
+
 // **** navbar ****
 
 #navbar {
@@ -796,7 +800,7 @@ $animation-length: 80s;
 
 .sponsor-img {
     filter: brightness(200%) grayscale(1);
-    opacity: .8;
+    opacity: .75;
     width: 200px;
     z-index: 1;
     margin: 0px 50px;
@@ -864,6 +868,10 @@ $animation-length: 80s;
   color: black;
 }
 
+.white-link {
+  color: white !important;
+}
+
 .link:hover {
   color: black;
   transition: ease 0.3s;
@@ -871,10 +879,16 @@ $animation-length: 80s;
   text-decoration: none;
 }
 
+.white-link:hover {
+  color: white;
+  transition: ease 0.3s;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+
 .social-buttons > a:hover {
   text-decoration: none;
-  transition: ease 0.3s;
-  opacity: 0.8;
 }
 
 // contact Circle Class
@@ -890,7 +904,11 @@ $animation-length: 80s;
 %contact-circle {
   padding: 8px;
   margin: 0px 10px;
+  transition: ease 0.2s;
   @include circle($cyan, 50px);
+  &:hover {
+    transform: scale(1.06);
+  }
   @media (max-width: 575px) {
     margin: 0px 3px;
     padding: 5px;
@@ -938,7 +956,7 @@ $animation-length: 80s;
 }
 
 .footer a:link, a:visited {
-    color: #000;
+    color: white;
 }
 
 @media (max-width: 991px) {
