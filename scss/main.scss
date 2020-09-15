@@ -6,6 +6,7 @@ $pink: #FF6B98;
 $lavender: #A88AA8;
 
 $light-lavender: #CCA8C1;
+$dark-blue: #324d66;
 $peach: #EBB8BE;
 $blue: #C3DDE2;
 $grey: #C4C4C4;
@@ -40,10 +41,6 @@ $animation-length: 80s;
 .btn:hover {
   transform: scale(1.05);
   opacity: 0.95;
-}
-
-.sponsor-img:hover {
-  transform: scale(1.05);
 }
 
 /*.disabled-btn {
@@ -529,6 +526,11 @@ $animation-length: 80s;
   transition: background-color 200ms linear;
 }
 
+.scroll-sponsors {
+  background-color: $dark-blue !important;
+  transition: background-color 200ms linear;
+}
+
 // **** tracks section ****
 
 .tracks {
@@ -765,12 +767,45 @@ $animation-length: 80s;
     margin-bottom: 5%;
 }
 
+.sponsor-tier-header {
+  overflow: hidden;
+  margin: 5px 0px;
+  text-align: center;
+  color: white;
+}
+
+.sponsor-tier-header:before, .sponsor-tier-header:after {
+  background-color: rgba(255, 255, 255, .9);
+  content: "";
+  display: inline-block;
+  height: 3px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.sponsor-tier-header:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.sponsor-tier-header:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
 .sponsor-img {
     filter: brightness(200%) grayscale(1);
+    opacity: .8;
     width: 200px;
     z-index: 1;
     margin: 0px 50px;
     transition: .3s ease;
+}
+
+.sponsor-img:hover {
+  transform: scale(1.05);
+  opacity: 1;
 }
 
 // **** footer section ****
