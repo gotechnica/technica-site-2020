@@ -6,6 +6,7 @@ $pink: #FF6B98;
 $lavender: #A88AA8;
 
 $light-lavender: #CCA8C1;
+$dark-blue: #324d66;
 $peach: #EBB8BE;
 $blue: #C3DDE2;
 $grey: #C4C4C4;
@@ -42,10 +43,6 @@ $animation-length: 80s;
   opacity: 0.95;
 }
 
-.sponsor-img:hover {
-  transform: scale(1.05);
-}
-
 /*.disabled-btn {
   pointer-events: none !important;
 }*/
@@ -71,6 +68,10 @@ $animation-length: 80s;
   border-radius: 8px;
   box-sizing: border-box;
   padding: 10px;
+}
+
+.white {
+  color: white;
 }
 
 // **** navbar ****
@@ -527,6 +528,11 @@ $animation-length: 80s;
   transition: background-color 200ms linear;
 }
 
+.scroll-sponsors {
+  background-color: $dark-blue !important;
+  transition: background-color 200ms linear;
+}
+
 // **** tracks section ****
 
 .tracks {
@@ -763,12 +769,57 @@ $animation-length: 80s;
     margin-bottom: 5%;
 }
 
+.sponsor-tier-header {
+  overflow: hidden;
+  margin: 5px 0px;
+  text-align: center;
+  color: white;
+}
+
+.sponsor-tier-header:before, .sponsor-tier-header:after {
+  background-color: rgba(255, 255, 255, .9);
+  content: "";
+  display: inline-block;
+  height: 3px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.sponsor-tier-header:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.sponsor-tier-header:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
 .sponsor-img {
     filter: brightness(200%) grayscale(1);
+    opacity: .75;
     width: 200px;
     z-index: 1;
     margin: 0px 50px;
     transition: .3s ease;
+    @media (max-width: 991px) {
+      width: 150px;
+      margin: 0px 30px;
+    }
+    @media (max-width: 767px) {
+      width: 120px;
+      margin: 0px 20px;
+    }
+    @media (max-width: 480px) {
+      width: 200px;
+      margin: 15px 40px;
+    }
+}
+
+.sponsor-img:hover {
+  transform: scale(1.05);
+  opacity: 1;
 }
 
 // **** footer section ****
@@ -827,6 +878,10 @@ $animation-length: 80s;
   color: black;
 }
 
+.white-link {
+  color: white !important;
+}
+
 .link:hover {
   color: black;
   transition: ease 0.3s;
@@ -834,10 +889,16 @@ $animation-length: 80s;
   text-decoration: none;
 }
 
+.white-link:hover {
+  color: white;
+  transition: ease 0.3s;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+
 .social-buttons > a:hover {
   text-decoration: none;
-  transition: ease 0.3s;
-  opacity: 0.8;
 }
 
 // contact Circle Class
@@ -853,7 +914,11 @@ $animation-length: 80s;
 %contact-circle {
   padding: 8px;
   margin: 0px 10px;
+  transition: ease 0.2s;
   @include circle($cyan, 50px);
+  &:hover {
+    transform: scale(1.06);
+  }
   @media (max-width: 575px) {
     margin: 0px 3px;
     padding: 5px;
@@ -901,7 +966,7 @@ $animation-length: 80s;
 }
 
 .footer a:link, a:visited {
-    color: #000;
+    color: white;
 }
 
 @media (max-width: 991px) {
