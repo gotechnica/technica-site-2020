@@ -803,6 +803,18 @@ $animation-length: 80s;
     z-index: 1;
     margin: 0px 50px;
     transition: .3s ease;
+    @media (max-width: 991px) {
+      width: 150px;
+      margin: 0px 30px;
+    }
+    @media (max-width: 767px) {
+      width: 120px;
+      margin: 0px 20px;
+    }
+    @media (max-width: 480px) {
+      width: 200px;
+      margin: 15px 40px;
+    }
 }
 
 .sponsor-img:hover {
