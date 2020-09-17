@@ -27,6 +27,9 @@
 .header {
   padding-bottom: 1%; }
 
+.white {
+  color: white; }
+
 #navbar {
   background-color: none;
   display: flex;
@@ -404,6 +407,10 @@
   background-color: #CCA8C1 !important;
   transition: background-color 200ms linear; }
 
+.scroll-sponsors {
+  background-color: #324d66 !important;
+  transition: background-color 200ms linear; }
+
 .tracks {
   position: relative;
   z-index: 5;
@@ -585,16 +592,60 @@
 .sponsors-list {
   overflow: hidden; }
 
-.sponsor-img {
-  width: 373px;
-  height: 119px;
-  z-index: 1;
-  margin: 0px 50px; }
-
 .sponsor-level-row {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.sponsor-tier {
+  margin-bottom: 5%; }
+
+.sponsor-tier-header {
+  overflow: hidden;
+  margin: 5px 0px;
+  text-align: center;
+  color: white; }
+
+.sponsor-tier-header:before, .sponsor-tier-header:after {
+  background-color: rgba(255, 255, 255, 0.9);
+  content: "";
+  display: inline-block;
+  height: 3px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%; }
+
+.sponsor-tier-header:before {
+  right: 0.5em;
+  margin-left: -50%; }
+
+.sponsor-tier-header:after {
+  left: 0.5em;
+  margin-right: -50%; }
+
+.sponsor-img {
+  filter: brightness(200%) grayscale(1);
+  opacity: .75;
+  width: 200px;
+  z-index: 1;
+  margin: 0px 50px;
+  transition: .3s ease; }
+  @media (max-width: 991px) {
+    .sponsor-img {
+      width: 150px;
+      margin: 0px 30px; } }
+  @media (max-width: 767px) {
+    .sponsor-img {
+      width: 120px;
+      margin: 0px 20px; } }
+  @media (max-width: 480px) {
+    .sponsor-img {
+      width: 200px;
+      margin: 15px 40px; } }
+
+.sponsor-img:hover {
+  transform: scale(1.05);
+  opacity: 1; }
 
 .contact-footer {
   background-image: url("../img/contact_horizon.svg");
@@ -648,25 +699,35 @@
 .link {
   color: black; }
 
+.white-link {
+  color: white !important; }
+
 .link:hover {
   color: black;
   transition: ease 0.3s;
   opacity: 0.7;
   text-decoration: none; }
 
-.social-buttons > a:hover {
-  text-decoration: none;
+.white-link:hover {
+  color: white;
   transition: ease 0.3s;
-  opacity: 0.8; }
+  opacity: 0.7;
+  text-decoration: none; }
+
+.social-buttons > a:hover {
+  text-decoration: none; }
 
 .blue-circle, .purple-circle, .pink-circle {
   padding: 8px;
   margin: 0px 10px;
+  transition: ease 0.2s;
   background-color: #82ECEC;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   display: inline-block; }
+  .blue-circle:hover, .purple-circle:hover, .pink-circle:hover {
+    transform: scale(1.06); }
   @media (max-width: 575px) {
     .blue-circle, .purple-circle, .pink-circle {
       margin: 0px 3px;
@@ -705,7 +766,7 @@
     margin-bottom: 5px; }
 
 .footer a:link, a:visited {
-  color: #000; }
+  color: white; }
 
 @media (max-width: 991px) {
   #mlh-trust-badge {

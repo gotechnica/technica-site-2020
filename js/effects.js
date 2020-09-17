@@ -46,6 +46,12 @@ $(function () {
     } else {
       $main.removeClass('scroll-faq');
     }
+    //sponsors
+    if($(window).scrollTop() >= $("#sponsors").offset().top - 100 || $(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+      $main.addClass('scroll-sponsors');
+    } else {
+      $main.removeClass('scroll-sponsors');
+    }
   });
 });
 
