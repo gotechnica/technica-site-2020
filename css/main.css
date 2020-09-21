@@ -652,7 +652,7 @@
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat; }
-  @media (min-width: 1500px) {
+  @media (min-width: 1850px) {
     .contact-footer {
       background-position: top; } }
   @media (max-width: 1199px) {
@@ -677,7 +677,9 @@
 
 @media (min-width: 1850px) {
   .contact {
-    padding-bottom: 10px; } }
+    padding-bottom: 30px;
+    padding-top: 0px;
+    margin-top: -10px; } }
 
 @media (min-width: 2300px) {
   .contact {
@@ -748,16 +750,17 @@
   padding-top: 20px;
   padding-bottom: 10px;
   text-align: center; }
-  @media (min-width: 1700px) {
+  @media (min-width: 1200px) {
     .footer {
-      padding-top: 40px; } }
+      padding-top: 30px;
+      padding-bottom: 30px; } }
   @media (min-width: 1850px) {
     .footer {
       padding-top: 0px;
-      padding-bottom: 3vw; } }
+      padding-bottom: 4vw; } }
   @media (min-width: 2300px) {
     .footer {
-      padding-bottom: 4vw; } }
+      padding-bottom: 6vw; } }
   @media (max-width: 575px) {
     .footer {
       font-size: 0.9rem;
