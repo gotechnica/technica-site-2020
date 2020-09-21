@@ -326,7 +326,7 @@ $animation-length: 80s;
 
 .hero-horizon {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   padding-top: 500px;
   z-index: 1;
   background: $gradient-peach;
@@ -584,7 +584,7 @@ $animation-length: 80s;
 @media (max-width: 767px) {
   .gallery {
     height: 500px;
-    width: 100vw;
+    width: 100%;
     position: relative;
     left: calc(-50vw + 50%);
   }
@@ -831,7 +831,7 @@ $animation-length: 80s;
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  @media (min-width: 1500px) {
+  @media (min-width: 1850px) {
     background-position: top;
   }
   @media (max-width: 1199px) {
@@ -856,7 +856,9 @@ $animation-length: 80s;
     padding-bottom: 50px;
   }
   @media (min-width: 1850px) {
-    padding-bottom: 10px;
+    padding-bottom: 30px;
+    padding-top: 0px;
+    margin-top: -10px;
   }
   @media (min-width: 2300px) {
     padding-bottom: 40px;
@@ -945,15 +947,16 @@ $animation-length: 80s;
 }
 
 .footer {
-    @media (min-width: 1700px) {
-      padding-top: 40px;
+    @media (min-width: 1200px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
     @media (min-width: 1850px) {
       padding-top: 0px;
-      padding-bottom: 3vw;
+      padding-bottom: 4vw;
     }
     @media (min-width: 2300px) {
-      padding-bottom: 4vw;
+      padding-bottom: 6vw;
     }
     padding-top: 20px;
     padding-bottom: 10px;
