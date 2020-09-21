@@ -250,7 +250,7 @@
 
 .hero-horizon {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   padding-top: 500px;
   z-index: 1;
   background: #EDA29F;
@@ -455,7 +455,7 @@
 @media (max-width: 767px) {
   .gallery {
     height: 500px;
-    width: 100vw;
+    width: 100%;
     position: relative;
     left: calc(-50vw + 50%); }
   .beginner, .hardware, .general, .research {

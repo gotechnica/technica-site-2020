@@ -326,7 +326,7 @@ $animation-length: 80s;
 
 .hero-horizon {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   padding-top: 500px;
   z-index: 1;
   background: $gradient-peach;
@@ -584,7 +584,7 @@ $animation-length: 80s;
 @media (max-width: 767px) {
   .gallery {
     height: 500px;
-    width: 100vw;
+    width: 100%;
     position: relative;
     left: calc(-50vw + 50%);
   }
