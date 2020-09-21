@@ -474,13 +474,13 @@ $animation-length: 80s;
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
-  margin-top: 20vw;
+  margin-top: 20%;
   z-index: 0; //hides overflow wave
   @media (max-width: 991px) {
-    margin-top: 16vw;
+    margin-top: 16%;
   }
   @media (max-width: 767px) {
-    margin-top: 34vw;
+    margin-top: 34%;
   }
   @media (max-width: 575px) {
     margin-top: 150px;
@@ -953,10 +953,10 @@ $animation-length: 80s;
     }
     @media (min-width: 1850px) {
       padding-top: 0px;
-      padding-bottom: 4vw;
+      padding-bottom: 4%;
     }
     @media (min-width: 2300px) {
-      padding-bottom: 6vw;
+      padding-bottom: 6%;
     }
     padding-top: 20px;
     padding-bottom: 10px;
