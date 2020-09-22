@@ -250,7 +250,7 @@
 
 .hero-horizon {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   padding-top: 500px;
   z-index: 1;
   background: #EDA29F;
@@ -357,14 +357,14 @@
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
-  margin-top: 20vw;
+  margin-top: 20%;
   z-index: 0; }
   @media (max-width: 991px) {
     .intro {
-      margin-top: 16vw; } }
+      margin-top: 16%; } }
   @media (max-width: 767px) {
     .intro {
-      margin-top: 34vw; } }
+      margin-top: 34%; } }
   @media (max-width: 575px) {
     .intro {
       margin-top: 150px;
@@ -455,7 +455,7 @@
 @media (max-width: 767px) {
   .gallery {
     height: 500px;
-    width: 100vw;
+    width: 100%;
     position: relative;
     left: calc(-50vw + 50%); }
   .beginner, .hardware, .general, .research {
@@ -652,7 +652,7 @@
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat; }
-  @media (min-width: 1500px) {
+  @media (min-width: 1850px) {
     .contact-footer {
       background-position: top; } }
   @media (max-width: 1199px) {
@@ -677,7 +677,9 @@
 
 @media (min-width: 1850px) {
   .contact {
-    padding-bottom: 10px; } }
+    padding-bottom: 30px;
+    padding-top: 0px;
+    margin-top: -10px; } }
 
 @media (min-width: 2300px) {
   .contact {
@@ -748,16 +750,17 @@
   padding-top: 20px;
   padding-bottom: 10px;
   text-align: center; }
-  @media (min-width: 1700px) {
+  @media (min-width: 1200px) {
     .footer {
-      padding-top: 40px; } }
+      padding-top: 30px;
+      padding-bottom: 30px; } }
   @media (min-width: 1850px) {
     .footer {
       padding-top: 0px;
-      padding-bottom: 3vw; } }
+      padding-bottom: 4%; } }
   @media (min-width: 2300px) {
     .footer {
-      padding-bottom: 4vw; } }
+      padding-bottom: 6%; } }
   @media (max-width: 575px) {
     .footer {
       font-size: 0.9rem;
