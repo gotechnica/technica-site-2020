@@ -768,7 +768,7 @@
   .footer #footer-links {
     margin-bottom: 5px; }
 
-.footer a:link, a:visited {
+.footer a:link, .footer a:visited {
   color: white; }
 
 @media (max-width: 991px) {

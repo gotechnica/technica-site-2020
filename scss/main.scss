@@ -970,8 +970,10 @@ $animation-length: 80s;
     }
 }
 
-.footer a:link, a:visited {
+.footer {
+  a:link, a:visited {
     color: white;
+  }
 }
 
 @media (max-width: 991px) {
