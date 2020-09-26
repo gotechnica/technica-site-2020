@@ -799,7 +799,7 @@ $animation-length: 80s;
 }
 
 .sponsor-img {
-    filter: brightness(200%) grayscale(1);
+    filter: brightness(0) invert(1);
     opacity: .75;
     width: 200px;
     z-index: 1;
@@ -819,9 +819,16 @@ $animation-length: 80s;
     }
 }
 
+.sponsor-img-detailed {
+  filter: brightness(.35) grayscale(1) invert(1);
+}
+
 .sponsor-img:hover {
   transform: scale(1.05);
+  filter: none;
   opacity: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
 }
 
 // **** footer section ****
