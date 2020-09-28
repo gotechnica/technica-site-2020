@@ -41,13 +41,13 @@ $(function () {
       $main.removeClass('scroll-registration');
     }
     //faq
-    if($(window).scrollTop() >= $("#faq").offset().top - 100 || $(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+    if($(window).scrollTop() >= $("#faq").offset().top - 100) {
       $main.addClass('scroll-faq');
     } else {
       $main.removeClass('scroll-faq');
     }
     //sponsors
-    if($(window).scrollTop() >= $("#sponsors").offset().top - 100 || $(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+    if($(window).scrollTop() >= $("#sponsors").offset().top - 150 || $(window).scrollTop() + $(window).height() > $(document).height() - 100) {
       $main.addClass('scroll-sponsors');
     } else {
       $main.removeClass('scroll-sponsors');

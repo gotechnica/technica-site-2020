@@ -623,35 +623,39 @@
   left: 0.5em;
   margin-right: -50%; }
 
-.sponsor-img {
+.sponsor-img-container, .sponsor-img-container-detailed {
   filter: brightness(0) invert(1);
   opacity: .75;
   width: 200px;
   z-index: 1;
-  margin: 0px 50px;
-  transition: .3s ease; }
+  padding: 5px;
+  transition: .3s ease;
+  margin: 10px 50px; }
+  .sponsor-img-container:hover, .sponsor-img-container-detailed:hover {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.05);
+    background-color: white;
+    /* IE8 */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px; }
+  .sponsor-img-container img, .sponsor-img-container-detailed img {
+    width: 100%; }
   @media (max-width: 991px) {
-    .sponsor-img {
+    .sponsor-img-container, .sponsor-img-container-detailed {
       width: 150px;
-      margin: 0px 30px; } }
+      margin: 10px 30px; } }
   @media (max-width: 767px) {
-    .sponsor-img {
+    .sponsor-img-container, .sponsor-img-container-detailed {
       width: 120px;
-      margin: 0px 20px; } }
+      margin: 10px 20px; } }
   @media (max-width: 480px) {
-    .sponsor-img {
+    .sponsor-img-container, .sponsor-img-container-detailed {
       width: 200px;
       margin: 15px 40px; } }
 
-.sponsor-img-detailed {
+.sponsor-img-container-detailed {
   filter: brightness(0.35) grayscale(1) invert(1); }
-
-.sponsor-img:hover {
-  transform: scale(1.05);
-  filter: none;
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 5px; }
 
 .contact-footer {
   background-image: url("../img/contact_horizon.svg");
