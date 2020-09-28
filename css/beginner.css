@@ -27,13 +27,41 @@ body {
 .gallery {
   height: 310px;
   margin-top: 50px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  left: auto !important; }
+  @media (max-width: 1199px) and (min-width: 992px) {
+    .gallery {
+      height: 330px; } }
 
 .flickity-prev-next-button.previous {
   left: -60px !important; }
+  @media (max-width: 1250px) and (min-width: 1200px) {
+    .flickity-prev-next-button.previous {
+      left: 10px !important; } }
+  @media (max-width: 1060px) and (min-width: 992px) {
+    .flickity-prev-next-button.previous {
+      left: 10px !important; } }
+  @media (max-width: 845px) and (min-width: 768px) {
+    .flickity-prev-next-button.previous {
+      left: 10px !important; } }
+  @media (max-width: 660px) {
+    .flickity-prev-next-button.previous {
+      left: 10px !important; } }
 
 .flickity-prev-next-button.next {
   right: -60px !important; }
+  @media (max-width: 1250px) and (min-width: 1200px) {
+    .flickity-prev-next-button.next {
+      right: 10px !important; } }
+  @media (max-width: 1060px) and (min-width: 992px) {
+    .flickity-prev-next-button.next {
+      right: 10px !important; } }
+  @media (max-width: 845px) and (min-width: 768px) {
+    .flickity-prev-next-button.next {
+      right: 10px !important; } }
+  @media (max-width: 660px) {
+    .flickity-prev-next-button.next {
+      right: 10px !important; } }
 
 .beginner-video {
   -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
@@ -47,6 +75,15 @@ body {
   height: 100%;
   margin: 0px 5px;
   width: 363px; }
+  @media (max-width: 1199px) {
+    .beginner-video {
+      width: 300px; } }
+  @media (max-width: 991px) {
+    .beginner-video {
+      width: 350px; } }
+  @media (max-width: 420px) {
+    .beginner-video {
+      width: 95%; } }
 
 .beginner-video-embed {
   width: 100%;
