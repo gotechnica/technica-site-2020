@@ -889,7 +889,7 @@ $animation-length: 80s;
   margin-bottom: 20px;
 }
 
-.link {
+.link, .link:visited {
   color: black;
 }
 
@@ -910,7 +910,6 @@ $animation-length: 80s;
   opacity: 0.7;
   text-decoration: none;
 }
-
 
 .social-buttons > a:hover {
   text-decoration: none;
