@@ -642,11 +642,11 @@
   @media (max-width: 991px) {
     .sponsor-img-container, .sponsor-img-container-detailed {
       width: 150px;
-      margin: 0px 30px; } }
+      margin: 10px 30px; } }
   @media (max-width: 767px) {
     .sponsor-img-container, .sponsor-img-container-detailed {
       width: 120px;
-      margin: 0px 20px; } }
+      margin: 10px 20px; } }
   @media (max-width: 480px) {
     .sponsor-img-container, .sponsor-img-container-detailed {
       width: 200px;
