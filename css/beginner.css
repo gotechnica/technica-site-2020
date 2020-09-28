@@ -9,6 +9,11 @@ body {
 .beginner-resource-header {
   font-weight: 300; }
 
+.beginner-subheader {
+  text-transform: none;
+  margin-top: 30px;
+  font-family: DinPro; }
+
 .beginner-link {
   font-weight: 300;
   color: #A88AA8; }
@@ -20,7 +25,7 @@ body {
   color: #A88AA8; }
 
 .gallery {
-  height: 300px;
+  height: 310px;
   margin-top: 50px;
   margin-bottom: 20px; }
 
