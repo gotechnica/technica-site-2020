@@ -810,6 +810,7 @@ $animation-length: 80s;
     filter: none;
     opacity: 1;
     transform: scale(1.05);
+    background-color: white; /* IE8 */
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 5px;
   }
