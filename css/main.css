@@ -708,7 +708,7 @@
   margin-top: -10px;
   margin-bottom: 20px; }
 
-.link {
+.link, .link:visited {
   color: black; }
 
 .white-link {
