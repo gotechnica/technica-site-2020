@@ -709,7 +709,8 @@
   margin-bottom: 20px; }
 
 .link, .link:visited {
-  color: black; }
+  font-weight: 300;
+  color: #A88AA8; }
 
 .white-link {
   color: white !important; }
