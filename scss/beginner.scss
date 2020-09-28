@@ -15,6 +15,12 @@ body {
   font-weight: 300;
 }
 
+.beginner-subheader {
+  text-transform: none;
+  margin-top: 30px;
+  font-family: DinPro;
+}
+
 .beginner-link {
   font-weight: 300;
   color: $lavender;
@@ -28,17 +34,45 @@ body {
 }
 
 .gallery {
-  height: 300px;
+  height: 310px;
   margin-top: 50px;
   margin-bottom: 20px;
+  left: auto !important;
+  @media (max-width: 1199px) and (min-width: 992px) {
+    height: 330px;
+  }
 }
 
 .flickity-prev-next-button.previous {
   left: -60px !important;
+  @media (max-width: 1250px) and (min-width: 1200px) {
+    left: 10px !important;
+  }
+  @media (max-width: 1060px) and (min-width: 992px) {
+    left: 10px !important;
+  }
+  @media (max-width: 845px) and (min-width: 768px) {
+    left: 10px !important;
+  }
+  @media (max-width: 660px) {
+    left: 10px !important;
+  }
 }
 
 .flickity-prev-next-button.next {
   right: -60px !important;
+  @media (max-width: 1250px) and (min-width: 1200px) {
+    right: 10px !important;
+  }
+  @media (max-width: 1060px) and (min-width: 992px) {
+    right: 10px !important;
+  }
+  @media (max-width: 845px) and (min-width: 768px) {
+    right: 10px !important;
+  }
+  @media (max-width: 660px) {
+    right: 10px !important;
+  }
 }
 
 .beginner-video {
@@ -52,6 +86,15 @@ body {
   height: 100%;
   margin: 0px 5px;
   width: 363px;
+  @media (max-width: 1199px) {
+    width: 300px;
+  }
+  @media (max-width: 991px) {
+    width: 350px;
+  }
+  @media (max-width: 420px) {
+    width: 95%;
+  }
 }
 
 .beginner-video-embed {
