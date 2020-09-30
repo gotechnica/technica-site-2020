@@ -897,8 +897,16 @@ $animation-length: 80s;
 .white-link {
   color: white !important;
 }
+
 .black-link {
   color: black;
+}
+
+.black-link:hover {
+  color: black;
+  transition: ease 0.3s;
+  opacity: 0.7;
+  text-decoration: none;
 }
 
 .link:hover {
