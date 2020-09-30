@@ -890,16 +890,19 @@ $animation-length: 80s;
 }
 
 .link, .link:visited {
-  font-weight: 300;
-  color: #A88AA8;
+  font-weight: bold;
+  color: $lavender;
 }
 
 .white-link {
   color: white !important;
 }
+.black-link {
+  color: black;
+}
 
 .link:hover {
-  color: black;
+  color: $lavender;
   transition: ease 0.3s;
   opacity: 0.7;
   text-decoration: none;
