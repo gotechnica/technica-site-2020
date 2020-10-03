@@ -709,13 +709,23 @@
   margin-bottom: 20px; }
 
 .link, .link:visited {
-  color: black; }
+  font-weight: bold;
+  color: #A88AA8; }
 
 .white-link {
   color: white !important; }
 
-.link:hover {
+.black-link {
+  color: black; }
+
+.black-link:hover {
   color: black;
+  transition: ease 0.3s;
+  opacity: 0.7;
+  text-decoration: none; }
+
+.link:hover {
+  color: #A88AA8;
   transition: ease 0.3s;
   opacity: 0.7;
   text-decoration: none; }
