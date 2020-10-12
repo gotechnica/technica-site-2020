@@ -629,15 +629,15 @@
   width: 200px;
   z-index: 1;
   padding: 5px;
+  padding-top: 80px;
   transition: .3s ease;
   margin: 10px 50px; }
   .sponsor-img-container:hover, .sponsor-img-container-detailed:hover {
     filter: none;
     opacity: 1;
     transform: scale(1.05);
-    background-color: white;
-    /* IE8 */
-    background-color: rgba(255, 255, 255, 0.9);
+    background-size: fill;
+    background-repeat: no-repeat;
     border-radius: 5px; }
   .sponsor-img-container img, .sponsor-img-container-detailed img {
     width: 100%; }
@@ -656,6 +656,15 @@
 
 .sponsor-img-container-detailed {
   filter: brightness(0.35) grayscale(1) invert(1); }
+
+.cloud-one:hover {
+  background: url("../clouds/1.svg"); }
+
+.cloud-two:hover {
+  background: url("../clouds/2.svg"); }
+
+.cloud-three:hover {
+  background: url("../clouds/3.svg"); }
 
 .contact-footer {
   background-image: url("../img/contact_horizon.svg");
