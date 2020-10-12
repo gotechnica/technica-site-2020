@@ -672,6 +672,61 @@ $animation-length: 80s;
     }
 }
 
+// **** Schedule Section ****
+
+.schedule-container {
+  background-color: white;
+  border-radius: 8px;
+}
+
+.schedule-toggler {
+  @include dinpro-text(24px,bold, $lavender);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0px;
+  border-bottom: 1px $grey solid;
+}
+
+.active-day {
+  border-bottom: 5px $lavender solid;
+}
+
+.tab-content {
+  height: 400px;
+  overflow-y: auto;
+}
+
+.schedule-event {
+  padding: 15px 30px;
+  font-weight: bold;
+  border-bottom: 1px $grey solid;
+}
+
+.event-time, .event-name, .event-type {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.event-time {
+  width: 20%;
+}
+
+.event-name {
+  width: 60%;
+}
+
+.event-subname {
+  font-weight: normal;
+}
+
+.event-type {
+  width: 10%;
+}
+
+.event-workshop {
+  color: $dark-blue;
+}
+
 // **** FAQ section ****
 
 .faq {
