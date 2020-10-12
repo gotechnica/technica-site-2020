@@ -646,6 +646,51 @@
     .speaker-bio {
       position: relative; } }
 
+      .schedule-container {
+        background-color: white;
+        border-radius: 8px; }
+
+      .schedule-toggler {
+        font-family: DINPro;
+        font-size: 24px;
+        font-weight: bold;
+        color: #A88AA8;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 10px 0px;
+        border-bottom: 1px #C4C4C4 solid; }
+
+      .active-day {
+        border-bottom: 5px #A88AA8 solid; }
+
+      .tab-content {
+        height: 400px;
+        overflow-y: auto; }
+
+      .schedule-event {
+        padding: 15px 30px;
+        font-weight: bold;
+        border-bottom: 1px #C4C4C4 solid; }
+
+      .event-time, .event-name, .event-type {
+        display: inline-block;
+        vertical-align: middle; }
+
+      .event-time {
+        width: 20%; }
+
+      .event-name {
+        width: 60%; }
+
+      .event-subname {
+        font-weight: normal; }
+
+      .event-type {
+        width: 10%; }
+
+      .event-workshop {
+        color: #324d66; }
+
 @media (max-width: 575px) {
   .faq {
     padding-left: 3%;

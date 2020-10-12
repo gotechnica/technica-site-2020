@@ -129,3 +129,11 @@ var flky = new Flickity( '.gallery', {
   wrapAround: true
   // at end of cells, wraps-around to first for infinite scrolling
 });
+
+//schedule
+$(function () {
+  var $sat = $("#sattogglecontainer");
+  var $sun = $("#suntogglecontainer");
+  $("#sattoggle").click(function() { $sat.addClass('active-day'); $sun.removeClass('active-day');});
+  $("#suntoggle").click(function() { $sun.addClass('active-day'); $sat.removeClass('active-day');});
+});
