@@ -680,29 +680,40 @@
   background-size: contain;
   background-repeat: no-repeat; }
 
-.cloud-one:hover {
+.cloud-one::after, .cloud-two::after, .cloud-three::after {
+  content: "";
+  opacity: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
+  @media (max-width: 480px) {
+    .cloud-one::after, .cloud-two::after, .cloud-three::after {
+      transition: .3s ease; } }
+
+.cloud-one:hover::after, .cloud-two:hover::after, .cloud-three:hover::after {
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: fade-in .3s forwards; }
+  @media (max-width: 480px) {
+    .cloud-one:hover::after, .cloud-two:hover::after, .cloud-three:hover::after {
+      opacity: 1;
+      background-image: none !important;
+      background: white;
+      border-radius: 5px;
+      animation: none; } }
+
+.cloud-one:hover::after {
   background-image: url("../clouds/1.svg"); }
-  @media (max-width: 480px) {
-    .cloud-one:hover {
-      background-image: none;
-      background-color: white;
-      border-radius: 5px; } }
 
-.cloud-two:hover {
+.cloud-two:hover::after {
   background-image: url("../clouds/2.svg"); }
-  @media (max-width: 480px) {
-    .cloud-two:hover {
-      background-image: none;
-      background-color: white;
-      border-radius: 5px; } }
 
-.cloud-three:hover {
+.cloud-three:hover::after {
   background-image: url("../clouds/3.svg"); }
-  @media (max-width: 480px) {
-    .cloud-three:hover {
-      background-image: none;
-      background-color: white;
-      border-radius: 5px; } }
 
 .contact-footer {
   background-image: url("../img/contact_horizon.svg");
