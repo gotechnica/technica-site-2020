@@ -800,36 +800,56 @@ $animation-length: 80s;
 
 .sponsor-img-container, .sponsor-img-container-detailed {
   filter: brightness(0) invert(1);
-  //background-image: url("../clouds/4.svg"); /* IE8 */
   opacity: .75;
-  width: 200px;
+  width: 240px;
+  height: 100px;
+  margin: 0px 40px;
+  position: relative;
   z-index: 1;
-  padding: 5px;
-  padding-top: 80px;
   transition: .3s ease;
-  margin: 10px 50px;
   &:hover {
     filter: none;
     opacity: 1;
     transform: scale(1.05);
-    background-size: fill;
-    background-repeat: no-repeat;
-    border-radius: 5px;
   }
   img {
-    width: 100%;
+    width: 200px;
+    position: absolute;
+    bottom: 2px;
+    right: 20px;
+  }
+  @media (max-width: 1199px) {
+    margin: 0px 30px;
   }
   @media (max-width: 991px) {
-    width: 150px;
-    margin: 10px 30px;
+    width: 180px;
+    height: 75px;
+    margin: 0px 20px;
+    img {
+      width: 150px;
+      right: 15px;
+    }
   }
   @media (max-width: 767px) {
-    width: 120px;
-    margin: 10px 20px;
+    width: 150px;
+    height: 60px;
+    margin: 0px 5px;
+    img {
+      width: 120px;
+      right: 15px;
+    }
   }
   @media (max-width: 480px) {
-    width: 200px;
-    margin: 15px 40px;
+    width: 150px;
+    margin: 10px 15px;
+    height: auto;
+    padding: 5px;
+    img {
+      width: 100%;
+      bottom: 0;
+      position: relative;
+      right: 0;
+    }
   }
 }
 
@@ -837,16 +857,37 @@ $animation-length: 80s;
   filter: brightness(.35) grayscale(1) invert(1);
 }
 
+.cloud-one, .cloud-two, .cloud-three {
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .cloud-one:hover {
-  background: url("../clouds/1.svg");
+  background-image: url("../clouds/1.svg");
+  @media (max-width: 480px) {
+    background-image: none;
+    background-color: white;
+    border-radius: 5px;
+  }
 }
 
 .cloud-two:hover {
-  background: url("../clouds/2.svg");
+  background-image: url("../clouds/2.svg");
+  @media (max-width: 480px) {
+    background-image: none;
+    background-color: white;
+    border-radius: 5px;
+  }
 }
 
 .cloud-three:hover {
-  background: url("../clouds/3.svg");
+  background-image: url("../clouds/3.svg");
+  @media (max-width: 480px) {
+    background-image: none;
+    background-color: white;
+    border-radius: 5px;
+  }
 }
 
 // **** footer section ****
