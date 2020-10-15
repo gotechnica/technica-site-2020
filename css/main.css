@@ -526,15 +526,59 @@
 
 .speaker-graphic {
   margin-right: 30px; }
+  @media (max-width: 1199px) {
+    .speaker-graphic {
+      margin-bottom: 30px;
+      margin-top: 40px; } }
+  @media (max-width: 991px) {
+    .speaker-graphic {
+      margin-right: 0;
+      padding: 0 25%;
+      margin-top: 0px; } }
+  @media (max-width: 767px) {
+    .speaker-graphic {
+      padding: 0 10%; } }
 
 .speaker-horizon {
   position: relative;
   margin-bottom: 75px; }
 
+.speaker-bird-one, .speaker-bird-two, .speaker-bird-three {
+  position: absolute; }
+
+.speaker-bird-one {
+  width: 57px;
+  top: 100px;
+  left: -50px; }
+  @media (max-width: 400px) {
+    .speaker-bird-one {
+      width: 40px;
+      left: -35px; } }
+
+.speaker-bird-two {
+  width: 60px;
+  top: -20px;
+  right: 50px; }
+  @media (max-width: 400px) {
+    .speaker-bird-two {
+      width: 43px; } }
+
+.speaker-bird-three {
+  width: 55px;
+  top: 15px;
+  right: -20px; }
+  @media (max-width: 400px) {
+    .speaker-bird-three {
+      width: 39px;
+      right: 0px; } }
+
 .speaker-headshot {
   border-radius: 50%;
   border: 15px #FF6B98 solid;
   width: 90%; }
+  @media (max-width: 480px) {
+    .speaker-headshot {
+      border: 10px #FF6B98 solid; } }
 
 .speaker-cloud {
   width: 100%;
@@ -546,6 +590,15 @@
   position: absolute;
   padding: 85px 0 10px 40px;
   margin-top: -130px; }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .speaker-cloud {
+      padding: 90px 0 10px 20px; } }
+  @media (max-width: 480px) {
+    .speaker-cloud {
+      padding: 95px 0 10px 30px; } }
+  @media (max-width: 400px) {
+    .speaker-cloud {
+      padding: 110px 0 10px 20px; } }
 
 .speaker-name {
   font-family: DINPro;
@@ -553,12 +606,26 @@
   font-weight: bold;
   color: #FF6B98;
   line-height: 43px; }
+  @media (max-width: 480px) {
+    .speaker-name {
+      font-size: 30px;
+      line-height: 33px; } }
+  @media (max-width: 400px) {
+    .speaker-name {
+      font-size: 25px;
+      line-height: 28px; } }
 
 .speaker-position {
   font-family: DINPro;
   font-size: 23px;
   font-weight: normal;
   color: black; }
+  @media (max-width: 480px) {
+    .speaker-position {
+      font-size: 20px; } }
+  @media (max-width: 400px) {
+    .speaker-position {
+      font-size: 17px; } }
 
 .speaker-wave {
   width: 100%; }
@@ -575,6 +642,9 @@
   padding: 10px;
   padding: 15px 20px;
   position: absolute; }
+  @media (max-width: 991px) {
+    .speaker-bio {
+      position: relative; } }
 
 @media (max-width: 575px) {
   .faq {

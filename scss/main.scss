@@ -676,6 +676,18 @@ $animation-length: 80s;
 
 .speaker-graphic {
   margin-right: 30px;
+  @media (max-width: 1199px) {
+    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+  @media (max-width: 991px) {
+    margin-right: 0;
+    padding: 0 25%;
+    margin-top: 0px;
+  }
+  @media (max-width: 767px) {
+    padding: 0 10%;
+  }
 }
 
 .speaker-horizon {
@@ -683,9 +695,45 @@ $animation-length: 80s;
   margin-bottom: 75px;
 }
 
+.speaker-bird-one, .speaker-bird-two, .speaker-bird-three {
+  position: absolute;
+}
+
+.speaker-bird-one {
+  width: 57px;
+  top: 100px;
+  left: -50px;
+  @media (max-width: 400px) {
+    width: 40px;
+    left: -35px;
+  }
+}
+
+.speaker-bird-two {
+  width: 60px;
+  top: -20px;
+  right: 50px;
+  @media (max-width: 400px) {
+    width: 43px;
+  }
+}
+
+.speaker-bird-three {
+  width: 55px;
+  top: 15px;
+  right: -20px;
+  @media (max-width: 400px) {
+    width: 39px;
+    right: 0px;
+  }
+}
+
 .speaker-headshot {
   border-radius: 50%;
   border: 15px $pink solid;
+  @media (max-width: 480px) {
+    border: 10px $pink solid;
+  }
   width: 90%;
 }
 
@@ -699,15 +747,41 @@ $animation-length: 80s;
   position: absolute;
   padding: 85px 0 10px 40px;
   margin-top: -130px;
+  @media (min-width: 768px) and (max-width: 1199px) {
+    padding: 90px 0 10px 20px;
+  }
+  @media (max-width: 767px) {
+
+  }
+  @media (max-width: 480px) {
+    padding: 95px 0 10px 30px;
+  }
+  @media (max-width: 400px) {
+    padding: 110px 0 10px 20px;
+  }
 }
 
 .speaker-name {
   @include dinpro-text(38px, bold, $pink);
   line-height: 43px;
+  @media (max-width: 480px) {
+    font-size: 30px;
+    line-height: 33px;
+  }
+  @media (max-width: 400px) {
+    font-size: 25px;
+    line-height: 28px;
+  }
 }
 
 .speaker-position {
   @include dinpro-text(23px, normal, black);
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
+  @media (max-width: 400px) {
+    font-size: 17px;
+  }
 }
 
 .speaker-wave {
@@ -718,6 +792,9 @@ $animation-length: 80s;
   @include box();
   padding: 15px 20px;
   position: absolute;
+  @media (max-width: 991px) {
+    position: relative;
+  }
 }
 
 
