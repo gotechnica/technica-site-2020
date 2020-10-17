@@ -588,7 +588,7 @@
   background-position: left bottom;
   background-size: contain;
   position: absolute;
-  padding: 85px 0 10px 40px;
+  padding: 85px 0 0px 25px;
   margin-top: -130px; }
   @media (min-width: 768px) and (max-width: 1199px) {
     .speaker-cloud {
@@ -602,7 +602,7 @@
 
 .speaker-name {
   font-family: DINPro;
-  font-size: 38px;
+  font-size: 32px;
   font-weight: bold;
   color: #FF6B98;
   line-height: 43px; }
@@ -612,7 +612,7 @@
       line-height: 33px; } }
   @media (max-width: 400px) {
     .speaker-name {
-      font-size: 25px;
+      font-size: 20px;
       line-height: 28px; } }
 
 .speaker-position {
