@@ -2,6 +2,7 @@
 //temporary until resolve _vars.scss issue
 $cyan: #82ECEC;
 $dark-cyan: #4CA1A7;
+$darker-cyan: #324D66;
 $pink: #FF6B98;
 $lavender: #A88AA8;
 
@@ -677,6 +678,9 @@ $animation-length: 80s;
 .schedule-container {
   background-color: white;
   border-radius: 8px;
+  @media (max-width: 575px) {
+    font-size: 12px;
+  }
 }
 
 .schedule-toggler {
@@ -685,6 +689,9 @@ $animation-length: 80s;
   text-align: center;
   padding: 10px 0px;
   border-bottom: 1px $grey solid;
+  @media (max-width: 575px) {
+    font-size: 17px;
+  }
 }
 
 .active-day {
@@ -692,7 +699,7 @@ $animation-length: 80s;
 }
 
 .tab-content {
-  height: 400px;
+  height: 500px;
   overflow-y: auto;
 }
 
@@ -700,6 +707,9 @@ $animation-length: 80s;
   padding: 15px 30px;
   font-weight: bold;
   border-bottom: 1px $grey solid;
+  @media (max-width: 575px) {
+    padding: 15px 10px;
+  }
 }
 
 .event-time, .event-name, .event-type {
@@ -709,10 +719,16 @@ $animation-length: 80s;
 
 .event-time {
   width: 20%;
+  @media (max-width: 767px) {
+    width: 30%;
+  }
 }
 
 .event-name {
   width: 60%;
+  @media (max-width: 767px) {
+    width: 45%;
+  }
 }
 
 .event-subname {
@@ -723,8 +739,20 @@ $animation-length: 80s;
   width: 10%;
 }
 
-.event-workshop {
-  color: $dark-blue;
+.workshop {
+  color: $pink;
+}
+
+.activity {
+  color: $dark-cyan;
+}
+
+.event {
+  color: $lavender;
+}
+
+.livestream {
+  color: $darker-cyan;
 }
 
 // **** FAQ section ****
