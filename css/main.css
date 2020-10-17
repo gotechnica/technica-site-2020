@@ -650,18 +650,17 @@
         background-color: white;
         border-radius: 8px; }
 
-      .schedule-toggler {
-        font-family: DINPro;
-        font-size: 24px;
-        font-weight: bold;
-        color: #A88AA8;
-        text-transform: uppercase;
-        text-align: center;
-        padding: 10px 0px;
-        border-bottom: 1px #C4C4C4 solid; }
+.tab-content {
+  height: 500px;
+  overflow-y: auto; }
 
-      .active-day {
-        border-bottom: 5px #A88AA8 solid; }
+.schedule-event {
+  padding: 15px 30px;
+  font-weight: bold;
+  border-bottom: 1px #C4C4C4 solid; }
+  @media (max-width: 575px) {
+    .schedule-event {
+      padding: 15px 10px; } }
 
       .tab-content {
         height: 400px;
@@ -685,11 +684,17 @@
       .event-subname {
         font-weight: normal; }
 
-      .event-type {
-        width: 10%; }
+.workshop {
+  color: #FF6B98; }
 
-      .event-workshop {
-        color: #324d66; }
+.activity {
+  color: #4CA1A7; }
+
+.event {
+  color: #A88AA8; }
+
+.livestream {
+  color: #324D66; }
 
 @media (max-width: 575px) {
   .faq {
