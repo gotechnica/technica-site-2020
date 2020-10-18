@@ -687,14 +687,14 @@
 .workshop {
   color: #FF6B98; }
 
-.activity {
+.panel-meetup {
   color: #4CA1A7; }
 
 .event {
-  color: #A88AA8; }
-
-.livestream {
   color: #324D66; }
+
+.minievent {
+  color: #A88AA8; }
 
 @media (max-width: 575px) {
   .faq {
