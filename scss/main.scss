@@ -745,7 +745,7 @@ $animation-length: 80s;
   background-position: left bottom;
   background-size: contain;
   position: absolute;
-  padding: 85px 0 10px 40px;
+  padding: 85px 0 0px 25px;
   margin-top: -130px;
   @media (min-width: 768px) and (max-width: 1199px) {
     padding: 90px 0 10px 20px;
@@ -762,14 +762,14 @@ $animation-length: 80s;
 }
 
 .speaker-name {
-  @include dinpro-text(38px, bold, $pink);
+  @include dinpro-text(32px, bold, $pink);
   line-height: 43px;
   @media (max-width: 480px) {
     font-size: 30px;
     line-height: 33px;
   }
   @media (max-width: 400px) {
-    font-size: 25px;
+    font-size: 20px;
     line-height: 28px;
   }
 }
