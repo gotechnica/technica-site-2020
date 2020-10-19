@@ -456,10 +456,8 @@
   .gallery {
     height: 500px;
     width: 100%;
-    position: relative;
-    left: calc(-50vw + 50%); }
+    position: relative; }
   .beginner, .hardware, .general, .research {
-    width: 550px;
     margin: 0px 3px; } }
 
 @media (max-width: 575px) {
@@ -649,9 +647,12 @@
 .schedule-container {
   background-color: white;
   border-radius: 8px; }
+  @media (max-width: 767px) {
+    .schedule-container {
+      font-size: 14px; } }
   @media (max-width: 575px) {
     .schedule-container {
-      font-size: 12px; } }
+      font-size: 13px; } }
 
 .schedule-toggler {
   font-family: DINPro;
@@ -679,7 +680,7 @@
   border-bottom: 1px #C4C4C4 solid; }
   @media (max-width: 575px) {
     .schedule-event {
-      padding: 15px 10px; } }
+      padding: 15px; } }
 
 .event-time, .event-name, .event-type {
   display: inline-block;
@@ -687,21 +688,37 @@
 
 .event-time {
   width: 20%; }
-  @media (max-width: 767px) {
+  @media (max-width: 420px) {
     .event-time {
-      width: 30%; } }
+      width: 25%; } }
+  @media (max-width: 330px) {
+    .event-time {
+      width: 27%; } }
 
 .event-name {
   width: 60%; }
   @media (max-width: 767px) {
     .event-name {
-      width: 45%; } }
+      width: 55%; } }
+  @media (max-width: 420px) {
+    .event-name {
+      width: 52%; } }
+  @media (max-width: 330px) {
+    .event-name {
+      width: 48%; } }
 
 .event-subname {
-  font-weight: normal; }
+  font-weight: normal;
+  font-size: .9rem; }
+  @media (max-width: 575px) {
+    .event-subname {
+      font-size: 12px; } }
 
 .event-type {
-  width: 10%; }
+  width: 15%; }
+  @media (max-width: 767px) {
+    .event-type {
+      width: 20%; } }
 
 .workshop {
   color: #FF6B98; }

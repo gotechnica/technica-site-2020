@@ -587,11 +587,9 @@ $animation-length: 80s;
     height: 500px;
     width: 100%;
     position: relative;
-    left: calc(-50vw + 50%);
   }
 
   .beginner, .hardware, .general, .research {
-    width: 550px;
     margin: 0px 3px;
   }
 }
@@ -804,8 +802,11 @@ $animation-length: 80s;
 .schedule-container {
   background-color: white;
   border-radius: 8px;
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
   @media (max-width: 575px) {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
@@ -834,7 +835,7 @@ $animation-length: 80s;
   font-weight: bold;
   border-bottom: 1px $grey solid;
   @media (max-width: 575px) {
-    padding: 15px 10px;
+    padding: 15px;
   }
 }
 
@@ -845,24 +846,40 @@ $animation-length: 80s;
 
 .event-time {
   width: 20%;
-  @media (max-width: 767px) {
-    width: 30%;
+  @media (max-width: 420px) {
+    width: 25%;
+  }
+  @media (max-width: 330px) {
+    width: 27%;
   }
 }
 
 .event-name {
   width: 60%;
   @media (max-width: 767px) {
-    width: 45%;
+    width: 55%;
+  }
+  @media (max-width: 420px) {
+    width: 52%;
+  }
+  @media (max-width: 330px) {
+    width: 48%;
   }
 }
 
 .event-subname {
   font-weight: normal;
+  font-size: .9rem;
+  @media (max-width: 575px) {
+    font-size: 12px;
+  }
 }
 
 .event-type {
-  width: 10%;
+  width: 15%;
+  @media (max-width: 767px) {
+    width: 20%;
+  }
 }
 
 .workshop {

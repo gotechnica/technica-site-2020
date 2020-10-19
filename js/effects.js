@@ -41,7 +41,7 @@ $(function () {
       $main.removeClass('scroll-registration');
     }
     //faq
-    if($(window).scrollTop() >= $("#faq").offset().top - 100) {
+    if($(window).scrollTop() >= $("#schedule").offset().top - 100) {
       $main.addClass('scroll-faq');
     } else {
       $main.removeClass('scroll-faq');
