@@ -646,6 +646,75 @@
     .speaker-bio {
       position: relative; } }
 
+.schedule-container {
+  background-color: white;
+  border-radius: 8px; }
+  @media (max-width: 575px) {
+    .schedule-container {
+      font-size: 12px; } }
+
+.schedule-toggler {
+  font-family: DINPro;
+  font-size: 24px;
+  font-weight: bold;
+  color: #A88AA8;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0px;
+  border-bottom: 1px #C4C4C4 solid; }
+  @media (max-width: 575px) {
+    .schedule-toggler {
+      font-size: 17px; } }
+
+.active-day {
+  border-bottom: 5px #A88AA8 solid; }
+
+.tab-content {
+  height: 500px;
+  overflow-y: auto; }
+
+.schedule-event {
+  padding: 15px 30px;
+  font-weight: bold;
+  border-bottom: 1px #C4C4C4 solid; }
+  @media (max-width: 575px) {
+    .schedule-event {
+      padding: 15px 10px; } }
+
+.event-time, .event-name, .event-type {
+  display: inline-block;
+  vertical-align: middle; }
+
+.event-time {
+  width: 20%; }
+  @media (max-width: 767px) {
+    .event-time {
+      width: 30%; } }
+
+.event-name {
+  width: 60%; }
+  @media (max-width: 767px) {
+    .event-name {
+      width: 45%; } }
+
+.event-subname {
+  font-weight: normal; }
+
+.event-type {
+  width: 10%; }
+
+.workshop {
+  color: #FF6B98; }
+
+.panel-meetup {
+  color: #4CA1A7; }
+
+.event {
+  color: #324D66; }
+
+.minievent {
+  color: #A88AA8; }
+
 @media (max-width: 575px) {
   .faq {
     padding-left: 3%;

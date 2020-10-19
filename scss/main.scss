@@ -2,6 +2,7 @@
 //temporary until resolve _vars.scss issue
 $cyan: #82ECEC;
 $dark-cyan: #4CA1A7;
+$darker-cyan: #324D66;
 $pink: #FF6B98;
 $lavender: #A88AA8;
 
@@ -797,6 +798,88 @@ $animation-length: 80s;
   }
 }
 
+
+// **** Schedule Section ****
+
+.schedule-container {
+  background-color: white;
+  border-radius: 8px;
+  @media (max-width: 575px) {
+    font-size: 12px;
+  }
+}
+
+.schedule-toggler {
+  @include dinpro-text(24px,bold, $lavender);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0px;
+  border-bottom: 1px $grey solid;
+  @media (max-width: 575px) {
+    font-size: 17px;
+  }
+}
+
+.active-day {
+  border-bottom: 5px $lavender solid;
+}
+
+.tab-content {
+  height: 500px;
+  overflow-y: auto;
+}
+
+.schedule-event {
+  padding: 15px 30px;
+  font-weight: bold;
+  border-bottom: 1px $grey solid;
+  @media (max-width: 575px) {
+    padding: 15px 10px;
+  }
+}
+
+.event-time, .event-name, .event-type {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.event-time {
+  width: 20%;
+  @media (max-width: 767px) {
+    width: 30%;
+  }
+}
+
+.event-name {
+  width: 60%;
+  @media (max-width: 767px) {
+    width: 45%;
+  }
+}
+
+.event-subname {
+  font-weight: normal;
+}
+
+.event-type {
+  width: 10%;
+}
+
+.workshop {
+  color: $pink;
+}
+
+.panel-meetup {
+  color: $dark-cyan;
+}
+
+.event {
+  color: $darker-cyan;
+}
+
+.minievent {
+  color: $lavender;
+}
 
 // **** FAQ section ****
 
