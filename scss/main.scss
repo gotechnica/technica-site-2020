@@ -749,15 +749,17 @@ $animation-length: 80s;
   @media (min-width: 768px) and (max-width: 1199px) {
     padding: 90px 0 10px 20px;
   }
-  @media (max-width: 767px) {
-
-  }
   @media (max-width: 480px) {
     padding: 95px 0 10px 30px;
   }
   @media (max-width: 400px) {
     padding: 110px 0 10px 20px;
   }
+}
+
+#cadran-cloud {
+  background-image: url("../img/speakers/cadran-cloud.svg");
+  margin-top: -120px;
 }
 
 .speaker-name {
