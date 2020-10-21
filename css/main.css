@@ -678,13 +678,27 @@
   height: 500px;
   overflow-y: auto; }
 
-.schedule-event {
+.schedule-event-nodesc, .schedule-event {
   padding: 15px 30px;
   font-weight: bold;
   border-bottom: 1px #C4C4C4 solid; }
   @media (max-width: 575px) {
-    .schedule-event {
+    .schedule-event-nodesc, .schedule-event {
       padding: 15px; } }
+
+.schedule-event {
+  cursor: pointer; }
+  .schedule-event:hover {
+    background-color: #E5E5E5; }
+
+.event-modal-title {
+  font-family: DINPro;
+  font-size: 20px;
+  font-weight: bold;
+  color: black; }
+  @media (max-width: 767px) {
+    .event-modal-title {
+      font-size: 16px; } }
 
 .event-time, .event-name, .event-type {
   display: inline-block;

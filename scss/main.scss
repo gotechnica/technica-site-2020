@@ -832,12 +832,26 @@ $animation-length: 80s;
   overflow-y: auto;
 }
 
-.schedule-event {
+.schedule-event-nodesc, .schedule-event {
   padding: 15px 30px;
   font-weight: bold;
   border-bottom: 1px $grey solid;
   @media (max-width: 575px) {
     padding: 15px;
+  }
+}
+
+.schedule-event {
+  cursor: pointer;
+  &:hover {
+    background-color: $light-grey;
+  }
+}
+
+.event-modal-title {
+  @include dinpro-text(20px,bold, black);
+  @media (max-width: 767px) {
+    font-size: 16px;
   }
 }
 
