@@ -896,6 +896,9 @@ $animation-length: 80s;
   @media (max-width: 767px) {
     width: 20%;
   }
+  @media (max-width: 450px) {
+    font-size: 12px;
+  }
 }
 
 .workshop {
@@ -912,6 +915,19 @@ $animation-length: 80s;
 
 .minievent {
   color: $dark-cyan;
+}
+
+.horizon-event {
+  @media (max-width: 450px) {
+    font-size: 11px;
+  }
+}
+
+.horizon-event:after {
+  padding-left: 5px;
+  display: inline-block;
+  width: 1px;
+  content: url("../img/horizon-icon.svg");
 }
 
 // **** FAQ section ****

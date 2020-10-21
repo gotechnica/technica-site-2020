@@ -737,6 +737,9 @@
   @media (max-width: 767px) {
     .event-type {
       width: 20%; } }
+  @media (max-width: 450px) {
+    .event-type {
+      font-size: 12px; } }
 
 .workshop {
   color: #FF6B98; }
@@ -749,6 +752,16 @@
 
 .minievent {
   color: #4CA1A7; }
+
+@media (max-width: 450px) {
+  .horizon-event {
+    font-size: 11px; } }
+
+.horizon-event:after {
+  padding-left: 5px;
+  display: inline-block;
+  width: 1px;
+  content: url("../img/horizon-icon.svg"); }
 
 @media (max-width: 575px) {
   .faq {
