@@ -678,13 +678,27 @@
   height: 500px;
   overflow-y: auto; }
 
-.schedule-event {
+.schedule-event-nodesc, .schedule-event {
   padding: 15px 30px;
   font-weight: bold;
   border-bottom: 1px #C4C4C4 solid; }
   @media (max-width: 575px) {
-    .schedule-event {
+    .schedule-event-nodesc, .schedule-event {
       padding: 15px; } }
+
+.schedule-event {
+  cursor: pointer; }
+  .schedule-event:hover {
+    background-color: #E5E5E5; }
+
+.event-modal-title {
+  font-family: DINPro;
+  font-size: 20px;
+  font-weight: bold;
+  color: black; }
+  @media (max-width: 767px) {
+    .event-modal-title {
+      font-size: 16px; } }
 
 .event-time, .event-name, .event-type {
   display: inline-block;
@@ -723,6 +737,9 @@
   @media (max-width: 767px) {
     .event-type {
       width: 20%; } }
+  @media (max-width: 450px) {
+    .event-type {
+      font-size: 12px; } }
 
 .workshop {
   color: #FF6B98; }
@@ -735,6 +752,16 @@
 
 .minievent {
   color: #4CA1A7; }
+
+@media (max-width: 450px) {
+  .horizon-event {
+    font-size: 11px; } }
+
+.horizon-event:after {
+  padding-left: 5px;
+  display: inline-block;
+  width: 1px;
+  content: url("../img/horizon-icon.svg"); }
 
 @media (max-width: 575px) {
   .faq {

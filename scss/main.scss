@@ -832,12 +832,26 @@ $animation-length: 80s;
   overflow-y: auto;
 }
 
-.schedule-event {
+.schedule-event-nodesc, .schedule-event {
   padding: 15px 30px;
   font-weight: bold;
   border-bottom: 1px $grey solid;
   @media (max-width: 575px) {
     padding: 15px;
+  }
+}
+
+.schedule-event {
+  cursor: pointer;
+  &:hover {
+    background-color: $light-grey;
+  }
+}
+
+.event-modal-title {
+  @include dinpro-text(20px,bold, black);
+  @media (max-width: 767px) {
+    font-size: 16px;
   }
 }
 
@@ -882,6 +896,9 @@ $animation-length: 80s;
   @media (max-width: 767px) {
     width: 20%;
   }
+  @media (max-width: 450px) {
+    font-size: 12px;
+  }
 }
 
 .workshop {
@@ -898,6 +915,19 @@ $animation-length: 80s;
 
 .minievent {
   color: $dark-cyan;
+}
+
+.horizon-event {
+  @media (max-width: 450px) {
+    font-size: 11px;
+  }
+}
+
+.horizon-event:after {
+  padding-left: 5px;
+  display: inline-block;
+  width: 1px;
+  content: url("../img/horizon-icon.svg");
 }
 
 // **** FAQ section ****
