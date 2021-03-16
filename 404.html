@@ -7,8 +7,13 @@
   <body>
 
   <script>
+    function capitalizeFirstLetter(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    
+    
     var url_string = window.location.pathname;
-    var s2 = url_string.substring(1);
+    var s2 = capitalizeFirstLetter(url_string.substring(1));
     window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSevXYt9ZMx17hCiBt7qOLsH_7XzCbiG-0fBH-xm0cecMrPaPw/viewform?usp=pp_url&entry.17835505=" + s2
 
   </script>
